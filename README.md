@@ -4,6 +4,8 @@ Website for [Sonali Events](https://www.sonali.events) — end-to-end event mana
 
 Proprietor: Mrs Sonali Rahul Upagnalawar.
 
+Drop new photographs and videos into the `photos and videos` folder at the project root, then refresh the site. They appear on Home and Gallery.
+
 ## Local development
 
 ```bash

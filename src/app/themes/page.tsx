@@ -23,7 +23,7 @@ export default function ThemesPage() {
           <Link
             key={theme.slug}
             href={`/themes/${theme.slug}`}
-            className={`group img-zoom grid min-h-[420px] overflow-hidden md:grid-cols-2 ${
+            className={`group img-zoom grid min-h-[420px] overflow-hidden rounded-3xl md:grid-cols-2 ${
               index % 2 === 1 ? "md:[&>div:first-child]:order-2" : ""
             }`}
           >
@@ -33,7 +33,11 @@ export default function ThemesPage() {
               className="min-h-[280px] md:min-h-[520px]"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
-            <div className="flex flex-col justify-center bg-paper p-8 md:p-14">
+            <div
+              className={`flex flex-col justify-center p-8 md:p-14 ${
+                index === 0 ? "bg-marigold" : index === 1 ? "bg-paper" : "bg-cream"
+              }`}
+            >
               <p className="text-[0.65rem] tracking-[0.22em] text-garnet uppercase">
                 {theme.kicker}
               </p>

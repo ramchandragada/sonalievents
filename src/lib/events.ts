@@ -1,3 +1,5 @@
+import { work } from "./work-picks";
+
 export type EventItem = {
   slug: string;
   name: string;
@@ -17,7 +19,7 @@ export const events: EventItem[] = [
     summary: "Theme, cake stage, games, and a room that feels like a gift.",
     story:
       "From first-year birthdays in Nanded City homes to golden jubilees in Sinhgad Road banquets, the birthday team builds a world around the person being celebrated — décor, food, music, and games that keep every age in the room.",
-    image: "/mood/birthday.jpg",
+    image: work.birthdayUnicorn,
     guests: "30–120",
     includes: ["Theme décor", "Cake & dessert staging", "Kids games & anchor", "Music", "F&B coordination"],
   },
@@ -28,7 +30,7 @@ export const events: EventItem[] = [
     summary: "Cradle, ritual corner, and a gentle gathering of family.",
     story:
       "A namkaran is intimate and exact. We set the cradle, the ritual corner, the seating for elders, and a meal that respects the family’s custom — Maharashtrian, North Indian, or South Indian.",
-    image: "/mood/ceremony.jpg",
+    image: work.namingPrincess,
     guests: "40–150",
     includes: ["Ritual layout", "Cradle & floral", "Guest flow", "Satvik / family menu", "Invites"],
   },
@@ -39,7 +41,7 @@ export const events: EventItem[] = [
     summary: "Stage, floral, host, and a night that photographs like a wedding.",
     story:
       "Engagements in Pune now carry wedding-level production. The team designs the stage, the walk-in, the ring moment, and the dance floor so the evening has a clear peak — not a blur of vendors.",
-    image: "/mood/mehndi.jpg",
+    image: work.roka,
     guests: "80–250",
     includes: ["Stage & floral", "Entry & host", "DJ / live music", "Invitations", "F&B"],
   },
@@ -50,7 +52,7 @@ export const events: EventItem[] = [
     summary: "Multi-day venue, ritual map, and a dedicated wedding team.",
     story:
       "Mrs Sonali Rahul Upagnalawar quality-checks every wedding week. Category teams run mehendi, sangeet, ceremony, and reception as one file — venue, décor, food, music, dance, and show-calling — so the family is in the photographs, not on the phone.",
-    image: "/mood/wedding.jpg",
+    image: work.banquetDoor,
     guests: "150–400",
     includes: [
       "Venue lock",
@@ -68,7 +70,7 @@ export const events: EventItem[] = [
     summary: "Home or venue décor, puja flow, and a meal for the new address.",
     story:
       "A gruha pravesh should feel like the house taking a first breath. We dress the threshold, sequence the puja, and feed the people who will become this home’s regulars.",
-    image: "/mood/indian-decor.jpg",
+    image: work.houseGarlands,
     guests: "40–120",
     includes: ["Threshold décor", "Puja staging", "Home or hall setup", "Catering", "Music"],
   },
@@ -79,7 +81,7 @@ export const events: EventItem[] = [
     summary: "Mandap, ritual seating, and a day paced for elders and the boy.",
     story:
       "Munj asks for precision: mandap, fire, seating for priests and grandparents, a meal that holds a long morning. The thread-ceremony team has run this rhythm across Pune for years.",
-    image: "/mood/mandap.jpg",
+    image: work.namingPalna,
     guests: "80–200",
     includes: ["Mandap", "Ritual map", "Elder seating", "Traditional meal", "Invites"],
   },
@@ -90,7 +92,7 @@ export const events: EventItem[] = [
     summary: "Venue, branding, entertainment, and a night the team will actually remember.",
     story:
       "Pune’s IT and SME calendars need a house that can turn a banquet into a brand night: stage, lights, food, games, and an anchor — quoted fast, run clean.",
-    image: "/mood/office.jpg",
+    image: work.birthdayAyaan,
     guests: "40–200",
     includes: ["Venue", "Stage & lights", "Entertainment", "Games", "F&B"],
   },
@@ -101,7 +103,7 @@ export const events: EventItem[] = [
     summary: "A styled party with a reason — and a run-of-show to match.",
     story:
       "Anniversaries, baby showers, promotions, house-full evenings. Same end-to-end desk as a wedding, scaled to the room you actually have.",
-    image: "/mood/party.jpg",
+    image: work.birthdaySixteen,
     guests: "40–150",
     includes: ["Styled décor", "Host & games", "Music", "Invites", "Food"],
   },

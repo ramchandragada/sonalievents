@@ -6,10 +6,12 @@ export function CountUp({
   value,
   suffix = "",
   label,
+  tint = "bg-paper",
 }: {
   value: number;
   suffix?: string;
   label: string;
+  tint?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(0);
@@ -42,12 +44,12 @@ export function CountUp({
   }, [value]);
 
   return (
-    <div ref={ref}>
-      <p className="display text-5xl md:text-6xl">
+    <div ref={ref} className={`rounded-3xl ${tint} p-6 md:p-8`}>
+      <p className="display text-5xl text-garnet md:text-6xl">
         {shown.toLocaleString("en-IN")}
         {suffix}
       </p>
-      <p className="mt-2 text-[0.7rem] tracking-[0.18em] text-ink-soft/70 uppercase">
+      <p className="mt-2 text-[0.7rem] tracking-[0.18em] text-ink-soft uppercase">
         {label}
       </p>
     </div>

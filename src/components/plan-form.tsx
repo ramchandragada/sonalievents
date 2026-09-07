@@ -85,7 +85,7 @@ export function PlanForm() {
       </label>
       <button
         type="submit"
-        className="mt-4 justify-self-start rounded-full bg-garnet px-8 py-3 text-[0.72rem] tracking-[0.2em] text-ivory uppercase"
+        className="mt-4 justify-self-start rounded-full bg-garnet px-8 py-3 text-[0.72rem] tracking-[0.2em] text-paper uppercase"
       >
         Send on WhatsApp
       </button>

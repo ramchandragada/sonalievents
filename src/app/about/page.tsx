@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MediaFrame } from "@/components/media-frame";
 import { site } from "@/lib/site";
+import { work } from "@/lib/work-picks";
 
 export const metadata: Metadata = {
   title: "About",
@@ -28,15 +29,15 @@ export default function AboutPage() {
 
       <div className="mx-auto mt-14 grid max-w-7xl gap-4 px-5 md:grid-cols-3 md:px-8">
         <MediaFrame
-          src="/mood/indian-decor.jpg"
-          alt="Traditional décor"
-          className="min-h-[320px] md:min-h-[480px] md:col-span-2"
+          src={work.banquetDoor}
+          alt="Banquet entrance dressed by Sonali Events"
+          className="min-h-[320px] overflow-hidden rounded-[2rem] md:min-h-[480px] md:col-span-2"
           sizes="(max-width: 768px) 100vw, 66vw"
         />
         <MediaFrame
-          src="/mood/venue.jpg"
-          alt="Venue lighting"
-          className="min-h-[280px] md:min-h-[480px]"
+          src={work.houseGarlands}
+          alt="Housewarming floral at a Pune home"
+          className="min-h-[280px] overflow-hidden rounded-[2rem] md:min-h-[480px]"
           sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>

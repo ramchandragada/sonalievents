@@ -24,21 +24,24 @@ export default async function ThemeDetailPage({ params }: Props) {
   if (!item) notFound();
 
   return (
-    <article className="pt-24">
-      <div className="relative min-h-[68dvh] overflow-hidden bg-ink text-ivory">
-        <MediaFrame
-          src={item.image}
-          alt={item.name}
-          className="absolute inset-0"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" />
-        <div className="relative z-10 mx-auto flex min-h-[68dvh] max-w-7xl flex-col justify-end px-5 pb-12 md:px-8">
-          <p className="text-[0.7rem] tracking-[0.28em] text-brass uppercase">
+    <article className="pt-28">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 md:grid-cols-2 md:px-8">
+        <div className="relative p-4 md:p-6">
+          <div className="frame-pop relative h-[400px] rounded-[2rem] md:h-[510px]">
+            <MediaFrame
+              src={item.image}
+              alt={item.name}
+              className="h-full w-full rounded-[2rem]"
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+        <div>
+          <p className="inline-flex rounded-full bg-marigold px-4 py-1.5 text-[0.7rem] tracking-[0.28em] uppercase">
             {item.kicker}
           </p>
-          <h1 className="display mt-3 text-6xl md:text-8xl">{item.name}</h1>
+          <h1 className="display mt-5 text-6xl md:text-8xl">{item.name}</h1>
         </div>
       </div>
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-12 md:px-8">
@@ -49,7 +52,7 @@ export default async function ThemeDetailPage({ params }: Props) {
           {item.cues.map((cue) => (
             <li
               key={cue}
-              className="border-b border-ink/10 py-4 font-serif text-2xl"
+              className="border-b border-garnet/15 py-4 font-serif text-2xl"
             >
               {cue}
             </li>
@@ -59,7 +62,7 @@ export default async function ThemeDetailPage({ params }: Props) {
               href={whatsappHref(
                 `Hello Sonali Events, I would like a ${item.name} theme celebration in Pune.`,
               )}
-              className="rounded-full bg-garnet px-6 py-3 text-[0.7rem] tracking-[0.18em] text-ivory uppercase"
+              className="rounded-full bg-garnet px-6 py-3 text-[0.7rem] tracking-[0.18em] text-paper uppercase"
             >
               Request this theme
             </Link>

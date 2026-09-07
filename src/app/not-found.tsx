@@ -9,7 +9,7 @@ export default function NotFound() {
       <h1 className="display mt-4 text-6xl">This page is not on the floorplan.</h1>
       <Link
         href="/"
-        className="mt-8 rounded-full bg-garnet px-6 py-3 text-[0.7rem] tracking-[0.18em] text-ivory uppercase"
+        className="mt-8 rounded-full bg-garnet px-6 py-3 text-[0.7rem] tracking-[0.18em] text-paper uppercase"
       >
         Back to Sonali Events
       </Link>

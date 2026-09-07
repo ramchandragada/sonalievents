@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# user drop folder is the source of truth; synced into public on predev/prebuild
+/public/photos-and-videos

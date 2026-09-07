@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Outfit } from "next/font/google";
 import { Footer } from "@/components/footer";
-import { Grain } from "@/components/grain";
 import { Header } from "@/components/header";
 import { Providers } from "@/components/providers";
 import { WhatsappDock } from "@/components/whatsapp-dock";
@@ -82,7 +81,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Providers>
-          <Grain />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />

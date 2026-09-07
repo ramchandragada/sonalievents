@@ -1,3 +1,5 @@
+import { work } from "./work-picks";
+
 export type ThemeItem = {
   slug: string;
   name: string;
@@ -18,7 +20,7 @@ export const themes: ThemeItem[] = [
     story:
       "Haldi that smells like home, a mundavalya that sits right, brass that catches the lights, and a meal elders trust. This is the language Sonali Events was built in — munj, namkaran, sakhar pud, lagna, gruha pravesh.",
     cues: ["Mundavalya & haldi", "Paithani & marigold", "Brass & naivedya", "Dhol-tasha optional"],
-    image: "/mood/indian-decor.jpg",
+    image: work.houseGarlands,
     accent: "#9a3412",
   },
   {
@@ -29,7 +31,7 @@ export const themes: ThemeItem[] = [
     story:
       "Pune hosts a great many North Indian wedding weeks. We build the mandap, the mehendi floor, the sangeet stage, and the pheras as one design — rich floral, clear guest flow, music that holds a long night.",
     cues: ["Floral mandap", "Mehendi floor", "Sangeet production", "Pheras & reception"],
-    image: "/mood/floral.jpg",
+    image: work.roka,
     accent: "#6b1d2a",
   },
   {
@@ -40,7 +42,7 @@ export const themes: ThemeItem[] = [
     story:
       "Naming, wedding, housewarming, thread ceremony — South Indian families in Pune get a team that understands jasmine, silk, banana stem, and a satvik meal, without turning the hall into a cliché.",
     cues: ["Jasmine & silk", "Temple motifs", "Banana leaf dining", "Priest-led pacing"],
-    image: "/mood/flowers2.jpg",
+    image: work.lotusStage,
     accent: "#1e3d32",
   },
 ];

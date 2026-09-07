@@ -24,7 +24,7 @@ export function GalleryGrid() {
             onClick={() => setFilter(item)}
             className={`rounded-full px-4 py-2 text-[0.68rem] tracking-[0.16em] uppercase transition ${
               filter === item
-                ? "bg-garnet text-ivory"
+                ? "bg-garnet text-paper"
                 : "border border-ink/15 text-ink-soft"
             }`}
           >
