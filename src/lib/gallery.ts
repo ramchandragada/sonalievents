@@ -1,0 +1,18 @@
+export const gallery = [
+  { src: "/mood/hero.jpg", alt: "Celebration décor", tag: "Marriages" },
+  { src: "/mood/indian-decor.jpg", alt: "Traditional floral décor", tag: "Maharashtrian" },
+  { src: "/mood/wedding.jpg", alt: "Wedding gathering", tag: "Marriages" },
+  { src: "/mood/birthday.jpg", alt: "Birthday styling", tag: "Birthdays" },
+  { src: "/mood/ceremony.jpg", alt: "Ceremony setting", tag: "Naming" },
+  { src: "/mood/mehndi.jpg", alt: "Mehendi evening", tag: "North Indian" },
+  { src: "/mood/mandap.jpg", alt: "Mandap", tag: "Thread ceremony" },
+  { src: "/mood/floral.jpg", alt: "Floral installation", tag: "Engagements" },
+  { src: "/mood/venue.jpg", alt: "Banquet lighting", tag: "Office parties" },
+  { src: "/mood/party.jpg", alt: "Celebration night", tag: "Celebration" },
+  { src: "/mood/lights.jpg", alt: "Evening lights", tag: "Office parties" },
+  { src: "/mood/food.jpg", alt: "Celebration dining", tag: "Food" },
+  { src: "/mood/cake.jpg", alt: "Celebration cake", tag: "Birthdays" },
+  { src: "/mood/flowers2.jpg", alt: "Close floral work", tag: "South Indian" },
+  { src: "/mood/wedding-hands.jpg", alt: "Ceremony detail", tag: "Marriages" },
+  { src: "/mood/office.jpg", alt: "Night production", tag: "Office parties" },
+] as const;

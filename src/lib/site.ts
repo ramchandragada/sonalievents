@@ -1,0 +1,74 @@
+export const site = {
+  name: "Sonali Events",
+  domain: "www.sonali.events",
+  url: "https://www.sonali.events",
+  tagline: "You live the day. We hold it.",
+  proprietor: "Mrs Sonali Rahul Upagnalawar",
+  role: "Proprietor & Managing Director",
+  city: "Pune",
+  address: "Nanded City, Sinhgad Road, Pune",
+  phoneDisplay: "+91 89757 60707",
+  phoneTel: "+918975760707",
+  whatsapp: "https://wa.me/918975760707",
+  languagesSpoken: ["Marathi", "Hindi", "English"] as const,
+  siteLanguage: "English",
+  eventsDelivered: "1,000+",
+  years: "3",
+} as const;
+
+export function whatsappHref(message?: string) {
+  if (!message) return site.whatsapp;
+  return `${site.whatsapp}?text=${encodeURIComponent(message)}`;
+}
+
+export const nav = [
+  { href: "/events", label: "Events" },
+  { href: "/themes", label: "Themes" },
+  { href: "/way", label: "The Sonali way" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/about", label: "About" },
+] as const;
+
+export const steps = [
+  {
+    n: "01",
+    title: "Enquire",
+    body: "WhatsApp or the form. A human replies within hours — in Marathi, Hindi, or English.",
+  },
+  {
+    n: "02",
+    title: "Discover",
+    body: "Budget, ritual, guest count, and the feeling you want in the room.",
+  },
+  {
+    n: "03",
+    title: "Design",
+    body: "Venue options, a theme board, and a clear estimate. Maharashtrian, North Indian, or South Indian.",
+  },
+  {
+    n: "04",
+    title: "Lock",
+    body: "Advance, contracts, and a named team for your category of event.",
+  },
+  {
+    n: "05",
+    title: "Produce",
+    body: "Décor, food, music, invitations, dance, games — one WhatsApp room, no vendor chase.",
+  },
+  {
+    n: "06",
+    title: "Deliver",
+    body: "Show-calling on the day. You greet guests. We run the floor.",
+  },
+] as const;
+
+export const scope = [
+  "Venue",
+  "Decoration",
+  "Food",
+  "Invitations",
+  "Music",
+  "Dance",
+  "Party games",
+  "Show calling",
+] as const;
