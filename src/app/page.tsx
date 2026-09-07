@@ -26,17 +26,19 @@ export default function Home() {
     <div>
       <section className="relative isolate min-h-[100svh] overflow-hidden bg-ink">
         <HeroStage />
-        <div className="absolute inset-x-0 bottom-0 h-[50%] bg-gradient-to-t from-ink/70 via-ink/25 to-transparent" />
+        <div className="absolute inset-0 bg-ink/45 md:bg-ink/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20 md:from-ink/90 md:via-ink/45 md:to-transparent" />
+        <div className="absolute inset-y-0 left-0 hidden w-[58%] bg-gradient-to-r from-ink/80 via-ink/40 to-transparent md:block" />
         <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-28 pt-28 md:px-8 md:pb-32">
-          <p className="text-[0.7rem] tracking-[0.28em] text-paper/80 uppercase">
+          <p className="hero-copy text-[0.7rem] tracking-[0.28em] text-paper uppercase">
             Pune · Nanded City · Sinhgad Road
           </p>
-          <h1 className="display mt-4 max-w-3xl text-[16vw] text-paper sm:text-[12vw] lg:text-[7.5rem]">
+          <h1 className="hero-copy display mt-4 max-w-3xl text-[16vw] text-paper sm:text-[12vw] lg:text-[7.5rem]">
             You live
             <br />
             the day.
           </h1>
-          <p className="mt-6 max-w-md text-lg leading-relaxed text-paper/85">
+          <p className="hero-copy mt-6 max-w-md text-lg leading-relaxed text-paper">
             {site.proprietor} and her teams hold venue, décor, food,
             invitations, music, dance, and games. Real Pune rooms — not a
             moodboard.
@@ -54,7 +56,7 @@ export default function Home() {
             </Magnetic>
             <Link
               href="/gallery"
-              className="inline-flex rounded-full border border-paper/40 px-7 py-3 text-[0.72rem] tracking-[0.22em] text-paper uppercase"
+              className="inline-flex rounded-full border border-paper/80 bg-ink/50 px-7 py-3 text-[0.72rem] tracking-[0.22em] text-paper uppercase"
             >
               See the work
             </Link>
