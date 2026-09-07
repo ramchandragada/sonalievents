@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { PlanForm } from "@/components/plan-form";
 import { PageIntro } from "@/components/page-intro";
+import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta("/plan", {
   title: "Plan your event",
   description:
     "Start a Pune celebration with Sonali Events. The form opens WhatsApp with your brief.",
-};
+});
 
 export default function PlanPage() {
   return (

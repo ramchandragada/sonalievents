@@ -10,7 +10,19 @@ export type WorkItem = {
   kind: "photo" | "video";
   label: string;
   mtime: number;
+  poster?: string;
 };
+
+function posterFor(src: string, kind: WorkItem["kind"]) {
+  if (kind !== "video") return undefined;
+  const file = src.split("/").pop() ?? "";
+  const base = file.replace(/\.[^.]+$/, "");
+  return `/posters/${base}.jpg`;
+}
+
+function withPoster(item: WorkItem): WorkItem {
+  return { ...item, poster: item.poster ?? posterFor(item.src, item.kind) };
+}
 
 function slugifyFilename(name: string) {
   const ext = extname(name).toLowerCase();
@@ -82,6 +94,7 @@ export function syncWorkMedia() {
           kind,
           label: kind === "photo" ? "Photograph" : "Film",
           mtime: fromStat.mtimeMs,
+          poster: posterFor(`/photos-and-videos/${slug}`, kind),
         });
       }
     }
@@ -96,7 +109,7 @@ export function syncWorkMedia() {
 }
 
 function sortMedia(items: WorkItem[]) {
-  return [...items].sort((a, b) => b.mtime - a.mtime);
+  return items.map(withPoster).sort((a, b) => b.mtime - a.mtime);
 }
 
 export function getWorkMedia(): WorkItem[] {

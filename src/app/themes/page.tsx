@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MediaFrame } from "@/components/media-frame";
 import { PageIntro } from "@/components/page-intro";
+import { pageMeta } from "@/lib/seo";
 import { themes } from "@/lib/themes";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta("/themes", {
   title: "Themes",
   description:
     "Traditional Maharashtrian, North Indian, and South Indian celebration themes by Sonali Events, Pune.",
-};
+});
 
 export default function ThemesPage() {
   return (

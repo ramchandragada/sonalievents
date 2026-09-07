@@ -5,7 +5,7 @@ import { themes } from "@/lib/themes";
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-paper text-ink">
+    <footer className="relative overflow-hidden bg-paper pb-24 text-ink md:pb-28">
       <div className="h-2 bg-garnet" />
       <div className="h-2 bg-marigold" />
       <div className="h-2 bg-forest" />

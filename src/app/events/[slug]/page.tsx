@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MediaFrame } from "@/components/media-frame";
 import { events, getEvent } from "@/lib/events";
+import { eventJsonLd, pageMeta } from "@/lib/seo";
 import { site, whatsappHref } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -15,10 +16,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const item = getEvent(slug);
   if (!item) return { title: "Event" };
-  return {
+  return pageMeta(`/events/${slug}`, {
     title: item.name,
     description: item.summary,
-  };
+    openGraph: { images: [{ url: item.image }] },
+  });
 }
 
 export default async function EventDetailPage({ params }: Props) {
@@ -28,6 +30,10 @@ export default async function EventDetailPage({ params }: Props) {
 
   return (
     <article className="pt-28">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd(item)) }}
+      />
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 md:grid-cols-2 md:px-8">
         <div className="relative p-4 md:p-6">
           <div className="frame-pop relative h-[400px] rounded-[2rem] md:h-[530px]">

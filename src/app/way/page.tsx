@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/page-intro";
+import { pageMeta } from "@/lib/seo";
 import { steps } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta("/way", {
   title: "The Sonali way",
   description:
     "How Sonali Events plans and delivers celebrations in Pune — from first WhatsApp to show-calling.",
-};
+});
 
 export default function WayPage() {
   return (

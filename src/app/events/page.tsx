@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MediaFrame } from "@/components/media-frame";
 import { PageIntro } from "@/components/page-intro";
+import { pageMeta } from "@/lib/seo";
 import { events } from "@/lib/events";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta("/events", {
   title: "Events",
   description:
     "Birthdays, naming ceremonies, engagements, marriages, housewarming, thread ceremonies, office parties, and celebration nights in Pune.",
-};
+});
 
 export default function EventsPage() {
   return (

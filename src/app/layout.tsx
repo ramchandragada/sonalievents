@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Outfit } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Providers } from "@/components/providers";
 import { WhatsappDock } from "@/components/whatsapp-dock";
+import { businessJsonLd, shareImages } from "@/lib/seo";
 import { site } from "@/lib/site";
 import "lenis/dist/lenis.css";
 import "./globals.css";
@@ -45,29 +46,17 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: "en_IN",
     type: "website",
+    ...shareImages.openGraph,
   },
+  twitter: shareImages.twitter,
   robots: { index: true, follow: true },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "EventPlanningBusiness",
-  name: site.name,
-  url: site.url,
-  telephone: site.phoneTel,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Nanded City, Sinhgad Road",
-    addressLocality: "Pune",
-    addressRegion: "Maharashtra",
-    addressCountry: "IN",
-  },
-  founder: {
-    "@type": "Person",
-    name: site.proprietor,
-  },
-  areaServed: "Pune",
+export const viewport: Viewport = {
+  themeColor: "#e31c79",
 };
+
+const jsonLd = businessJsonLd;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
@@ -81,8 +70,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Providers>
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-full focus:bg-garnet focus:px-4 focus:py-2 focus:text-paper"
+          >
+            Skip to content
+          </a>
           <Header />
-          <main className="flex-1">{children}</main>
+          <main id="main" className="flex-1">
+            {children}
+          </main>
           <Footer />
           <WhatsappDock />
         </Providers>

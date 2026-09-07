@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { CountUp } from "@/components/count-up";
 import { Magnetic } from "@/components/magnetic";
@@ -9,8 +10,11 @@ import { scope, site, steps, whatsappHref } from "@/lib/site";
 import { themes } from "@/lib/themes";
 import { work } from "@/lib/work-picks";
 import { getWorkPhotos, getWorkVideos } from "@/lib/work-media";
+import { pageMeta } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = pageMeta("/", {});
 
 const pillColors = [
   "border-garnet bg-garnet/10 text-garnet",
@@ -117,6 +121,14 @@ export default function Home() {
         <CountUp value={8} label="Event categories" tint="bg-paper" />
         <CountUp value={3} label="Regional themes" tint="bg-cream" />
         <CountUp value={3} label="Languages on the floor" tint="bg-paper" />
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 pb-8 md:px-8">
+        <p className="max-w-2xl text-ink-soft">
+          The photographs and films on this site are from real Pune days — Nanded
+          City homes, Sinhgad Road halls, and rooms such as Serenova Banquet.
+          Not stock. Not a moodboard.
+        </p>
       </section>
 
       {photos.length + videos.length > 0 ? (
@@ -308,8 +320,8 @@ export default function Home() {
           <h2 className="display mt-3 text-5xl md:text-6xl">
             {site.proprietor}
           </h2>
-          <p className="mt-2 text-sm tracking-[0.14em] text-ink-soft/70 uppercase">
-            {site.role} · Proprietorship
+          <p className="mt-2 text-sm tracking-[0.14em] text-ink-soft uppercase">
+            Proprietor · Nanded City, Pune
           </p>
           <p className="mt-6 text-lg leading-relaxed text-ink-soft">
             Based at Nanded City on Sinhgad Road. Multiple experienced teams

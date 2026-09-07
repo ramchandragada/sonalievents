@@ -9,6 +9,7 @@ export function PlanForm() {
   const [eventType, setEventType] = useState(events[0]?.name ?? "Birthday");
   const [date, setDate] = useState("");
   const [guests, setGuests] = useState("");
+  const [phone, setPhone] = useState("");
   const [notes, setNotes] = useState("");
 
   const href = whatsappHref(
@@ -18,6 +19,7 @@ export function PlanForm() {
       `Event: ${eventType}`,
       date && `Date: ${date}`,
       guests && `Guests: ${guests}`,
+      phone && `WhatsApp: ${phone}`,
       notes && `Notes: ${notes}`,
     ]
       .filter(Boolean)
@@ -74,8 +76,18 @@ export function PlanForm() {
           />
         </label>
       </div>
-      <label className="grid gap-2 text-[0.7rem] tracking-[0.16em] uppercase">
-        Anything we should know
+        <label className="grid gap-2 text-[0.7rem] tracking-[0.16em] uppercase">
+          WhatsApp number
+          <input
+            type="tel"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            placeholder="+91"
+            className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none"
+          />
+        </label>
+        <label className="grid gap-2 text-[0.7rem] tracking-[0.16em] uppercase">
+          Anything we should know
         <textarea
           value={notes}
           onChange={(e) => setNotes(e.target.value)}

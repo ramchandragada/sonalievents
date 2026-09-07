@@ -59,15 +59,16 @@ export function WorkGallery({ items }: { items: WorkItem[] }) {
                 />
               ) : (
                 <div className="relative flex min-h-[240px] aspect-[3/4] items-end overflow-hidden rounded-3xl bg-cream p-5">
-                  <span className="pointer-events-none absolute inset-0 opacity-40">
-                    <video
-                      src={item.src}
-                      muted
-                      playsInline
-                      preload="metadata"
-                      className="h-full w-full object-cover"
-                    />
-                  </span>
+                  {item.poster ? (
+                    <div className="pointer-events-none absolute inset-0">
+                      <MediaFrame
+                        src={item.poster}
+                        alt="Film still from a Sonali Events celebration"
+                        className="h-full w-full"
+                        sizes="(max-width: 640px) 100vw, 33vw"
+                      />
+                    </div>
+                  ) : null}
                   <span className="relative rounded-full bg-ivory px-4 py-2 text-[0.62rem] tracking-[0.18em] text-garnet uppercase">
                     Play film
                   </span>
@@ -112,10 +113,11 @@ export function WorkGallery({ items }: { items: WorkItem[] }) {
             ) : (
               <video
                 src={active.src}
+                poster={active.poster}
                 controls
                 autoPlay
                 playsInline
-                className="max-h-[80dvh] w-full bg-ink"
+                className="max-h-[80dvh] w-full bg-ink object-contain"
               />
             )}
           </div>

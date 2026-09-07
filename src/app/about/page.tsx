@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { MediaFrame } from "@/components/media-frame";
+import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 import { work } from "@/lib/work-picks";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta("/about", {
   title: "About",
   description:
     "Mrs Sonali Rahul Upagnalawar — proprietor of Sonali Events, Nanded City, Sinhgad Road, Pune. 1,000+ celebrations.",
-};
+});
 
 export default function AboutPage() {
   return (

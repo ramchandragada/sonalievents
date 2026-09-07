@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MediaFrame } from "@/components/media-frame";
+import { pageMeta } from "@/lib/seo";
 import { getTheme, themes } from "@/lib/themes";
 import { whatsappHref } from "@/lib/site";
 
@@ -15,7 +16,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const item = getTheme(slug);
   if (!item) return { title: "Theme" };
-  return { title: `${item.name} theme`, description: item.summary };
+  return pageMeta(`/themes/${slug}`, {
+    title: `${item.name} theme`,
+    description: item.summary,
+    openGraph: { images: [{ url: item.image }] },
+  });
 }
 
 export default async function ThemeDetailPage({ params }: Props) {

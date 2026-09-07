@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/page-intro";
 import { WorkGallery } from "@/components/work-gallery";
+import { pageMeta } from "@/lib/seo";
 import { getWorkMedia } from "@/lib/work-media";
 
 export const dynamic = "force-dynamic";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta("/gallery", {
   title: "Gallery",
   description:
     "Photographs and films from Sonali Events celebrations in Pune.",
-};
+});
 
 export default function GalleryPage() {
   const items = getWorkMedia();
