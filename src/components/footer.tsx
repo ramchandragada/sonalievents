@@ -6,9 +6,7 @@ import { themes } from "@/lib/themes";
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-paper pb-24 text-ink md:pb-28">
-      <div className="h-2 bg-garnet" />
-      <div className="h-2 bg-marigold" />
-      <div className="h-2 bg-forest" />
+      <div className="h-px bg-garnet" />
       <div className="pointer-events-none absolute -right-10 -bottom-16 font-serif text-[28vw] leading-none text-garnet/10">
         SE
       </div>
@@ -35,7 +33,7 @@ export function Footer() {
         </div>
         <div className="grid gap-10 sm:grid-cols-3 md:col-span-7">
           <div>
-            <p className="text-[0.65rem] tracking-[0.22em] text-brass uppercase">
+            <p className="text-[0.65rem] tracking-[0.22em] text-garnet uppercase">
               Visit
             </p>
             <ul className="mt-4 space-y-2 text-sm text-ink-soft">
@@ -54,7 +52,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-[0.65rem] tracking-[0.22em] text-forest uppercase">
+            <p className="text-[0.65rem] tracking-[0.22em] text-garnet uppercase">
               Events
             </p>
             <ul className="mt-4 space-y-2 text-sm text-ink-soft">

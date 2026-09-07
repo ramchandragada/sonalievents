@@ -31,19 +31,17 @@ export default async function ThemeDetailPage({ params }: Props) {
   return (
     <article className="pt-28">
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 md:grid-cols-2 md:px-8">
-        <div className="relative p-4 md:p-6">
-          <div className="frame-pop relative h-[400px] rounded-[2rem] md:h-[510px]">
-            <MediaFrame
-              src={item.image}
-              alt={item.name}
-              className="h-full w-full rounded-[2rem]"
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
+        <div className="relative h-[400px] md:h-[510px]">
+          <MediaFrame
+            src={item.image}
+            alt={item.name}
+            className="h-full w-full"
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
         <div>
-          <p className="inline-flex rounded-full bg-marigold px-4 py-1.5 text-[0.7rem] tracking-[0.28em] uppercase">
+          <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
             {item.kicker}
           </p>
           <h1 className="display mt-5 text-6xl md:text-8xl">{item.name}</h1>

@@ -35,19 +35,17 @@ export default async function EventDetailPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd(item)) }}
       />
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 md:grid-cols-2 md:px-8">
-        <div className="relative p-4 md:p-6">
-          <div className="frame-pop relative h-[400px] rounded-[2rem] md:h-[530px]">
-            <MediaFrame
-              src={item.image}
-              alt={item.name}
-              className="h-full w-full rounded-[2rem]"
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
+        <div className="relative h-[400px] md:h-[530px]">
+          <MediaFrame
+            src={item.image}
+            alt={item.name}
+            className="h-full w-full"
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
         <div>
-          <p className="inline-flex rounded-full bg-marigold px-4 py-1.5 text-[0.7rem] tracking-[0.28em] uppercase">
+          <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
             {item.local}
           </p>
           <h1 className="display mt-5 text-6xl md:text-8xl">{item.name}</h1>
@@ -62,7 +60,7 @@ export default async function EventDetailPage({ params }: Props) {
           </p>
         </div>
         <aside className="md:col-span-5">
-          <div className="rounded-3xl border-2 border-garnet/15 bg-paper p-6">
+          <div className="border-t border-ink/10 bg-paper p-6">
             <p className="text-[0.65rem] tracking-[0.22em] text-garnet uppercase">
               In the plan
             </p>

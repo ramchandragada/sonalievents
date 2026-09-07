@@ -44,7 +44,7 @@ export function CountUp({
   }, [value]);
 
   return (
-    <div ref={ref} className={`rounded-3xl ${tint} p-6 md:p-8`}>
+    <div ref={ref} className={`rounded-none border-t border-ink/10 ${tint} py-6 md:py-8`}>
       <p className="display text-5xl text-garnet md:text-6xl">
         {shown.toLocaleString("en-IN")}
         {suffix}

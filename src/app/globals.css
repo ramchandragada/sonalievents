@@ -48,11 +48,7 @@ html.lenis-stopped {
 
 body {
   font-family: var(--font-outfit), system-ui, sans-serif;
-  background:
-    radial-gradient(900px 520px at 8% -8%, rgba(255, 208, 0, 0.45), transparent 58%),
-    radial-gradient(820px 480px at 100% 0%, rgba(227, 28, 121, 0.22), transparent 55%),
-    radial-gradient(700px 420px at 80% 100%, rgba(13, 159, 138, 0.18), transparent 50%),
-    var(--ivory);
+  background: var(--ivory);
   min-height: 100%;
 }
 

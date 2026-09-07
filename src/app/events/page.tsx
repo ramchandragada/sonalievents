@@ -20,13 +20,11 @@ export default function EventsPage() {
         body="Each category has its own experienced team. The same end-to-end promise: venue, décor, food, invitations, music, dance, games."
       />
       <div className="mx-auto grid max-w-7xl gap-4 px-5 pb-24 md:grid-cols-2 md:px-8">
-        {events.map((item, index) => (
+        {events.map((item) => (
           <Link
             key={item.slug}
             href={`/events/${item.slug}`}
-            className={`group img-zoom grid overflow-hidden rounded-3xl md:grid-cols-2 ${
-              index % 2 === 0 ? "bg-paper" : "bg-cream"
-            }`}
+            className="group img-zoom grid overflow-hidden border-t border-ink/10 bg-paper md:grid-cols-2"
           >
             <MediaFrame
               src={item.image}

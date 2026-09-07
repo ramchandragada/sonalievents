@@ -32,13 +32,13 @@ export default function AboutPage() {
         <MediaFrame
           src={work.banquetDoor}
           alt="Banquet entrance dressed by Sonali Events"
-          className="min-h-[320px] overflow-hidden rounded-[2rem] md:min-h-[480px] md:col-span-2"
+          className="min-h-[320px] overflow-hidden md:min-h-[480px] md:col-span-2"
           sizes="(max-width: 768px) 100vw, 66vw"
         />
         <MediaFrame
           src={work.houseGarlands}
           alt="Housewarming floral at a Pune home"
-          className="min-h-[280px] overflow-hidden rounded-[2rem] md:min-h-[480px]"
+          className="min-h-[280px] overflow-hidden md:min-h-[480px]"
           sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>

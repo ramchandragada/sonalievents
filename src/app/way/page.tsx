@@ -19,16 +19,10 @@ export default function WayPage() {
       />
       <div className="mx-auto max-w-7xl px-5 pb-24 md:px-8">
         <ol className="grid gap-4 md:grid-cols-2">
-          {steps.map((step, index) => (
+          {steps.map((step) => (
             <li
               key={step.n}
-              className={`rounded-3xl p-8 md:p-12 ${
-                index % 3 === 0
-                  ? "bg-marigold"
-                  : index % 3 === 1
-                    ? "bg-paper"
-                    : "bg-cream"
-              }`}
+              className="border-t border-ink/10 p-8 md:p-12"
             >
               <p className="text-garnet">{step.n}</p>
               <h2 className="display mt-4 text-4xl md:text-5xl">{step.title}</h2>

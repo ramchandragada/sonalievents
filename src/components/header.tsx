@@ -24,12 +24,8 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 text-ink transition-[background,box-shadow] duration-400 ${
-        open
-          ? "bg-marigold"
-          : scrolled
-            ? "bg-ivory shadow-[0_1px_0_rgba(227,28,121,0.18)]"
-            : "bg-transparent"
+      className={`fixed inset-x-0 top-0 z-50 bg-ivory text-ink transition-[border-color] duration-400 ${
+        scrolled || open ? "border-b border-garnet/20" : "border-b border-transparent"
       }`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:h-[4.5rem] md:px-8">
@@ -37,7 +33,7 @@ export function Header() {
           <span className="font-serif text-2xl tracking-tight text-garnet md:text-[1.7rem]">
             Sonali
           </span>
-          <span className="text-[0.65rem] tracking-[0.28em] text-brass uppercase">
+          <span className="text-[0.65rem] tracking-[0.28em] text-ink-soft uppercase">
             Events
           </span>
         </Link>
@@ -94,7 +90,7 @@ export function Header() {
         aria-hidden={!open}
         inert={open ? undefined : true}
       >
-        <div className="flex min-h-[calc(100dvh-4rem)] flex-col justify-between bg-marigold px-6 pb-10">
+        <div className="flex min-h-[calc(100dvh-4rem)] flex-col justify-between bg-ivory px-6 pb-10">
           <nav className="flex flex-col gap-2 pt-6">
             {nav.map((item) => (
               <Link key={item.href} href={item.href} className="display text-5xl text-ink">
