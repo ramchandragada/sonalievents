@@ -21,6 +21,8 @@ export const work = {
   roka: "/photos-and-videos/whatsapp-image-2026-09-07-at-10-58-23-pm.jpeg",
   lotusStage:
     "/photos-and-videos/whatsapp-image-2026-09-07-at-10-56-33-pm.jpeg",
+  floralMoon:
+    "/photos-and-videos/whatsapp-image-2026-09-07-at-10-57-04-pm.jpeg",
   peacockSofa:
     "/photos-and-videos/whatsapp-image-2026-09-07-at-10-53-57-pm.jpeg",
   banquetDoor:

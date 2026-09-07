@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CountUp } from "@/components/count-up";
+import { HeroStage } from "@/components/hero-stage";
 import { InquiryBar } from "@/components/inquiry-bar";
 import { Magnetic } from "@/components/magnetic";
 import { Marquee } from "@/components/marquee";
@@ -11,7 +12,7 @@ import { events } from "@/lib/events";
 import { scope, site, steps, whatsappHref } from "@/lib/site";
 import { themes } from "@/lib/themes";
 import { work } from "@/lib/work-picks";
-import { getWorkPhotos, getWorkVideos } from "@/lib/work-media";
+import { getWorkVideos } from "@/lib/work-media";
 import { pageMeta } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
@@ -19,24 +20,13 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = pageMeta("/", {});
 
 export default function Home() {
-  const photos = getWorkPhotos();
   const videos = getWorkVideos();
-  const hero = photos[0]?.src ?? work.birthdayUnicorn;
 
   return (
     <div>
-      <section className="relative isolate min-h-[100svh] overflow-hidden">
-        <div className="absolute inset-0">
-          <MediaFrame
-            src={hero}
-            alt="A celebration staged by Sonali Events in Pune"
-            className="h-full min-h-[100svh] w-full"
-            imageClassName="ken"
-            priority
-            sizes="100vw"
-          />
-        </div>
-        <div className="absolute inset-0 bg-ink/50" />
+      <section className="relative isolate min-h-[100svh] overflow-hidden bg-ink">
+        <HeroStage />
+        <div className="absolute inset-x-0 bottom-0 h-[50%] bg-gradient-to-t from-ink/70 via-ink/25 to-transparent" />
         <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-28 pt-28 md:px-8 md:pb-32">
           <p className="text-[0.7rem] tracking-[0.28em] text-paper/80 uppercase">
             Pune · Nanded City · Sinhgad Road
