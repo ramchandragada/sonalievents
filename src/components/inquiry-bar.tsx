@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState, type ReactNode } from "react";
+import { useEffect, useId, useState, type ReactNode } from "react";
 import { whatsappHref } from "@/lib/site";
 
 const FUNCTIONS = [
@@ -28,6 +28,17 @@ export function InquiryBar() {
   const [guests, setGuests] = useState("");
   const [venue, setVenue] = useState("");
 
+  useEffect(() => {
+    if (!open) return;
+    document.documentElement.dataset.sheetOpen = "true";
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      delete document.documentElement.dataset.sheetOpen;
+      document.body.style.overflow = prev;
+    };
+  }, [open]);
+
   function compose() {
     const lines = [
       `Hi Sonali — I'd like to plan a ${fn || "celebration"}.`,
@@ -38,15 +49,18 @@ export function InquiryBar() {
     return whatsappHref(lines.join(" "));
   }
 
-  function goWhatsApp() {
-    window.open(compose(), "_blank", "noopener,noreferrer");
+  function close() {
     setOpen(false);
     setStep(0);
   }
 
+  function goWhatsApp() {
+    window.open(compose(), "_blank", "noopener,noreferrer");
+    close();
+  }
+
   return (
     <>
-      {/* Desktop / tablet inline card */}
       <form
         className="mx-auto hidden max-w-7xl grid-cols-[1.2fr_0.8fr_1.2fr_auto] items-end gap-4 border-l-4 border-l-garnet bg-paper/95 p-5 shadow-[0_20px_60px_-28px_rgba(42,17,64,0.35)] backdrop-blur-sm md:grid"
         onSubmit={(event) => {
@@ -99,12 +113,11 @@ export function InquiryBar() {
         </button>
       </form>
 
-      {/* Mobile trigger + sheet */}
       <div className="md:hidden">
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="pressable flex w-full items-center justify-between gap-3 border-l-4 border-l-garnet bg-paper px-4 py-4 text-left shadow-[0_16px_40px_-24px_rgba(42,17,64,0.4)]"
+          className="pressable flex w-full items-center justify-between gap-3 border-l-4 border-l-garnet bg-paper px-4 py-4 text-left shadow-[0_16px_40px_-24px_rgba(42,17,64,0.35)]"
         >
           <span>
             <span className="eyebrow">Plan in 3 taps</span>
@@ -120,26 +133,23 @@ export function InquiryBar() {
 
       {open ? (
         <div
-          className="fixed inset-0 z-[60] md:hidden"
+          className="fixed inset-0 z-[70] md:hidden"
           role="dialog"
           aria-modal="true"
           aria-labelledby={titleId}
         >
           <button
             type="button"
-            className="absolute inset-0 bg-ink/50 backdrop-blur-[2px]"
+            className="absolute inset-0 bg-ink/55 backdrop-blur-[3px]"
             aria-label="Close planner"
-            onClick={() => setOpen(false)}
+            onClick={close}
           />
-          <div
-            className="sheet absolute inset-x-0 bottom-0 rounded-t-3xl bg-ivory px-5 pt-4 shadow-[0_-20px_60px_rgba(42,17,64,0.25)]"
-            style={{ paddingBottom: "max(1.25rem, env(safe-area-inset-bottom))" }}
-          >
-            <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-ink/15" />
-            <div className="flex items-start justify-between gap-3">
-              <div>
+          <div className="sheet absolute inset-x-0 bottom-0 flex max-h-[88dvh] flex-col rounded-t-[1.75rem] bg-ivory shadow-[0_-24px_80px_rgba(42,17,64,0.28)]">
+            <div className="mx-auto mt-3 h-1 w-10 shrink-0 rounded-full bg-ink/15" />
+            <div className="flex items-start justify-between gap-3 px-5 pt-4 pb-2">
+              <div className="min-w-0">
                 <p className="eyebrow">Step {step + 1} of 3</p>
-                <h2 id={titleId} className="display mt-1 text-3xl text-ink">
+                <h2 id={titleId} className="display mt-1 text-[1.85rem] text-ink">
                   {step === 0 && "What are you celebrating?"}
                   {step === 1 && "About how many guests?"}
                   {step === 2 && "Where is the function?"}
@@ -147,17 +157,17 @@ export function InquiryBar() {
               </div>
               <button
                 type="button"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 text-sm"
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-ink/15 text-base text-ink"
                 aria-label="Close"
-                onClick={() => setOpen(false)}
+                onClick={close}
               >
                 ✕
               </button>
             </div>
 
-            <div className="mt-5">
+            <div className="min-h-0 flex-1 overflow-y-auto px-5 py-3">
               {step === 0 ? (
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-2.5">
                   {FUNCTIONS.map((item) => (
                     <button
                       key={item}
@@ -168,7 +178,7 @@ export function InquiryBar() {
                       }}
                       className={`pressable min-h-12 rounded-2xl border px-3 py-3 text-left text-sm ${
                         fn === item
-                          ? "border-garnet bg-garnet/10 text-ink"
+                          ? "border-garnet-deep bg-garnet/8 text-ink"
                           : "border-ink/10 bg-paper text-ink"
                       }`}
                     >
@@ -179,36 +189,18 @@ export function InquiryBar() {
               ) : null}
 
               {step === 1 ? (
-                <div className="space-y-4">
-                  <input
-                    inputMode="numeric"
-                    value={guests}
-                    onChange={(e) => setGuests(e.target.value)}
-                    placeholder="e.g. 80"
-                    className="field-input min-h-12 w-full rounded-2xl border border-ink/15 bg-paper px-4"
-                    autoFocus
-                  />
-                  <div className="flex gap-2">
-                    <button
-                      type="button"
-                      className="pressable min-h-12 flex-1 rounded-full border border-ink/15"
-                      onClick={() => setStep(0)}
-                    >
-                      Back
-                    </button>
-                    <button
-                      type="button"
-                      className="pressable cta-label min-h-12 flex-[2] rounded-full bg-wa text-white hover:bg-wa-bright"
-                      onClick={() => setStep(2)}
-                    >
-                      Next
-                    </button>
-                  </div>
-                </div>
+                <input
+                  inputMode="numeric"
+                  value={guests}
+                  onChange={(e) => setGuests(e.target.value)}
+                  placeholder="e.g. 80"
+                  className="sheet-input min-h-14 w-full rounded-2xl border border-ink/12 bg-paper px-4 text-lg text-ink outline-none"
+                  autoFocus
+                />
               ) : null}
 
               {step === 2 ? (
-                <div className="space-y-3">
+                <div className="space-y-2.5">
                   {VENUES.map((item) => (
                     <button
                       key={item.value}
@@ -216,7 +208,7 @@ export function InquiryBar() {
                       onClick={() => setVenue(item.value)}
                       className={`pressable flex min-h-12 w-full items-center rounded-2xl border px-4 text-left text-sm ${
                         venue === item.value
-                          ? "border-garnet bg-garnet/10"
+                          ? "border-garnet-deep bg-garnet/8"
                           : "border-ink/10 bg-paper"
                       }`}
                     >
@@ -228,36 +220,61 @@ export function InquiryBar() {
                     onClick={() => setVenue("")}
                     className={`pressable flex min-h-12 w-full items-center rounded-2xl border px-4 text-left text-sm ${
                       venue === ""
-                        ? "border-garnet bg-garnet/10"
+                        ? "border-garnet-deep bg-garnet/8"
                         : "border-ink/10 bg-paper"
                     }`}
                   >
                     Not decided yet
                   </button>
-                  <div className="flex gap-2 pt-2">
+                </div>
+              ) : null}
+            </div>
+
+            {/* Always-visible actions — never under the WhatsApp dock */}
+            {step > 0 ? (
+              <div
+                className="shrink-0 border-t border-ink/8 bg-ivory px-5 pt-3"
+                style={{
+                  paddingBottom: "max(1rem, env(safe-area-inset-bottom))",
+                }}
+              >
+                <div className="flex gap-2">
+                  <button
+                    type="button"
+                    className="pressable min-h-12 flex-1 rounded-full border border-ink/15 text-sm font-semibold text-ink"
+                    onClick={() => setStep((s) => Math.max(0, s - 1))}
+                  >
+                    Back
+                  </button>
+                  {step === 1 ? (
                     <button
                       type="button"
-                      className="pressable min-h-12 flex-1 rounded-full border border-ink/15"
-                      onClick={() => setStep(1)}
+                      className="pressable cta-label min-h-12 flex-[1.6] rounded-full bg-wa text-white hover:bg-wa-bright"
+                      onClick={() => setStep(2)}
                     >
-                      Back
+                      Next
                     </button>
+                  ) : (
                     <a
                       href={compose()}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="pressable cta-label flex min-h-12 flex-[2] items-center justify-center rounded-full bg-wa text-white hover:bg-wa-bright"
-                      onClick={() => {
-                        setOpen(false);
-                        setStep(0);
-                      }}
+                      className="pressable cta-label flex min-h-12 flex-[1.6] items-center justify-center rounded-full bg-wa text-white hover:bg-wa-bright"
+                      onClick={close}
                     >
                       Plan on WhatsApp
                     </a>
-                  </div>
+                  )}
                 </div>
-              ) : null}
-            </div>
+              </div>
+            ) : (
+              <div
+                className="shrink-0"
+                style={{
+                  paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))",
+                }}
+              />
+            )}
           </div>
         </div>
       ) : null}

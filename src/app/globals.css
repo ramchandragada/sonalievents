@@ -285,10 +285,20 @@ body {
     opacity 0.2s var(--ease-out);
 }
 
-html[data-menu-open="true"] .mobile-action-bar {
+html[data-menu-open="true"] .mobile-action-bar,
+html[data-sheet-open="true"] .mobile-action-bar {
   transform: translateY(110%);
   opacity: 0;
   pointer-events: none;
+}
+
+.sheet-input {
+  transition: border-color 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+}
+
+.sheet-input:focus {
+  border-color: color-mix(in oklab, var(--garnet-deep) 55%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--garnet) 18%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {

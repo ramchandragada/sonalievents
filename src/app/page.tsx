@@ -68,11 +68,11 @@ export default function Home() {
 
       <CategoryChips />
 
-      <section className="mx-auto grid max-w-7xl grid-cols-2 gap-x-5 px-5 py-10 md:grid-cols-4 md:gap-x-8 md:px-8 md:py-14">
+      <section className="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 gap-y-1 px-5 py-12 md:grid-cols-4 md:gap-x-10 md:px-8 md:py-16">
         <Stat value="1,000+" label="Events held" accent />
-        <Stat value="Homes · lawns · halls" label="Where we stage" />
-        <Stat value="Marathi · Hindi · English" label="On the floor" />
-        <Stat value="Since ’23" label="With families nearby" />
+        <Stat value="Home · lawn · hall" label="Where we stage" />
+        <Stat value="3 languages" label="Marathi · Hindi · English" />
+        <Stat value="Since 2023" label="With families nearby" />
       </section>
 
       <section className="mx-auto max-w-7xl px-5 pb-2 md:px-8">
