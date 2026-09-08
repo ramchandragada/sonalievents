@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { WhatsAppButton } from "@/components/cta";
 import { MediaFrame } from "@/components/media-frame";
 import { events, getEvent } from "@/lib/events";
 import { eventJsonLd, pageMeta } from "@/lib/seo";
-import { site, whatsappHref } from "@/lib/site";
+import { site } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -71,15 +71,16 @@ export default async function EventDetailPage({ params }: Props) {
                 </li>
               ))}
             </ul>
-            <Link
-              href={whatsappHref(
-                `Hello Sonali Events, I would like to plan a ${item.name.toLowerCase()} near Nanded City / Sinhgad Road.`,
-              )}
-              className="mt-6 inline-flex rounded-full bg-garnet px-6 py-3 text-[0.7rem] tracking-[0.18em] text-paper uppercase"
+            <WhatsAppButton
+              className="mt-6"
+              message={`Hello Sonali Events, I would like to plan a ${item.name.toLowerCase()} near Nanded City / Sinhgad Road.`}
+            />
+            <a
+              href={`tel:${site.phoneTel}`}
+              className="mt-4 block text-xs text-ink-muted underline-offset-4 hover:underline"
             >
-              Plan this on WhatsApp
-            </Link>
-            <p className="mt-4 text-xs text-ink-soft/60">{site.phoneDisplay}</p>
+              {site.phoneDisplay}
+            </a>
           </div>
         </aside>
       </div>

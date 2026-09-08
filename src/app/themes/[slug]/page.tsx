@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { WhatsAppButton } from "@/components/cta";
 import { MediaFrame } from "@/components/media-frame";
 import { pageMeta } from "@/lib/seo";
 import { getTheme, themes } from "@/lib/themes";
-import { whatsappHref } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -61,14 +60,9 @@ export default async function ThemeDetailPage({ params }: Props) {
             </li>
           ))}
           <li className="pt-8">
-            <Link
-              href={whatsappHref(
-                `Hello Sonali Events, I would like a ${item.name} theme celebration near Nanded City / Sinhgad Road.`,
-              )}
-              className="rounded-full bg-garnet px-6 py-3 text-[0.7rem] tracking-[0.18em] text-paper uppercase"
-            >
-              Request this theme
-            </Link>
+            <WhatsAppButton
+              message={`Hello Sonali Events, I would like a ${item.name} theme celebration near Nanded City / Sinhgad Road.`}
+            />
           </li>
         </ul>
       </div>

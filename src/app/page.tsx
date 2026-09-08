@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CountUp } from "@/components/count-up";
+import { CategoryChips } from "@/components/category-chips";
+import { SeeWorkButton, WhatsAppButton } from "@/components/cta";
 import { HeroStage } from "@/components/hero-stage";
 import { InquiryBar } from "@/components/inquiry-bar";
 import { Magnetic } from "@/components/magnetic";
-import { Marquee } from "@/components/marquee";
 import { MediaFrame } from "@/components/media-frame";
+import { Stat } from "@/components/stat";
 import { caseStudies } from "@/lib/case-studies";
 import { events } from "@/lib/events";
-import { scope, site, whatsappHref } from "@/lib/site";
+import { scope, site } from "@/lib/site";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta("/", {});
@@ -16,12 +17,18 @@ export const metadata: Metadata = pageMeta("/", {});
 export default function Home() {
   return (
     <div>
-      <section className="relative isolate min-h-[78svh] overflow-hidden bg-ink md:min-h-[100svh]">
+      <section className="relative isolate overflow-hidden bg-ink">
         <HeroStage />
-        <div className="absolute inset-0 bg-ink/28 md:bg-ink/15" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/65 to-ink/15 md:from-ink/90 md:via-ink/40 md:to-transparent" />
-        <div className="absolute inset-y-0 left-0 hidden w-[58%] bg-gradient-to-r from-ink/75 via-ink/35 to-transparent md:block" />
-        <div className="relative z-10 mx-auto flex min-h-[78svh] max-w-7xl flex-col justify-end px-5 pb-16 pt-24 md:min-h-[100svh] md:px-8 md:pb-32 md:pt-28">
+        <div className="absolute inset-0 bg-ink/35 md:bg-ink/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/25 md:from-ink/85 md:via-ink/35 md:to-transparent" />
+        <div className="absolute inset-y-0 left-0 hidden w-[55%] bg-gradient-to-r from-ink/80 via-ink/40 to-transparent md:block" />
+        <div
+          className="relative z-10 mx-auto flex max-w-7xl flex-col justify-end px-5 pb-14 md:px-8 md:pb-28"
+          style={{
+            paddingTop: "calc(var(--header-h) + 1.25rem)",
+            minHeight: "min(92svh, 52rem)",
+          }}
+        >
           <p
             className="hero-copy text-[0.7rem] tracking-[0.28em] text-paper uppercase"
             style={{ animation: "rise 0.8s 0.12s cubic-bezier(0.16,1,0.3,1) both" }}
@@ -29,7 +36,7 @@ export default function Home() {
             {site.baseLine}
           </p>
           <h1
-            className="hero-copy display mt-3 max-w-3xl text-[15vw] text-paper sm:text-[12vw] lg:text-[9vw] xl:text-[8rem]"
+            className="hero-copy display mt-3 max-w-3xl text-[13vw] leading-[0.9] text-paper sm:text-[11vw] lg:text-[8.5vw] xl:text-[7.5rem]"
             style={{ animation: "rise 1s 0.28s cubic-bezier(0.16,1,0.3,1) both" }}
           >
             You live
@@ -37,61 +44,35 @@ export default function Home() {
             the day.
           </h1>
           <p
-            className="hero-copy mt-4 max-w-md text-base leading-relaxed text-paper/95 md:mt-6 md:text-lg"
+            className="hero-copy mt-4 max-w-md text-base leading-relaxed text-paper/95 md:mt-5 md:text-lg"
             style={{ animation: "rise 0.85s 0.48s cubic-bezier(0.16,1,0.3,1) both" }}
           >
             Venue, décor, food, music, dance, and games — at home, society lawn,
             or banquet hall near Nanded City and Sinhgad Road.
           </p>
           <div
-            className="mt-6 flex items-center gap-2 md:mt-8"
+            className="mt-6 flex flex-wrap items-center gap-2 md:mt-8"
             style={{ animation: "rise 0.85s 0.62s cubic-bezier(0.16,1,0.3,1) both" }}
           >
             <Magnetic>
-              <Link
-                href={whatsappHref(
-                  "Hello Sonali Events, I would like to plan a celebration near Nanded City / Sinhgad Road.",
-                )}
-                className="inline-flex rounded-full bg-garnet px-5 py-2.5 text-[0.65rem] tracking-[0.18em] text-paper uppercase md:px-7 md:py-3 md:text-[0.72rem] md:tracking-[0.22em]"
-              >
-                Begin on WhatsApp
-              </Link>
+              <WhatsAppButton className="hidden md:inline-flex" />
             </Magnetic>
-            <Link
-              href="/gallery"
-              className="inline-flex rounded-full border border-paper/80 bg-ink/40 px-5 py-2.5 text-[0.65rem] tracking-[0.18em] text-paper uppercase backdrop-blur-sm md:px-7 md:py-3 md:text-[0.72rem] md:tracking-[0.22em]"
-            >
-              See the work
-            </Link>
+            <SeeWorkButton className="border-paper/80 bg-ink/40 text-paper backdrop-blur-sm" />
           </div>
         </div>
       </section>
 
-      <div className="relative z-20 -mt-10 px-5 md:-mt-16 md:px-8">
+      <div className="relative z-20 -mt-8 px-5 md:-mt-14 md:px-8">
         <InquiryBar />
       </div>
 
-      <Marquee
-        items={[
-          "Birthdays",
-          "Namkaran",
-          "Engagements",
-          "Marriages",
-          "Gruha pravesh",
-          "Munj",
-          "Office nights",
-          "Celebration parties",
-          "Maharashtrian",
-          "North Indian",
-          "South Indian",
-        ]}
-      />
+      <CategoryChips />
 
-      <section className="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 px-5 py-8 md:grid-cols-4 md:px-8 md:py-12">
-        <CountUp value={1000} suffix="+" label="Events in 3 years" tint="bg-transparent" />
-        <CountUp value={3} label="Years with families" tint="bg-transparent" />
-        <CountUp value={3} label="Regional themes" tint="bg-transparent" />
-        <CountUp value={3} label="Languages on the floor" tint="bg-transparent" />
+      <section className="mx-auto grid max-w-7xl grid-cols-2 gap-x-5 px-5 py-10 md:grid-cols-4 md:gap-x-8 md:px-8 md:py-14">
+        <Stat value="1,000+" label="Events held" accent />
+        <Stat value="Homes · lawns · halls" label="Where we stage" />
+        <Stat value="Marathi · Hindi · English" label="On the floor" />
+        <Stat value="Since ’23" label="With families nearby" />
       </section>
 
       <section className="mx-auto max-w-7xl px-5 pb-2 md:px-8">
@@ -101,10 +82,10 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="px-5 py-8 md:px-8 md:py-12">
+      <section className="section-pad px-5 md:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-end justify-between gap-4">
-            <div>
+            <div className="reveal">
               <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
                 From the floor
               </p>
@@ -122,7 +103,7 @@ export default function Home() {
               <Link
                 key={item.title}
                 href={item.href}
-                className="group img-zoom relative aspect-[4/5] overflow-hidden md:aspect-[5/4]"
+                className="group img-zoom reveal relative aspect-[4/5] overflow-hidden md:aspect-[5/4]"
               >
                 <MediaFrame
                   src={item.image}
@@ -131,7 +112,7 @@ export default function Home() {
                   sizes="(max-width: 768px) 50vw, 50vw"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/35 to-transparent p-3 pt-16 md:p-5 md:pt-24">
-                  <p className="text-[0.58rem] tracking-[0.18em] text-paper/70 uppercase">
+                  <p className="text-[0.58rem] tracking-[0.18em] text-paper/75 uppercase">
                     {item.place}
                   </p>
                   <h3 className="display mt-1 text-xl text-paper md:text-3xl">
@@ -147,7 +128,7 @@ export default function Home() {
       <section className="px-5 pb-4 md:px-8 md:pb-8">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-end justify-between gap-4">
-            <div>
+            <div className="reveal">
               <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
                 Celebrations
               </p>
@@ -167,7 +148,7 @@ export default function Home() {
               <Link
                 key={item.slug}
                 href={`/events/${item.slug}`}
-                className="group img-zoom relative aspect-[3/4] overflow-hidden"
+                className="group img-zoom reveal relative aspect-[3/4] overflow-hidden"
               >
                 <MediaFrame
                   src={item.image}
@@ -176,7 +157,7 @@ export default function Home() {
                   sizes="(max-width: 768px) 50vw, 25vw"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/35 to-transparent p-3 pt-14 text-paper md:p-4 md:pt-20">
-                  <p className="text-[0.55rem] tracking-[0.16em] text-paper/70 uppercase">
+                  <p className="text-[0.55rem] tracking-[0.16em] text-paper/75 uppercase">
                     {item.local}
                   </p>
                   <h3 className="display mt-1 text-lg md:text-2xl">{item.name}</h3>
@@ -187,7 +168,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-10 md:px-8 md:py-14">
+      <section className="section-pad mx-auto max-w-7xl px-5 md:px-8">
         <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
           One window
         </p>
@@ -201,52 +182,40 @@ export default function Home() {
           {scope.map((item) => (
             <span
               key={item}
-              className="rounded-full border border-ink/15 px-4 py-1.5 text-[0.68rem] tracking-[0.18em] uppercase md:px-5 md:py-2 md:text-[0.72rem]"
+              className="inline-flex min-h-11 items-center rounded-full border border-ink/15 px-4 text-[0.68rem] tracking-[0.18em] uppercase md:px-5 md:text-[0.72rem]"
             >
               {item}
             </span>
           ))}
         </div>
         <div className="mt-6 flex flex-wrap gap-5 text-[0.72rem] tracking-[0.2em] uppercase">
-          <Link href="/themes" className="text-garnet transition hover:text-garnet-deep">
+          <Link href="/themes" className="nav-link text-garnet">
             Themes →
           </Link>
-          <Link href="/way" className="text-garnet transition hover:text-garnet-deep">
+          <Link href="/way" className="nav-link text-garnet">
             How we work →
           </Link>
-          <Link href="/about" className="text-garnet transition hover:text-garnet-deep">
+          <Link href="/about" className="nav-link text-garnet">
             About →
           </Link>
         </div>
       </section>
 
-      <section className="bg-ink px-5 py-12 text-paper md:px-8 md:py-20">
+      <section className="liquid-ink section-pad px-5 text-paper md:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
+          <p className="text-[0.7rem] tracking-[0.28em] text-marigold uppercase">
             {site.domain}
           </p>
           <h2 className="display mt-3 text-4xl md:mt-4 md:text-7xl">
             Tell us the date, the tradition, and where it is.
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-sm text-paper/75 md:text-base">
+          <p className="mx-auto mt-4 max-w-lg text-sm text-paper/80 md:text-base">
             Home, society lawn, or banquet hall near Nanded City and Sinhgad
             Road — we hold the rest.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-10 md:gap-4">
-            <Link
-              href="/plan"
-              className="rounded-full bg-garnet px-8 py-3 text-[0.72rem] tracking-[0.2em] text-paper uppercase transition hover:bg-garnet-deep"
-            >
-              Plan your event
-            </Link>
-            <Link
-              href={whatsappHref(
-                "Hello Sonali Events, I have a date near Nanded City / Sinhgad Road.",
-              )}
-              className="rounded-full border border-paper/60 bg-paper/5 px-8 py-3 text-[0.72rem] tracking-[0.2em] uppercase transition hover:bg-paper/10"
-            >
-              WhatsApp us
-            </Link>
+            <WhatsAppButton variant="wa" />
+            <SeeWorkButton className="border-paper/60 text-paper" />
           </div>
         </div>
       </section>

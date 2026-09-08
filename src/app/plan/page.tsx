@@ -5,7 +5,7 @@ import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta("/plan", {
-  title: "Plan your event",
+  title: "Plan",
   description:
     "Start a celebration near Nanded City or Sinhgad Road with Sonali Events. The form opens WhatsApp with your brief.",
 });

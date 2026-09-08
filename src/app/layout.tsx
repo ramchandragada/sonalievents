@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Outfit } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { MobileActionBar } from "@/components/mobile-action-bar";
 import { Providers } from "@/components/providers";
-import { WhatsappDock } from "@/components/whatsapp-dock";
 import { businessJsonLd, shareImages } from "@/lib/seo";
 import { site } from "@/lib/site";
 import "lenis/dist/lenis.css";
@@ -55,6 +55,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: "#e31c79",
+  viewportFit: "cover",
 };
 
 const jsonLd = businessJsonLd;
@@ -78,11 +79,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             Skip to content
           </a>
           <Header />
-          <main id="main" className="flex-1">
+          <main
+            id="main"
+            className="flex-1 pb-[calc(4.25rem+env(safe-area-inset-bottom))] md:pb-0"
+          >
             {children}
           </main>
           <Footer />
-          <WhatsappDock />
+          <MobileActionBar />
         </Providers>
       </body>
     </html>

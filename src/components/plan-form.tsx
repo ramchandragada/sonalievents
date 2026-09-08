@@ -173,7 +173,7 @@ export function PlanForm() {
         type="submit"
         className="mt-4 w-full rounded-full bg-garnet px-8 py-3 text-[0.72rem] tracking-[0.2em] text-paper uppercase transition hover:bg-garnet-deep sm:w-auto sm:justify-self-start"
       >
-        Send on WhatsApp
+        Plan on WhatsApp
       </button>
     </form>
   );
