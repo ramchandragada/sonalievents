@@ -25,13 +25,14 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Sonali Events · Pune event management",
+    default: "Sonali Events · Nanded City & Sinhgad Road",
     template: "%s · Sonali Events",
   },
   description:
-    "End-to-end event management in Pune. Birthdays, namkaran, engagements, marriages, housewarming, munj, office parties. 1,000+ celebrations. Nanded City, Sinhgad Road.",
+    "Event management from Nanded City and Sinhgad Road. Birthdays, namkaran, engagements, marriages, housewarming, munj, office parties. 1,000+ celebrations. Nearby Pune.",
   keywords: [
-    "event planner Pune",
+    "event planner Nanded City",
+    "event planner Sinhgad Road",
     "wedding planner Pune",
     "Sonali Events",
     "naming ceremony Pune",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sonali Events · You live the day. We hold it.",
     description:
-      "1,000+ Pune celebrations. Maharashtrian, North Indian, and South Indian themes. Nanded City, Sinhgad Road.",
+      "1,000+ celebrations from Nanded City and Sinhgad Road. Maharashtrian, North Indian, and South Indian themes.",
     url: site.url,
     siteName: site.name,
     locale: "en_IN",

@@ -30,3 +30,22 @@ export const work = {
   houseGarlands:
     "/photos-and-videos/whatsapp-image-2026-09-07-at-10-51-42-pm.jpeg",
 } as const;
+
+/** Real stills chosen for the public gallery — labels describe the photograph, not a review. */
+export const featuredStills = [
+  { src: work.roka, label: "Engagement" },
+  { src: work.lotusStage, label: "Mandap" },
+  { src: work.floralMoon, label: "Naming ceremony" },
+  { src: work.birthdayUnicorn, label: "Birthday" },
+  { src: work.birthdaySixteen, label: "Birthday" },
+  { src: work.birthdayAyaan, label: "Birthday" },
+  { src: work.birthdayCar, label: "Birthday" },
+  { src: work.namingPrincess, label: "Naming ceremony" },
+  { src: work.namingGirl, label: "Naming ceremony" },
+  { src: work.namingKrishna, label: "Naming ceremony" },
+  { src: work.namingPalna, label: "Naming ceremony" },
+  { src: work.namingMoon, label: "Naming ceremony" },
+  { src: work.peacockSofa, label: "Celebration" },
+  { src: work.banquetDoor, label: "Banquet" },
+  { src: work.houseGarlands, label: "Housewarming" },
+] as const;

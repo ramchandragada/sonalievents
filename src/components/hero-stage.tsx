@@ -7,15 +7,15 @@ import { work } from "@/lib/work-picks";
 const slides = [
   {
     src: work.roka,
-    alt: "Roka stage with a red rose arch, staged by Sonali Events in Pune",
+    alt: "Roka stage with a red rose arch, staged by Sonali Events near Sinhgad Road",
   },
   {
     src: work.lotusStage,
-    alt: "Lotus mandap with brass lamps, staged by Sonali Events in Pune",
+    alt: "Lotus mandap with brass lamps, staged by Sonali Events near Nanded City",
   },
   {
     src: work.floralMoon,
-    alt: "Floral moon naming ceremony, staged by Sonali Events in Pune",
+    alt: "Floral moon naming ceremony, staged by Sonali Events on this corridor",
   },
 ] as const;
 

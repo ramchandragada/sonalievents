@@ -8,7 +8,7 @@ import { themes } from "@/lib/themes";
 export const metadata: Metadata = pageMeta("/themes", {
   title: "Themes",
   description:
-    "Traditional Maharashtrian, North Indian, and South Indian celebration themes by Sonali Events, Pune.",
+    "Maharashtrian, North Indian, and South Indian celebration themes by Sonali Events — Nanded City and Sinhgad Road.",
 });
 
 export default function ThemesPage() {
@@ -17,7 +17,7 @@ export default function ThemesPage() {
       <PageIntro
         kicker="How a room feels"
         title="Maharashtrian. North Indian. South Indian."
-        body="Three design languages, one production house. Tell us the family, we dress the day."
+        body="Three design languages, one production house on this corridor. Tell us the family, we dress the day."
       />
       <div className="mx-auto max-w-7xl space-y-2 px-5 pb-12 md:px-8 md:pb-24 md:space-y-3">
         {themes.map((theme, index) => (

@@ -38,9 +38,9 @@ export const events: EventItem[] = [
     slug: "engagements",
     name: "Engagements",
     local: "Sakhar pud · Ring ceremony",
-    summary: "Stage, floral, host, and a night that photographs like a wedding.",
+    summary: "Stage, floral, host, and a night with wedding-level staging.",
     story:
-      "Engagements in Pune now carry wedding-level production. The team designs the stage, the walk-in, the ring moment, and the dance floor so the evening has a clear peak — not a blur of vendors.",
+      "Engagements near Sinhgad Road now carry wedding-level production. The team designs the stage, the walk-in, the ring moment, and the dance floor so the evening has a clear peak — not a blur of vendors.",
     image: work.roka,
     guests: "80–250",
     includes: ["Stage & floral", "Entry & host", "DJ / live music", "Invitations", "F&B"],
@@ -51,7 +51,7 @@ export const events: EventItem[] = [
     local: "Lagna and related functions",
     summary: "Multi-day venue, ritual map, and a dedicated wedding team.",
     story:
-      "The wedding desk quality-checks every week. Specialist teams run mehendi, sangeet, ceremony, and reception as one file — venue, décor, food, music, dance, and show-calling — so the family is in the photographs, not on the phone.",
+      "A wedding desk runs mehendi, sangeet, ceremony, and reception as one file — venue, décor, food, music, dance, and show-calling — so the family greets guests, not vendors.",
     image: work.banquetDoor,
     guests: "150–400",
     includes: [
@@ -80,7 +80,7 @@ export const events: EventItem[] = [
     local: "Munj · Upanayana",
     summary: "Mandap, ritual seating, and a day paced for elders and the boy.",
     story:
-      "Munj asks for precision: mandap, fire, seating for priests and grandparents, a meal that holds a long morning. The thread-ceremony team has run this rhythm across Pune for years.",
+      "Munj asks for precision: mandap, fire, seating for priests and grandparents, and a meal that holds a long morning.",
     image: work.namingPalna,
     guests: "80–200",
     includes: ["Mandap", "Ritual map", "Elder seating", "Traditional meal", "Invites"],
@@ -91,7 +91,7 @@ export const events: EventItem[] = [
     local: "Annual day · offsite night",
     summary: "Venue, branding, entertainment, and a night the team will actually remember.",
     story:
-      "Pune’s IT and SME calendars need a house that can turn a banquet into a brand night: stage, lights, food, games, and an anchor — quoted fast, run clean.",
+      "Office annual days and offsite nights in a Sinhgad Road banquet or nearby hall: stage, lights, food, games, and an anchor.",
     image: work.birthdayAyaan,
     guests: "40–200",
     includes: ["Venue", "Stage & lights", "Entertainment", "Games", "F&B"],
@@ -102,7 +102,7 @@ export const events: EventItem[] = [
     local: "Anniversary, baby shower, success",
     summary: "A styled party with a reason — and a run-of-show to match.",
     story:
-      "Anniversaries, baby showers, promotions, house-full evenings. Same end-to-end desk as a wedding, scaled to the room you actually have.",
+      "Anniversaries, baby showers, promotions, house-full evenings. Same house desk as a wedding, scaled to the room you actually have.",
     image: work.birthdaySixteen,
     guests: "40–150",
     includes: ["Styled décor", "Host & games", "Music", "Invites", "Food"],

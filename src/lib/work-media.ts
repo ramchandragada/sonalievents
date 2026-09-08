@@ -1,6 +1,7 @@
 import { copyFileSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from "fs";
 import { extname, join } from "path";
 import bundled from "./work-manifest.json";
+import { featuredStills } from "./work-picks";
 
 const IMAGE_EXT = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"]);
 const VIDEO_EXT = new Set([".mp4", ".webm", ".mov", ".m4v"]);
@@ -139,6 +140,26 @@ export function getWorkPhotos() {
 
 export function getWorkVideos() {
   return getWorkMedia().filter((item) => item.kind === "video");
+}
+
+export function getGallerySets() {
+  const all = getWorkMedia();
+  const bySrc = new Map(all.map((item) => [item.src, item]));
+  const featuredPhotos: WorkItem[] = featuredStills.map((still) => {
+    const found = bySrc.get(still.src);
+    return {
+      src: still.src,
+      kind: "photo",
+      label: still.label,
+      mtime: found?.mtime ?? 0,
+    };
+  });
+  const films = all.filter((item) => item.kind === "video");
+  const featuredFilms = films.slice(0, 6);
+  const featured = [...featuredPhotos, ...featuredFilms];
+  const featuredSrc = new Set(featured.map((item) => item.src));
+  const rest = all.filter((item) => !featuredSrc.has(item.src));
+  return { featured, rest };
 }
 
 export function firstWorkPhoto(fallback: string) {

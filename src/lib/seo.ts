@@ -5,7 +5,7 @@ const ogImage = {
   url: "/og/sonali-events-cover.jpg",
   width: 1200,
   height: 630,
-  alt: "Sonali Events — Pune celebrations",
+  alt: "Sonali Events — Nanded City and Sinhgad Road celebrations",
 };
 
 export function pageMeta(path: string, extra: Metadata = {}): Metadata {
@@ -38,7 +38,6 @@ export const businessJsonLd = {
   url: site.url,
   image: `${site.url}${ogImage.url}`,
   telephone: site.phoneTel,
-  priceRange: "₹₹₹",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Nanded City, Sinhgad Road",
@@ -56,10 +55,16 @@ export const businessJsonLd = {
     "@type": "Person",
     name: site.proprietor,
   },
-  areaServed: {
-    "@type": "City",
-    name: "Pune",
-  },
+  areaServed: [
+    {
+      "@type": "Place",
+      name: "Nanded City, Sinhgad Road, Pune",
+    },
+    {
+      "@type": "City",
+      name: "Pune",
+    },
+  ],
 };
 
 export function eventJsonLd(item: {
@@ -86,7 +91,7 @@ export function eventJsonLd(item: {
       description: item.summary,
       image: `${site.url}${item.image}`,
       provider: { "@type": "EventPlanningBusiness", name: site.name, url: site.url },
-      areaServed: "Pune",
+      areaServed: "Nanded City, Sinhgad Road, and nearby Pune",
       url,
     },
   ];

@@ -7,6 +7,7 @@ export const site = {
   role: "Proprietor & Managing Director",
   city: "Pune",
   address: "Nanded City, Sinhgad Road, Pune",
+  baseLine: "Nanded City · Sinhgad Road · nearby Pune",
   phoneDisplay: "+91 89757 60707",
   phoneTel: "+918975760707",
   whatsapp: "https://wa.me/918975760707",
@@ -15,7 +16,11 @@ export const site = {
   eventsDelivered: "1,000+",
   years: "3",
   houseLine:
-    "A Pune event house with specialist teams for every kind of celebration.",
+    "An event house based at Nanded City and Sinhgad Road, with experienced teams for the celebrations we actually run.",
+  honestLine:
+    "Photographs and films on this site are from days we held. We do not publish reviews, awards, or social pages we do not have.",
+  oneWindowLine:
+    "Tell us the date, the ritual, the guest count, and home or hall. We hold the rest — venue, décor, food, invitations, music, dance, games, and show-calling.",
 } as const;
 
 export function whatsappHref(message?: string) {
@@ -35,7 +40,7 @@ export const steps = [
   {
     n: "01",
     title: "Enquire",
-    body: "WhatsApp or the form. A human replies within hours — in Marathi, Hindi, or English.",
+    body: "WhatsApp or the form. Someone from the house replies — in Marathi, Hindi, or English.",
   },
   {
     n: "02",
@@ -45,12 +50,12 @@ export const steps = [
   {
     n: "03",
     title: "Design",
-    body: "Venue options, a theme board, and a clear estimate. Maharashtrian, North Indian, or South Indian.",
+    body: "Venue options on this corridor, a theme board, and a clear estimate. Maharashtrian, North Indian, or South Indian.",
   },
   {
     n: "04",
     title: "Lock",
-    body: "Advance, contracts, and a named team for your category of event.",
+    body: "You lock the date and the brief. A team takes your kind of event.",
   },
   {
     n: "05",

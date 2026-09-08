@@ -6,7 +6,7 @@ import { steps } from "@/lib/site";
 export const metadata: Metadata = pageMeta("/way", {
   title: "The Sonali way",
   description:
-    "How Sonali Events plans and delivers celebrations in Pune — from first WhatsApp to show-calling.",
+    "How Sonali Events plans and delivers celebrations from Nanded City and Sinhgad Road — from first WhatsApp to show-calling.",
 });
 
 export default function WayPage() {
@@ -15,7 +15,7 @@ export default function WayPage() {
       <PageIntro
         kicker="Method"
         title="The day has a sequence."
-        body="The same six-stage file for a birthday and a wedding week. Only the depth changes. Multiple teams mean two celebrations can run on the same weekend without borrowing each other’s crew."
+        body="You decide the date, the ritual, the guest count, and home or hall. The same six-stage file for a birthday and a wedding week. Only the depth changes. Crews for different kinds of day can run on the same Saturday on this corridor without borrowing each other’s people."
       />
       <div className="mx-auto max-w-7xl px-5 pb-12 md:px-8 md:pb-24">
         <ol className="grid gap-2 md:grid-cols-2 md:gap-4">

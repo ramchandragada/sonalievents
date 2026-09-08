@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: site.name,
     short_name: "Sonali Events",
     description:
-      "End-to-end event management in Pune. Birthdays, namkaran, marriages, and more.",
+      "Event management from Nanded City and Sinhgad Road. Birthdays, namkaran, marriages, and more.",
     start_url: "/",
     display: "standalone",
     background_color: "#fff6ef",

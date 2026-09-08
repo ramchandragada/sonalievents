@@ -49,7 +49,7 @@ function Reel({ item, featured }: { item: WorkItem; featured?: boolean }) {
           playsInline
           controls={false}
           preload="none"
-          aria-label="A Sonali Events celebration in Pune"
+          aria-label="A Sonali Events celebration near Nanded City and Sinhgad Road"
           className="absolute inset-0 h-full w-full object-cover"
         />
       ) : null}

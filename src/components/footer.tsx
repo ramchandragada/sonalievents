@@ -12,11 +12,12 @@ export function Footer() {
         <div className="md:col-span-5">
           <BrandMark compact />
           <p className="mt-5 max-w-sm text-ink-soft">
-            {site.houseLine} Venue, décor, food, music, dance, invitations, games.
+            {site.houseLine} Venue, décor, food, music, dance, invitations,
+            games. Based at {site.address}.
           </p>
           <Link
             href={whatsappHref(
-              "Hello Sonali Events, I would like to plan a celebration.",
+              "Hello Sonali Events, I would like to plan a celebration near Nanded City / Sinhgad Road.",
             )}
             className="mt-6 inline-flex rounded-full bg-garnet px-6 py-3 text-[0.7rem] tracking-[0.2em] text-paper uppercase"
           >

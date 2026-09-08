@@ -29,7 +29,7 @@ export const themes: ThemeItem[] = [
     kicker: "Mandap, mehendi, sangeet",
     summary: "Phoolon ki chaadar, a dense floral mandap, and a sangeet that actually dances.",
     story:
-      "Pune hosts a great many North Indian wedding weeks. We build the mandap, the mehendi floor, the sangeet stage, and the pheras as one design — rich floral, clear guest flow, music that holds a long night.",
+      "Families near Sinhgad Road host many North Indian wedding weeks. We build the mandap, the mehendi floor, the sangeet stage, and the pheras as one design — rich floral, clear guest flow, music that holds a long night.",
     cues: ["Floral mandap", "Mehendi floor", "Sangeet production", "Pheras & reception"],
     image: work.roka,
     accent: "#6b1d2a",
@@ -38,9 +38,9 @@ export const themes: ThemeItem[] = [
     slug: "south-indian",
     name: "South Indian",
     kicker: "Jasmine, silk, temple rhythm",
-    summary: "Banana leaf, gopuram lines, and a ceremony paced for priests and photographs.",
+    summary: "Banana leaf, gopuram lines, and a ceremony paced for priests and family.",
     story:
-      "Naming, wedding, housewarming, thread ceremony — South Indian families in Pune get a team that understands jasmine, silk, banana stem, and a satvik meal, without turning the hall into a cliché.",
+      "Naming, wedding, housewarming, thread ceremony — South Indian families on this corridor get a team that understands jasmine, silk, banana stem, and a satvik meal, without turning the hall into a cliché.",
     cues: ["Jasmine & silk", "Temple motifs", "Banana leaf dining", "Priest-led pacing"],
     image: work.lotusStage,
     accent: "#1e3d32",

@@ -8,7 +8,7 @@ import { events } from "@/lib/events";
 export const metadata: Metadata = pageMeta("/events", {
   title: "Events",
   description:
-    "Birthdays, naming ceremonies, engagements, marriages, housewarming, thread ceremonies, office parties, and celebration nights in Pune.",
+    "Birthdays, naming ceremonies, engagements, marriages, housewarming, thread ceremonies, office parties, and celebration nights from Nanded City and Sinhgad Road.",
 });
 
 export default function EventsPage() {
@@ -17,7 +17,7 @@ export default function EventsPage() {
       <PageIntro
         kicker="What we hold"
         title="Eight celebrations. One house."
-        body="Each category has its own experienced team. The same end-to-end promise: venue, décor, food, invitations, music, dance, games."
+        body="Each category has its own experienced team. The same house holds: venue, décor, food, invitations, music, dance, games."
       />
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-2 px-5 pb-12 md:grid-cols-2 md:gap-4 md:px-8 md:pb-24">
         {events.map((item) => (

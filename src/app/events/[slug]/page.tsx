@@ -56,7 +56,7 @@ export default async function EventDetailPage({ params }: Props) {
           <p className="text-xl leading-relaxed text-ink-soft">{item.story}</p>
           <p className="mt-6 text-ink-soft/80">
             Typical gathering: {item.guests} guests. Final scale follows your
-            home, hall, or hotel.
+            home, society lawn, or Sinhgad Road hall.
           </p>
         </div>
         <aside className="md:col-span-5">
@@ -73,7 +73,7 @@ export default async function EventDetailPage({ params }: Props) {
             </ul>
             <Link
               href={whatsappHref(
-                `Hello Sonali Events, I would like to plan a ${item.name.toLowerCase()} in Pune.`,
+                `Hello Sonali Events, I would like to plan a ${item.name.toLowerCase()} near Nanded City / Sinhgad Road.`,
               )}
               className="mt-6 inline-flex rounded-full bg-garnet px-6 py-3 text-[0.7rem] tracking-[0.18em] text-paper uppercase"
             >

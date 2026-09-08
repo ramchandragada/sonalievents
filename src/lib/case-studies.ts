@@ -9,7 +9,7 @@ export const caseStudies = [
   },
   {
     title: "Ayaan's birthday",
-    place: "Pune",
+    place: "Nanded City",
     href: "/events/birthdays",
     image: work.birthdayAyaan,
   },

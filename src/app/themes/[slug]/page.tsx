@@ -63,7 +63,7 @@ export default async function ThemeDetailPage({ params }: Props) {
           <li className="pt-8">
             <Link
               href={whatsappHref(
-                `Hello Sonali Events, I would like a ${item.name} theme celebration in Pune.`,
+                `Hello Sonali Events, I would like a ${item.name} theme celebration near Nanded City / Sinhgad Road.`,
               )}
               className="rounded-full bg-garnet px-6 py-3 text-[0.7rem] tracking-[0.18em] text-paper uppercase"
             >

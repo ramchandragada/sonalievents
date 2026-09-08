@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import { MediaFrame } from "@/components/media-frame";
+import { events } from "@/lib/events";
 import { pageMeta } from "@/lib/seo";
-import { site } from "@/lib/site";
+import { scope, site } from "@/lib/site";
+import { themes } from "@/lib/themes";
 import { work } from "@/lib/work-picks";
 
 export const metadata: Metadata = pageMeta("/about", {
   title: "About",
   description:
-    "Sonali Events — Pune event house with specialist teams for birthdays, namkaran, weddings, and office nights. Nanded City, Sinhgad Road. 1,000+ celebrations.",
+    "Sonali Events — event house at Nanded City and Sinhgad Road with experienced teams for birthdays, namkaran, weddings, and office nights. 1,000+ celebrations.",
 });
 
 export default function AboutPage() {
@@ -23,8 +25,8 @@ export default function AboutPage() {
           </h1>
         </div>
         <p className="text-base text-ink-soft md:col-span-5 md:text-lg">
-          {site.houseLine} Based at Nanded City, Sinhgad Road. Built on three
-          years and more than a thousand events.
+          {site.houseLine} Three years of work, more than a thousand events —
+          focused on this corridor before we look farther.
         </p>
       </div>
 
@@ -46,21 +48,25 @@ export default function AboutPage() {
       <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 md:grid-cols-2 md:gap-12 md:px-8 md:py-20">
         <div className="space-y-4 text-base leading-relaxed text-ink-soft md:space-y-5 md:text-lg">
           <p>
-            Families in Pune should not have to assemble a wedding — or a
-            child’s birthday — from six vendors and a group chat. Sonali
-            Events is the single window: venue, decoration, food, invitations,
-            music, dance, and party games.
+            Families near Nanded City and Sinhgad Road should not have to
+            assemble a wedding — or a child’s birthday — from six vendors and a
+            group chat. Sonali Events is the single window for what we actually
+            hold: venue, decoration, food, invitations, music, dance, and party
+            games.
           </p>
           <p>
-            Delivery sits with experienced teams for each category, so a munj
-            and an office night can share a Saturday without sharing a crew.
-            Quality is held at the house, not left to a rotating vendor list.
+            Delivery sits with experienced crews for each kind of day, so a
+            munj and an office night can share a Saturday without sharing a crew.
+            We do not list staff names, degrees, or awards here that we cannot
+            stand behind. We do not claim photography, purohit booking, or other
+            desks until we can book them from one WhatsApp.
           </p>
           <p>
             The website is English. On the floor the team speaks Marathi,
             Hindi, and English. Themes run Maharashtrian, North Indian, and
-            South Indian — because Pune families are all three.
+            South Indian — because families on this road are all three.
           </p>
+          <p className="text-sm md:text-base">{site.honestLine}</p>
         </div>
         <dl className="grid grid-cols-2 gap-4 md:gap-6">
           {[
@@ -69,7 +75,7 @@ export default function AboutPage() {
             ["Record", `${site.eventsDelivered} events in ${site.years} years`],
             ["Spoken", site.languagesSpoken.join(" · ")],
             ["Contact", site.phoneDisplay],
-            ["Director", site.proprietor],
+            [site.role, site.proprietor],
           ].map(([k, v]) => (
             <div key={k} className="border-t border-ink/10 pt-3">
               <dt className="text-[0.65rem] tracking-[0.2em] text-garnet uppercase">
@@ -79,6 +85,47 @@ export default function AboutPage() {
             </div>
           ))}
         </dl>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-5 pb-12 md:px-8 md:pb-24">
+        <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
+          Desks
+        </p>
+        <h2 className="display mt-2 text-3xl md:text-5xl">
+          What we actually run.
+        </h2>
+        <div className="mt-8 grid gap-8 md:grid-cols-3">
+          <div>
+            <p className="text-[0.65rem] tracking-[0.2em] text-garnet uppercase">
+              In the plan
+            </p>
+            <ul className="mt-3 space-y-1 text-ink-soft">
+              {scope.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="text-[0.65rem] tracking-[0.2em] text-garnet uppercase">
+              Kinds of day
+            </p>
+            <ul className="mt-3 space-y-1 text-ink-soft">
+              {events.map((item) => (
+                <li key={item.slug}>{item.name}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="text-[0.65rem] tracking-[0.2em] text-garnet uppercase">
+              How a room can feel
+            </p>
+            <ul className="mt-3 space-y-1 text-ink-soft">
+              {themes.map((item) => (
+                <li key={item.slug}>{item.name}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );

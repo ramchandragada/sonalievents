@@ -6,9 +6,18 @@ import type { WorkItem } from "@/lib/work-media";
 
 const filters = ["All", "Photos", "Films"] as const;
 
-export function WorkGallery({ items }: { items: WorkItem[] }) {
+export function WorkGallery({
+  featured,
+  rest,
+}: {
+  featured: WorkItem[];
+  rest: WorkItem[];
+}) {
   const [filter, setFilter] = useState<(typeof filters)[number]>("All");
   const [active, setActive] = useState<WorkItem | null>(null);
+  const [showRest, setShowRest] = useState(false);
+
+  const items = showRest ? [...featured, ...rest] : featured;
 
   const visible = useMemo(() => {
     if (filter === "Photos") return items.filter((item) => item.kind === "photo");
@@ -37,9 +46,7 @@ export function WorkGallery({ items }: { items: WorkItem[] }) {
 
       {visible.length === 0 ? (
         <p className="mt-16 max-w-md text-ink-soft/70">
-          Drop photographs and videos into the{" "}
-          <span className="text-ink">photos and videos</span> folder, then
-          refresh this page.
+          Photographs from days we hold will appear here.
         </p>
       ) : (
         <div className="mt-6 columns-2 gap-2 sm:columns-2 md:mt-10 md:gap-4 lg:columns-3">
@@ -81,6 +88,16 @@ export function WorkGallery({ items }: { items: WorkItem[] }) {
           ))}
         </div>
       )}
+
+      {rest.length > 0 && !showRest ? (
+        <button
+          type="button"
+          onClick={() => setShowRest(true)}
+          className="mt-8 text-[0.72rem] tracking-[0.2em] text-garnet uppercase"
+        >
+          More photographs from the floor
+        </button>
+      ) : null}
 
       {active ? (
         <div

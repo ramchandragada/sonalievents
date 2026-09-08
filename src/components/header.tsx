@@ -49,7 +49,7 @@ export function Header() {
           <Magnetic>
             <Link
               href={whatsappHref(
-                "Hello Sonali Events, I would like to plan a celebration in Pune.",
+                "Hello Sonali Events, I would like to plan a celebration near Nanded City / Sinhgad Road.",
               )}
               className="rounded-full bg-garnet px-5 py-2 text-[0.7rem] tracking-[0.2em] text-paper uppercase transition hover:bg-garnet-deep"
             >
