@@ -54,9 +54,11 @@ export default function Home() {
             className="mt-6 flex flex-wrap items-center gap-2 md:mt-8"
             style={{ animation: "rise 0.85s 0.62s cubic-bezier(0.16,1,0.3,1) both" }}
           >
-            <Magnetic>
-              <WhatsAppButton className="hidden md:inline-flex" />
-            </Magnetic>
+            <span className="hidden md:inline-flex">
+              <Magnetic>
+                <WhatsAppButton />
+              </Magnetic>
+            </span>
             <SeeWorkButton className="border-paper/80 bg-ink/40 text-paper backdrop-blur-sm" />
           </div>
         </div>
@@ -208,7 +210,7 @@ export default function Home() {
             Road — we hold the rest.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-10 md:gap-4">
-            <WhatsAppButton />
+            <WhatsAppButton desktopOnly />
             <SeeWorkButton className="border-paper/60 text-paper" />
           </div>
         </div>

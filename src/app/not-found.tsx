@@ -13,7 +13,7 @@ export default function NotFound() {
         >
           Home
         </Link>
-        <WhatsAppButton />
+        <WhatsAppButton desktopOnly />
       </div>
     </div>
   );

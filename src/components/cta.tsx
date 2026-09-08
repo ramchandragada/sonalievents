@@ -9,8 +9,9 @@ type WhatsAppProps = {
   message?: string;
   className?: string;
   children?: ReactNode;
-  /** Primary conversion CTAs use WhatsApp green for one consistent ask */
   variant?: "wa" | "paper";
+  /** Hide on mobile — sticky MobileActionBar owns the WhatsApp ask there */
+  desktopOnly?: boolean;
 };
 
 export function WhatsAppButton({
@@ -18,18 +19,22 @@ export function WhatsAppButton({
   className = "",
   children = "Plan on WhatsApp",
   variant = "wa",
+  desktopOnly = false,
 }: WhatsAppProps) {
   const styles =
     variant === "paper"
       ? "border border-paper/60 bg-paper/5 text-paper hover:bg-paper/10"
       : "bg-wa text-white hover:bg-wa-bright";
 
+  // One display utility only — do not mix `hidden` + `inline-flex` from callers
+  const layout = desktopOnly ? "hidden md:inline-flex" : "inline-flex";
+
   return (
     <Link
       href={whatsappHref(message)}
       target="_blank"
       rel="noopener noreferrer"
-      className={`pressable cta-label inline-flex min-h-12 items-center justify-center rounded-full px-6 py-3 transition duration-200 ${styles} ${className}`}
+      className={`pressable cta-label ${layout} min-h-12 items-center justify-center rounded-full px-6 py-3 transition duration-200 ${styles} ${className}`}
     >
       {children}
     </Link>

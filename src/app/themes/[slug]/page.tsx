@@ -61,6 +61,7 @@ export default async function ThemeDetailPage({ params }: Props) {
           ))}
           <li className="pt-8">
             <WhatsAppButton
+              desktopOnly
               message={`Hello Sonali Events, I would like a ${item.name} theme celebration near Nanded City / Sinhgad Road.`}
             />
           </li>

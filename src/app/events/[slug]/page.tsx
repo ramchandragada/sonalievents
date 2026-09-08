@@ -70,6 +70,7 @@ export default async function EventDetailPage({ params }: Props) {
               ))}
             </ul>
             <WhatsAppButton
+              desktopOnly
               className="mt-6"
               message={`Hello Sonali Events, I would like to plan a ${item.name.toLowerCase()} near Nanded City / Sinhgad Road.`}
             />

@@ -16,10 +16,10 @@ export function Footer() {
             {site.houseLine} Venue, décor, food, music, dance, invitations,
             games. Based at {site.address}.
           </p>
-          <WhatsAppButton className="mt-6" />
+          <WhatsAppButton className="mt-6" desktopOnly />
           <a
             href={`tel:${site.phoneTel}`}
-            className="mt-3 flex min-h-11 items-center text-sm text-ink-soft underline-offset-4 hover:text-garnet hover:underline"
+            className="mt-3 hidden min-h-11 items-center text-sm text-ink-soft underline-offset-4 hover:text-garnet hover:underline md:flex"
           >
             Call {site.phoneDisplay}
           </a>

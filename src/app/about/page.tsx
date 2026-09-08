@@ -172,7 +172,10 @@ export default function AboutPage() {
         </div>
 
         <div className="mt-14 flex flex-col items-start gap-4 border-t border-ink/10 pt-10 sm:flex-row sm:items-center">
-          <WhatsAppButton message="Hello Sonali Events — I read About and would like to plan a celebration near Nanded City / Sinhgad Road." />
+          <WhatsAppButton
+            desktopOnly
+            message="Hello Sonali Events — I read About and would like to plan a celebration near Nanded City / Sinhgad Road."
+          />
           <p className="max-w-sm text-sm text-ink-muted">
             Tell us the date, the tradition, and where the function is. We hold
             the rest.
