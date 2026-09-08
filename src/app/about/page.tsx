@@ -17,7 +17,7 @@ export default function AboutPage() {
     <div className="pt-20 md:pt-24">
       <div className="mx-auto grid max-w-7xl items-end gap-6 px-5 md:grid-cols-12 md:gap-10 md:px-8">
         <div className="md:col-span-7">
-          <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
+          <p className="eyebrow">
             The house
           </p>
           <h1 className="display mt-3 text-4xl md:mt-4 md:text-7xl">
@@ -88,7 +88,7 @@ export default function AboutPage() {
       </div>
 
       <div className="mx-auto max-w-7xl px-5 pb-12 md:px-8 md:pb-24">
-        <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
+        <p className="eyebrow">
           What we run
         </p>
         <h2 className="display mt-2 text-3xl md:text-5xl">

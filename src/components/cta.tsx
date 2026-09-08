@@ -9,28 +9,27 @@ type WhatsAppProps = {
   message?: string;
   className?: string;
   children?: ReactNode;
-  variant?: "garnet" | "wa" | "paper";
+  /** Primary conversion CTAs use WhatsApp green for one consistent ask */
+  variant?: "wa" | "paper";
 };
 
 export function WhatsAppButton({
   message = DEFAULT_WA,
   className = "",
   children = "Plan on WhatsApp",
-  variant = "garnet",
+  variant = "wa",
 }: WhatsAppProps) {
   const styles =
-    variant === "wa"
-      ? "bg-wa text-white hover:brightness-105"
-      : variant === "paper"
-        ? "border border-paper/60 bg-paper/5 text-paper hover:bg-paper/10"
-        : "bg-garnet text-paper hover:bg-garnet-deep";
+    variant === "paper"
+      ? "border border-paper/60 bg-paper/5 text-paper hover:bg-paper/10"
+      : "bg-wa text-white hover:bg-wa-bright";
 
   return (
     <Link
       href={whatsappHref(message)}
       target="_blank"
       rel="noopener noreferrer"
-      className={`pressable inline-flex min-h-11 items-center justify-center rounded-full px-6 py-3 text-[0.7rem] tracking-[0.2em] uppercase transition duration-200 ${styles} ${className}`}
+      className={`pressable cta-label inline-flex min-h-12 items-center justify-center rounded-full px-6 py-3 transition duration-200 ${styles} ${className}`}
     >
       {children}
     </Link>
@@ -51,7 +50,7 @@ export function SeeWorkButton({
   return (
     <Link
       href={href}
-      className={`pressable inline-flex min-h-11 items-center justify-center rounded-full border border-current/40 px-6 py-3 text-[0.7rem] tracking-[0.2em] uppercase transition duration-200 hover:border-current ${className}`}
+      className={`pressable cta-label inline-flex min-h-12 items-center justify-center rounded-full border border-current/40 px-6 py-3 transition duration-200 hover:border-current ${className}`}
     >
       {children}
     </Link>

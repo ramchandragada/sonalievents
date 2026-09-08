@@ -35,7 +35,7 @@ export default function ThemesPage() {
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="flex flex-col justify-center bg-paper p-6 md:p-14">
-              <p className="text-[0.65rem] tracking-[0.22em] text-garnet uppercase">
+              <p className="eyebrow">
                 {theme.kicker}
               </p>
               <h2 className="display mt-2 text-3xl md:mt-3 md:text-6xl">{theme.name}</h2>

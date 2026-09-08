@@ -6,14 +6,15 @@
   --paper: #ffffff;
   --ink: #2a1140;
   --ink-soft: #3f2754;
-  --ink-muted: #6b5280;
-  --garnet: #e31c79;
-  --garnet-deep: #be125f;
+  --ink-muted: #5a426c;
+  --garnet: #c91868;
+  --garnet-deep: #a01052;
   --brass: #ff8a00;
   --marigold: #ffd000;
   --forest: #0d9f8a;
   --sky: #5b8def;
-  --wa: #25d366;
+  --wa: #128c7e;
+  --wa-bright: #25d366;
   --header-h: 4rem;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --section-y: 3.5rem;
@@ -33,6 +34,7 @@
   --color-forest: var(--forest);
   --color-sky: var(--sky);
   --color-wa: var(--wa);
+  --color-wa-bright: var(--wa-bright);
   --font-sans: var(--font-outfit);
   --font-serif: var(--font-cormorant);
   --font-display: var(--font-cormorant);
@@ -80,6 +82,22 @@ body {
   font-weight: 500;
   letter-spacing: -0.04em;
   line-height: 0.92;
+}
+
+/* Small labels — dark enough for AA on ivory; never use bright pink here */
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--garnet-deep);
+}
+
+.cta-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .hero-copy {
@@ -256,9 +274,21 @@ body {
 
 .liquid-ink {
   background:
-    radial-gradient(120% 80% at 10% 0%, rgba(227, 28, 121, 0.28), transparent 55%),
+    radial-gradient(120% 80% at 10% 0%, rgba(201, 24, 104, 0.32), transparent 55%),
     radial-gradient(90% 70% at 90% 100%, rgba(255, 138, 0, 0.18), transparent 50%),
     var(--ink);
+}
+
+.mobile-action-bar {
+  transition:
+    transform 0.25s var(--ease-out),
+    opacity 0.2s var(--ease-out);
+}
+
+html[data-menu-open="true"] .mobile-action-bar {
+  transform: translateY(110%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -272,6 +302,10 @@ body {
 
   .pressable:active {
     transform: none;
+  }
+
+  .mobile-action-bar {
+    transition: none;
   }
 
   html {

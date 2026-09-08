@@ -3,7 +3,7 @@ import { site, whatsappHref } from "@/lib/site";
 export function MobileActionBar() {
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-ink/10 bg-ivory/95 px-3 pt-2 backdrop-blur-md md:hidden"
+      className="mobile-action-bar fixed inset-x-0 bottom-0 z-40 border-t border-ink/10 bg-ivory/95 px-3 pt-2 backdrop-blur-md md:hidden"
       style={{ paddingBottom: "max(0.5rem, env(safe-area-inset-bottom))" }}
     >
       <div className="mx-auto flex max-w-7xl items-center gap-2">
@@ -20,9 +20,9 @@ export function MobileActionBar() {
           )}
           target="_blank"
           rel="noopener noreferrer"
-          className="pressable flex h-12 min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-wa px-4 text-[0.72rem] tracking-[0.18em] text-white uppercase"
+          className="pressable cta-label flex h-12 min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-wa px-4 text-white hover:bg-wa-bright"
         >
-          <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/20 text-[0.65rem]">
+          <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/20 text-[0.7rem] font-semibold">
             WA
           </span>
           Plan on WhatsApp

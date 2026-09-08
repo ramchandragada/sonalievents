@@ -40,7 +40,7 @@ export default async function ThemeDetailPage({ params }: Props) {
           />
         </div>
         <div>
-          <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
+          <p className="eyebrow">
             {item.kicker}
           </p>
           <h1 className="display mt-3 text-5xl md:mt-5 md:text-8xl">{item.name}</h1>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { nav, site } from "@/lib/site";
 import { BrandMark } from "./brand-mark";
 import { Magnetic } from "./magnetic";
@@ -11,16 +11,29 @@ import { WhatsAppButton } from "./cta";
 export function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
+  const lastY = useRef(0);
   const isHome = pathname === "/";
   const overHero = isHome && !scrolled && !open;
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 24);
+      if (open) {
+        setHidden(false);
+        lastY.current = y;
+        return;
+      }
+      const goingDown = y > lastY.current;
+      setHidden(y > 96 && goingDown);
+      lastY.current = y;
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [open]);
 
   useEffect(() => {
     setOpen(false);
@@ -28,14 +41,18 @@ export function Header() {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+    document.documentElement.dataset.menuOpen = open ? "true" : "";
     return () => {
       document.body.style.overflow = "";
+      delete document.documentElement.dataset.menuOpen;
     };
   }, [open]);
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,color,backdrop-filter,box-shadow] duration-200 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-[transform,background-color,border-color,color,backdrop-filter,box-shadow] duration-200 ${
+        hidden && !open ? "-translate-y-full" : "translate-y-0"
+      } ${
         overHero
           ? "border-b border-transparent bg-transparent text-paper"
           : scrolled || open
@@ -52,7 +69,7 @@ export function Header() {
               key={item.href}
               href={item.href}
               data-active={pathname === item.href || pathname.startsWith(`${item.href}/`)}
-              className={`nav-link text-[0.72rem] tracking-[0.18em] uppercase ${
+              className={`nav-link text-xs font-semibold tracking-[0.16em] uppercase ${
                 overHero ? "text-paper/90" : ""
               }`}
             >
@@ -93,7 +110,7 @@ export function Header() {
         aria-hidden={!open}
         inert={open ? undefined : true}
       >
-        <div className="flex min-h-[calc(100dvh-var(--header-h))] flex-col justify-between bg-ivory px-6 pb-28 text-ink">
+        <div className="flex min-h-[calc(100dvh-var(--header-h))] flex-col justify-between bg-ivory px-6 pb-10 text-ink">
           <nav className="flex flex-col gap-1 pt-2">
             {nav.map((item) => (
               <Link
@@ -106,13 +123,15 @@ export function Header() {
             ))}
             <WhatsAppButton className="mt-6 w-fit" />
           </nav>
-          <p className="mt-8 text-sm tracking-wide text-ink-soft">
-            {site.address}
-            <br />
-            <a href={`tel:${site.phoneTel}`} className="underline-offset-4 hover:underline">
+          <div className="mt-8 text-base tracking-wide text-ink-soft">
+            <p>{site.address}</p>
+            <a
+              href={`tel:${site.phoneTel}`}
+              className="mt-2 inline-flex min-h-11 items-center underline-offset-4 hover:underline"
+            >
               {site.phoneDisplay}
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </header>

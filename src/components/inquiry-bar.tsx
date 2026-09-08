@@ -93,7 +93,7 @@ export function InquiryBar() {
         </Field>
         <button
           type="submit"
-          className="pressable min-h-12 rounded-full bg-wa px-7 text-[0.68rem] tracking-[0.2em] text-white uppercase"
+          className="pressable cta-label min-h-12 rounded-full bg-wa px-7 text-white hover:bg-wa-bright"
         >
           Plan on WhatsApp
         </button>
@@ -107,14 +107,12 @@ export function InquiryBar() {
           className="pressable flex w-full items-center justify-between gap-3 border-l-4 border-l-garnet bg-paper px-4 py-4 text-left shadow-[0_16px_40px_-24px_rgba(42,17,64,0.4)]"
         >
           <span>
-            <span className="block text-[0.62rem] tracking-[0.2em] text-garnet uppercase">
-              Plan in 3 taps
-            </span>
+            <span className="eyebrow">Plan in 3 taps</span>
             <span className="mt-1 block font-serif text-2xl text-ink">
               Start your brief
             </span>
           </span>
-          <span className="rounded-full bg-wa px-4 py-2.5 text-[0.62rem] tracking-[0.16em] text-white uppercase">
+          <span className="cta-label rounded-full bg-wa px-4 py-2.5 text-white">
             Open
           </span>
         </button>
@@ -140,9 +138,7 @@ export function InquiryBar() {
             <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-ink/15" />
             <div className="flex items-start justify-between gap-3">
               <div>
-                <p className="text-[0.62rem] tracking-[0.2em] text-garnet uppercase">
-                  Step {step + 1} of 3
-                </p>
+                <p className="eyebrow">Step {step + 1} of 3</p>
                 <h2 id={titleId} className="display mt-1 text-3xl text-ink">
                   {step === 0 && "What are you celebrating?"}
                   {step === 1 && "About how many guests?"}
@@ -202,7 +198,7 @@ export function InquiryBar() {
                     </button>
                     <button
                       type="button"
-                      className="pressable min-h-12 flex-[2] rounded-full bg-garnet text-[0.68rem] tracking-[0.18em] text-paper uppercase"
+                      className="pressable cta-label min-h-12 flex-[2] rounded-full bg-wa text-white hover:bg-wa-bright"
                       onClick={() => setStep(2)}
                     >
                       Next
@@ -250,7 +246,7 @@ export function InquiryBar() {
                       href={compose()}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="pressable flex min-h-12 flex-[2] items-center justify-center rounded-full bg-wa text-[0.68rem] tracking-[0.18em] text-white uppercase"
+                      className="pressable cta-label flex min-h-12 flex-[2] items-center justify-center rounded-full bg-wa text-white hover:bg-wa-bright"
                       onClick={() => {
                         setOpen(false);
                         setStep(0);
@@ -277,7 +273,7 @@ function Field({
   children: ReactNode;
 }) {
   return (
-    <label className="grid gap-1.5 text-[0.65rem] tracking-[0.18em] uppercase">
+    <label className="grid gap-1.5 text-xs font-semibold tracking-[0.16em] uppercase">
       {label}
       {children}
     </label>

@@ -26,9 +26,7 @@ export function Footer() {
         </div>
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-7">
           <div>
-            <p className="text-[0.65rem] tracking-[0.22em] text-garnet uppercase">
-              Visit
-            </p>
+            <p className="eyebrow">Visit</p>
             <ul className="mt-4 space-y-1 text-sm text-ink-soft">
               {nav.map((item) => (
                 <li key={item.href}>
@@ -59,9 +57,7 @@ export function Footer() {
             </ul>
           </div>
           <div className="hidden sm:block">
-            <p className="text-[0.65rem] tracking-[0.22em] text-garnet uppercase">
-              Events
-            </p>
+            <p className="eyebrow">Events</p>
             <ul className="mt-4 space-y-1 text-sm text-ink-soft">
               {events.map((item) => (
                 <li key={item.slug}>
@@ -76,9 +72,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-[0.65rem] tracking-[0.22em] text-garnet uppercase">
-              House
-            </p>
+            <p className="eyebrow">House</p>
             <ul className="mt-4 space-y-1 text-sm text-ink-soft">
               {themes.map((item) => (
                 <li key={item.slug}>

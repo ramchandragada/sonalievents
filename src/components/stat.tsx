@@ -18,7 +18,7 @@ export function Stat({
       >
         {value}
       </p>
-      <p className="mt-2 text-[0.62rem] leading-snug tracking-[0.14em] text-ink-muted uppercase md:text-[0.7rem] md:tracking-[0.18em]">
+      <p className="mt-2 text-xs font-semibold leading-snug tracking-[0.14em] text-ink-muted uppercase md:text-[0.8rem]">
         {label}
       </p>
     </div>

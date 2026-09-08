@@ -45,7 +45,7 @@ export default async function EventDetailPage({ params }: Props) {
           />
         </div>
         <div>
-          <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
+          <p className="eyebrow">
             {item.local}
           </p>
           <h1 className="display mt-3 text-5xl md:mt-5 md:text-8xl">{item.name}</h1>
@@ -61,9 +61,7 @@ export default async function EventDetailPage({ params }: Props) {
         </div>
         <aside className="md:col-span-5">
           <div className="border-t border-ink/10 bg-paper p-6">
-            <p className="text-[0.65rem] tracking-[0.22em] text-garnet uppercase">
-              In the plan
-            </p>
+            <p className="eyebrow">In the plan</p>
             <ul className="mt-4 space-y-2 text-ink-soft">
               {item.includes.map((line) => (
                 <li key={line} className="border-b border-ink/5 py-2">

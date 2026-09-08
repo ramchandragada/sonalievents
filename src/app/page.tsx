@@ -76,7 +76,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 pb-2 md:px-8">
-        <p className="max-w-2xl text-sm text-ink-soft md:text-base">
+        <p className="max-w-2xl text-base leading-relaxed text-ink-soft">
           {site.honestLine} We work at Nanded City homes, society lawns,
           Sinhgad Road banquet halls, and halls such as Serenova Banquet.
         </p>
@@ -86,14 +86,12 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="flex items-end justify-between gap-4">
             <div className="reveal">
-              <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
-                From the floor
-              </p>
+              <p className="eyebrow">From the floor</p>
               <h2 className="display mt-2 text-4xl md:text-6xl">Real days nearby.</h2>
             </div>
             <Link
               href="/gallery"
-              className="nav-link shrink-0 text-[0.72rem] tracking-[0.2em] uppercase"
+              className="nav-link shrink-0 text-xs font-semibold tracking-[0.16em] text-garnet-deep uppercase"
             >
               Gallery
             </Link>
@@ -129,16 +127,14 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="flex items-end justify-between gap-4">
             <div className="reveal">
-              <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
-                Celebrations
-              </p>
+              <p className="eyebrow">Celebrations</p>
               <h2 className="display mt-2 text-4xl md:text-6xl">
                 From namkaran to wedding week.
               </h2>
             </div>
             <Link
               href="/events"
-              className="nav-link shrink-0 text-[0.72rem] tracking-[0.2em] uppercase"
+              className="nav-link shrink-0 text-xs font-semibold tracking-[0.16em] text-garnet-deep uppercase"
             >
               See all
             </Link>
@@ -169,33 +165,31 @@ export default function Home() {
       </section>
 
       <section className="section-pad mx-auto max-w-7xl px-5 md:px-8">
-        <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
-          One window
-        </p>
+        <p className="eyebrow">One window</p>
         <h2 className="display mt-2 max-w-3xl text-4xl md:mt-3 md:text-5xl">
           What Sonali Events holds.
         </h2>
-        <p className="mt-4 max-w-2xl text-base text-ink-soft md:text-lg">
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft md:text-lg">
           {site.oneWindowLine}
         </p>
         <div className="mt-6 flex flex-wrap gap-2 md:mt-8 md:gap-3">
           {scope.map((item) => (
             <span
               key={item}
-              className="inline-flex min-h-11 items-center rounded-full border border-ink/15 px-4 text-[0.68rem] tracking-[0.18em] uppercase md:px-5 md:text-[0.72rem]"
+              className="inline-flex min-h-11 items-center rounded-full border border-ink/15 px-4 text-xs font-semibold tracking-[0.14em] uppercase md:px-5"
             >
               {item}
             </span>
           ))}
         </div>
-        <div className="mt-6 flex flex-wrap gap-5 text-[0.72rem] tracking-[0.2em] uppercase">
-          <Link href="/themes" className="nav-link text-garnet">
+        <div className="mt-6 flex flex-wrap gap-5 text-xs font-semibold tracking-[0.16em] uppercase">
+          <Link href="/themes" className="nav-link text-garnet-deep">
             Themes →
           </Link>
-          <Link href="/way" className="nav-link text-garnet">
+          <Link href="/way" className="nav-link text-garnet-deep">
             How we work →
           </Link>
-          <Link href="/about" className="nav-link text-garnet">
+          <Link href="/about" className="nav-link text-garnet-deep">
             About →
           </Link>
         </div>
@@ -203,18 +197,18 @@ export default function Home() {
 
       <section className="liquid-ink section-pad px-5 text-paper md:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-[0.7rem] tracking-[0.28em] text-marigold uppercase">
+          <p className="text-xs font-semibold tracking-[0.2em] text-marigold uppercase">
             {site.domain}
           </p>
           <h2 className="display mt-3 text-4xl md:mt-4 md:text-7xl">
             Tell us the date, the tradition, and where it is.
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-sm text-paper/80 md:text-base">
+          <p className="mx-auto mt-4 max-w-lg text-base text-paper/85">
             Home, society lawn, or banquet hall near Nanded City and Sinhgad
             Road — we hold the rest.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-10 md:gap-4">
-            <WhatsAppButton variant="wa" />
+            <WhatsAppButton />
             <SeeWorkButton className="border-paper/60 text-paper" />
           </div>
         </div>
