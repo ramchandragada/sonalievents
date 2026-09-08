@@ -34,13 +34,13 @@ export default function ThemesPage() {
               className="min-h-[140px] md:min-h-[520px]"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
-            <div className="flex flex-col justify-center bg-paper p-4 md:p-14">
+            <div className="flex flex-col justify-center bg-paper p-6 md:p-14">
               <p className="text-[0.65rem] tracking-[0.22em] text-garnet uppercase">
                 {theme.kicker}
               </p>
               <h2 className="display mt-2 text-3xl md:mt-3 md:text-6xl">{theme.name}</h2>
               <p className="mt-2 max-w-md text-sm text-ink-soft md:mt-5 md:text-lg">{theme.summary}</p>
-              <span className="mt-4 text-[0.7rem] tracking-[0.18em] uppercase md:mt-8">
+              <span className="mt-4 text-[0.7rem] tracking-[0.18em] text-garnet uppercase transition hover:text-garnet-deep md:mt-8">
                 Enter the lookbook →
               </span>
             </div>

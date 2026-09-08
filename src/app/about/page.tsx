@@ -21,7 +21,7 @@ export default function AboutPage() {
             The house
           </p>
           <h1 className="display mt-3 text-4xl md:mt-4 md:text-7xl">
-            {site.name}
+            Three years. A thousand days.
           </h1>
         </div>
         <p className="text-base text-ink-soft md:col-span-5 md:text-lg">

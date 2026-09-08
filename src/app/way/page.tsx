@@ -24,9 +24,11 @@ export default function WayPage() {
               key={step.n}
               className="border-t border-ink/10 p-4 md:p-12"
             >
-              <p className="text-garnet">{step.n}</p>
+              <p className="text-[0.68rem] font-semibold tracking-[0.26em] text-garnet uppercase">
+                {step.n}
+              </p>
               <h2 className="display mt-2 text-3xl md:mt-4 md:text-5xl">{step.title}</h2>
-              <p className="mt-2 max-w-md text-sm text-ink-soft/80 md:mt-4 md:text-base">{step.body}</p>
+              <p className="mt-2 max-w-md text-sm text-ink-soft md:mt-4 md:text-base">{step.body}</p>
             </li>
           ))}
         </ol>

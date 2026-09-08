@@ -79,7 +79,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-garnet/15 bg-cream/50 px-5 py-5 text-[0.7rem] tracking-[0.16em] text-ink-soft uppercase md:px-8">
+      <div className="border-t border-garnet/15 bg-ivory px-5 py-5 text-[0.7rem] tracking-[0.16em] text-ink-soft uppercase md:px-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 sm:flex-row sm:justify-between">
           <span>© {new Date().getFullYear()} {site.name}</span>
           <span>{site.domain}</span>

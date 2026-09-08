@@ -5,8 +5,6 @@ import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 import { getGallerySets } from "@/lib/work-media";
 
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = pageMeta("/gallery", {
   title: "Gallery",
   description:

@@ -19,15 +19,19 @@ const slides = [
   },
 ] as const;
 
+const SLIDE_MS = 7000;
+
 export function HeroStage() {
   const [index, setIndex] = useState(0);
+  const [reduce, setReduce] = useState(false);
 
   useEffect(() => {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) return;
+    const prefersReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setReduce(prefersReduce);
+    if (prefersReduce) return;
     const id = window.setInterval(() => {
       setIndex((current) => (current + 1) % slides.length);
-    }, 7000);
+    }, SLIDE_MS);
     return () => window.clearInterval(id);
   }, []);
 
@@ -40,13 +44,21 @@ export function HeroStage() {
           alt={slide.alt}
           fill
           priority={i === 0}
-          quality={90}
+          quality={85}
           sizes="100vw"
-          className={`object-cover object-[center_38%] brightness-[1.08] contrast-[1.05] saturate-[1.1] transition-opacity duration-[1600ms] ease-in-out ${
-            i === index ? "opacity-100" : "opacity-0"
+          className={`object-cover object-[center_38%] brightness-[1.05] contrast-[1.06] transition-opacity duration-[1600ms] ease-in-out ${
+            i === index ? `opacity-100 ${reduce ? "" : "ken"}` : "opacity-0"
           }`}
         />
       ))}
+      {!reduce ? (
+        <div
+          key={index}
+          className="absolute inset-x-0 bottom-0 z-[1] h-[2px] origin-left bg-garnet"
+          style={{ animation: `hero-progress ${SLIDE_MS}ms linear both` }}
+          aria-hidden
+        />
+      ) : null}
     </div>
   );
 }

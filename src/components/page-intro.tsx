@@ -12,8 +12,8 @@ export function PageIntro({
       <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
         {kicker}
       </p>
-      <h1 className="display mt-3 max-w-4xl text-4xl md:mt-4 md:text-7xl">{title}</h1>
-      <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft/80 md:mt-6 md:text-lg">
+      <h1 className="display mt-3 max-w-4xl text-4xl sm:text-5xl md:mt-4 lg:text-7xl">{title}</h1>
+      <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft md:mt-6 md:text-lg">
         {body}
       </p>
     </div>

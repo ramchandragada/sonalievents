@@ -33,10 +33,10 @@ export function WorkGallery({
             key={item}
             type="button"
             onClick={() => setFilter(item)}
-            className={`rounded-full px-4 py-2 text-[0.68rem] tracking-[0.16em] uppercase transition ${
+            className={`rounded-full px-4 py-2 text-[0.68rem] tracking-[0.16em] uppercase transition-colors duration-300 ${
               filter === item
                 ? "bg-garnet text-paper"
-                : "border border-ink/15 text-ink-soft"
+                : "border border-ink/15 text-ink-soft hover:border-garnet/40"
             }`}
           >
             {item}
@@ -81,7 +81,7 @@ export function WorkGallery({
                   </span>
                 </div>
               )}
-              <span className="mt-2 block text-[0.65rem] tracking-[0.18em] text-ink-soft/60 uppercase">
+              <span className="mt-2 block text-[0.65rem] tracking-[0.18em] text-ink-soft uppercase">
                 {item.label}
               </span>
             </button>
@@ -109,10 +109,11 @@ export function WorkGallery({
         >
           <button
             type="button"
-            className="absolute top-5 right-5 text-[0.7rem] tracking-[0.2em] text-ivory uppercase"
+            className="absolute top-5 right-5 flex h-11 w-11 items-center justify-center rounded-full border border-ivory/35 text-sm tracking-[0.18em] text-ivory uppercase"
             onClick={() => setActive(null)}
+            aria-label="Close"
           >
-            Close
+            ✕
           </button>
           <div
             className="max-h-[90dvh] w-full max-w-5xl"

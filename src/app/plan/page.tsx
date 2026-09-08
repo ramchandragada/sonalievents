@@ -20,7 +20,7 @@ export default function PlanPage() {
       />
       <div className="mx-auto grid max-w-7xl gap-6 px-5 pb-12 md:grid-cols-2 md:gap-16 md:px-8 md:pb-24">
         <PlanForm />
-        <div className="self-start border-t border-ink/10 bg-paper p-5 md:p-10">
+        <div className="self-start border-t border-ink/10 p-5 md:p-10">
           <p className="font-serif text-3xl">What happens next</p>
           <ol className="mt-6 space-y-4 text-ink-soft">
             <li>01 · We reply in Marathi, Hindi, or English.</li>

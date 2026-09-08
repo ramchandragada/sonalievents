@@ -1,7 +1,7 @@
 export function Marquee({ items }: { items: string[] }) {
   const loop = [...items, ...items];
   return (
-    <div className="overflow-hidden border-y border-ink/10 bg-paper py-2.5 text-ink md:py-4">
+    <div className="overflow-hidden border-y border-ink/10 bg-ivory py-2.5 text-ink md:py-4">
       <div className="marquee-track">
         {loop.map((item, index) => (
           <span

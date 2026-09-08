@@ -20,7 +20,7 @@ export function InquiryBar() {
 
   return (
     <form
-      className="mx-auto grid max-w-7xl grid-cols-2 gap-3 bg-paper p-3 sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end md:p-5"
+      className="mx-auto grid max-w-7xl grid-cols-2 gap-3 border-l-4 border-l-garnet bg-paper p-3 sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end md:p-5"
       onSubmit={(event) => {
         event.preventDefault();
         openWhatsApp();
@@ -32,7 +32,7 @@ export function InquiryBar() {
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
-          className="border-b border-ink/20 bg-transparent py-2 text-base tracking-normal normal-case outline-none"
+          className="border-b border-ink/20 bg-transparent py-2 text-base tracking-normal normal-case outline-none transition-colors focus:border-garnet"
         />
       </label>
       <label className="grid gap-1.5 text-[0.65rem] tracking-[0.18em] uppercase">
@@ -42,7 +42,7 @@ export function InquiryBar() {
           value={guests}
           onChange={(e) => setGuests(e.target.value)}
           placeholder="80"
-          className="border-b border-ink/20 bg-transparent py-2 text-base tracking-normal normal-case outline-none"
+          className="border-b border-ink/20 bg-transparent py-2 text-base tracking-normal normal-case outline-none transition-colors focus:border-garnet"
         />
       </label>
       <label className="col-span-2 grid gap-1.5 text-[0.65rem] tracking-[0.18em] uppercase sm:col-span-1">
@@ -50,7 +50,7 @@ export function InquiryBar() {
         <select
           value={place}
           onChange={(e) => setPlace(e.target.value)}
-          className="border-b border-ink/20 bg-transparent py-2 text-base tracking-normal normal-case outline-none"
+          className="border-b border-ink/20 bg-transparent py-2 text-base tracking-normal normal-case outline-none transition-colors focus:border-garnet"
         >
           <option value="">Not decided yet</option>
           <option value="At home">At home</option>

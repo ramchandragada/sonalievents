@@ -18,7 +18,7 @@ export function MediaFrame({
   sizes = "(max-width: 768px) 100vw, 50vw",
 }: Props) {
   return (
-    <div className={`relative overflow-hidden bg-cream ${className}`}>
+    <div className={`relative overflow-hidden bg-cream/80 ${className}`}>
       <Image
         src={src}
         alt={alt}

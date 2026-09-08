@@ -69,7 +69,7 @@ export function PlanForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none"
+          className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none transition-colors focus:border-garnet"
         />
       </label>
       <label className="grid gap-2 text-[0.7rem] tracking-[0.16em] uppercase">
@@ -77,7 +77,7 @@ export function PlanForm() {
         <select
           value={eventType}
           onChange={(e) => setEventType(e.target.value)}
-          className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none"
+          className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none transition-colors focus:border-garnet"
         >
           {events.map((item) => (
             <option key={item.slug}>{item.name}</option>
@@ -91,7 +91,7 @@ export function PlanForm() {
           onChange={(e) =>
             setTradition(e.target.value as (typeof traditions)[number] | "")
           }
-          className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none"
+          className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none transition-colors focus:border-garnet"
         >
           <option value="">Select</option>
           {traditions.map((item) => (
@@ -106,7 +106,7 @@ export function PlanForm() {
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none"
+            className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none transition-colors focus:border-garnet"
           />
         </label>
         <label className="grid gap-2 text-[0.7rem] tracking-[0.16em] uppercase">
@@ -116,7 +116,7 @@ export function PlanForm() {
             value={guests}
             onChange={(e) => setGuests(e.target.value)}
             placeholder="80"
-            className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none"
+            className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none transition-colors focus:border-garnet"
           />
         </label>
       </div>
@@ -126,7 +126,7 @@ export function PlanForm() {
           <select
             value={place}
             onChange={(e) => setPlace(e.target.value as (typeof places)[number] | "")}
-            className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none"
+            className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none transition-colors focus:border-garnet"
           >
             <option value="">Select</option>
             {places.map((item) => (
@@ -141,7 +141,7 @@ export function PlanForm() {
             onChange={(e) =>
               setBudget(e.target.value as (typeof budgets)[number] | "")
             }
-            className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none"
+            className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none transition-colors focus:border-garnet"
           >
             <option value="">Prefer to discuss</option>
             {budgets.map((item) => (
@@ -157,7 +157,7 @@ export function PlanForm() {
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           placeholder="+91"
-          className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none"
+          className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none transition-colors focus:border-garnet"
         />
       </label>
       <label className="grid gap-2 text-[0.7rem] tracking-[0.16em] uppercase">
@@ -166,12 +166,12 @@ export function PlanForm() {
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
           rows={4}
-          className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none"
+          className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none transition-colors focus:border-garnet"
         />
       </label>
       <button
         type="submit"
-        className="mt-4 justify-self-start rounded-full bg-garnet px-8 py-3 text-[0.72rem] tracking-[0.2em] text-paper uppercase"
+        className="mt-4 w-full rounded-full bg-garnet px-8 py-3 text-[0.72rem] tracking-[0.2em] text-paper uppercase transition hover:bg-garnet-deep sm:w-auto sm:justify-self-start"
       >
         Send on WhatsApp
       </button>

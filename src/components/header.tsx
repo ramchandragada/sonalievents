@@ -11,6 +11,8 @@ export function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const isHome = pathname === "/";
+  const overHero = isHome && !scrolled && !open;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -25,12 +27,16 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 bg-ivory text-ink transition-[border-color] duration-400 ${
-        scrolled || open ? "border-b border-garnet/20" : "border-b border-transparent"
+      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,color,backdrop-filter] duration-500 ${
+        overHero
+          ? "border-b border-transparent bg-transparent text-paper"
+          : scrolled || open
+            ? "border-b border-garnet/20 bg-ivory/95 text-ink backdrop-blur-md"
+            : "border-b border-transparent bg-ivory text-ink"
       }`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:h-[4.5rem] md:px-8">
-        <BrandMark />
+        <BrandMark light={overHero} />
 
         <nav className="hidden items-center gap-8 lg:flex">
           {nav.map((item) => (
@@ -38,7 +44,9 @@ export function Header() {
               key={item.href}
               href={item.href}
               data-active={pathname === item.href || pathname.startsWith(`${item.href}/`)}
-              className="nav-link text-[0.72rem] tracking-[0.18em] uppercase"
+              className={`nav-link text-[0.72rem] tracking-[0.18em] uppercase ${
+                overHero ? "text-paper/90" : ""
+              }`}
             >
               {item.label}
             </Link>
@@ -84,18 +92,21 @@ export function Header() {
         aria-hidden={!open}
         inert={open ? undefined : true}
       >
-        <div className="flex flex-col justify-between bg-ivory px-6 pb-8">
+        <div className="flex flex-col justify-between bg-ivory px-6 pb-8 text-ink">
           <nav className="flex flex-col gap-1 pt-2">
             {nav.map((item) => (
               <Link key={item.href} href={item.href} className="display text-3xl text-ink">
                 {item.label}
               </Link>
             ))}
-            <Link href="/plan" className="display text-3xl text-garnet">
+            <Link
+              href="/plan"
+              className="mt-4 inline-flex w-fit rounded-full bg-garnet px-6 py-2.5 font-serif text-2xl text-paper"
+            >
               Plan
             </Link>
           </nav>
-          <p className="text-sm tracking-wide text-ink-soft">
+          <p className="mt-8 text-sm tracking-wide text-ink-soft">
             {site.address}
             <br />
             {site.phoneDisplay}
