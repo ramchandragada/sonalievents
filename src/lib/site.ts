@@ -14,6 +14,8 @@ export const site = {
   siteLanguage: "English",
   eventsDelivered: "1,000+",
   years: "3",
+  houseLine:
+    "A Pune event house with specialist teams for every kind of celebration.",
 } as const;
 
 export function whatsappHref(message?: string) {

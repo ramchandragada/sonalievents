@@ -1,0 +1,14 @@
+---
+description: Always deploy finished website work without asking.
+alwaysApply: true
+---
+
+# Deploy without asking
+
+When website work is done (layout, copy, or feature changes that should go live):
+
+1. Commit the relevant files on `main`.
+2. Push to `origin` (`git push origin HEAD`). Vercel auto-deploys production at www.sonali.events.
+3. Do not wait for a second “go live” confirmation.
+
+Do not invent social proof, testimonials, degrees, or Instagram. Do not lead public pages with the proprietor’s full name — the house and teams come first; founder belongs on About as a fact.

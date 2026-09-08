@@ -29,9 +29,9 @@ export default async function ThemeDetailPage({ params }: Props) {
   if (!item) notFound();
 
   return (
-    <article className="pt-28">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 md:grid-cols-2 md:px-8">
-        <div className="relative h-[400px] md:h-[510px]">
+    <article className="pt-20 md:pt-28">
+      <div className="mx-auto grid max-w-7xl items-center gap-6 px-5 md:grid-cols-2 md:gap-10 md:px-8">
+        <div className="relative h-[240px] md:h-[510px]">
           <MediaFrame
             src={item.image}
             alt={item.name}
@@ -44,10 +44,10 @@ export default async function ThemeDetailPage({ params }: Props) {
           <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
             {item.kicker}
           </p>
-          <h1 className="display mt-5 text-6xl md:text-8xl">{item.name}</h1>
+          <h1 className="display mt-3 text-5xl md:mt-5 md:text-8xl">{item.name}</h1>
         </div>
       </div>
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-12 md:px-8">
+      <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 md:grid-cols-12 md:gap-12 md:px-8 md:py-20">
         <p className="text-xl leading-relaxed text-ink-soft md:col-span-7">
           {item.story}
         </p>

@@ -26,8 +26,8 @@ function Reel({ item, featured }: { item: WorkItem; featured?: boolean }) {
   return (
     <div
       ref={ref}
-      className={`relative overflow-hidden rounded-3xl bg-cream ${
-        featured ? "min-h-[360px] md:col-span-2 md:min-h-[520px]" : "min-h-[280px]"
+      className={`relative overflow-hidden bg-cream ${
+        featured ? "min-h-[220px] md:col-span-2 md:min-h-[520px]" : "min-h-[180px] md:min-h-[280px]"
       }`}
     >
       {item.poster ? (
@@ -61,9 +61,11 @@ export function WorkFilm({ items }: { items: WorkItem[] }) {
   if (items.length === 0) return null;
 
   return (
-    <div className="grid gap-4 md:grid-cols-3">
+    <div className="grid gap-2 md:grid-cols-3 md:gap-4">
       {items.map((item, index) => (
-        <Reel key={item.src} item={item} featured={index === 0} />
+        <div key={item.src} className={index > 0 ? "hidden md:block" : ""}>
+          <Reel item={item} featured={index === 0} />
+        </div>
       ))}
     </div>
   );

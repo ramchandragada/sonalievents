@@ -44,12 +44,12 @@ export function CountUp({
   }, [value]);
 
   return (
-    <div ref={ref} className={`rounded-none border-t border-ink/10 ${tint} py-6 md:py-8`}>
-      <p className="display text-5xl text-garnet md:text-6xl">
+    <div ref={ref} className={`rounded-none border-t border-ink/10 ${tint} py-3 md:py-8`}>
+      <p className="display text-3xl text-garnet md:text-6xl">
         {shown.toLocaleString("en-IN")}
         {suffix}
       </p>
-      <p className="mt-2 text-[0.7rem] tracking-[0.18em] text-ink-soft uppercase">
+      <p className="mt-1.5 text-[0.62rem] leading-snug tracking-[0.14em] text-ink-soft uppercase md:mt-2 md:text-[0.7rem] md:tracking-[0.18em]">
         {label}
       </p>
     </div>

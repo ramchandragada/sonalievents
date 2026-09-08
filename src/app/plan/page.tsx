@@ -12,15 +12,15 @@ export const metadata: Metadata = pageMeta("/plan", {
 
 export default function PlanPage() {
   return (
-    <div className="pt-24">
+    <div className="pt-20 md:pt-24">
       <PageIntro
         kicker="Begin"
         title="A date, a ritual, a room."
         body={`The brief lands on WhatsApp — ${site.phoneDisplay}. No account, no waiting for email.`}
       />
-      <div className="mx-auto grid max-w-7xl gap-16 px-5 pb-24 md:grid-cols-2 md:px-8">
+      <div className="mx-auto grid max-w-7xl gap-6 px-5 pb-12 md:grid-cols-2 md:gap-16 md:px-8 md:pb-24">
         <PlanForm />
-        <div className="self-start border-t border-ink/10 bg-paper p-8 md:p-10">
+        <div className="self-start border-t border-ink/10 bg-paper p-5 md:p-10">
           <p className="font-serif text-3xl">What happens next</p>
           <ol className="mt-6 space-y-4 text-ink-soft">
             <li>01 · We reply in Marathi, Hindi, or English.</li>

@@ -42,7 +42,7 @@ export function WorkGallery({ items }: { items: WorkItem[] }) {
           refresh this page.
         </p>
       ) : (
-        <div className="mt-10 columns-1 gap-4 sm:columns-2 lg:columns-3">
+        <div className="mt-6 columns-2 gap-2 sm:columns-2 md:mt-10 md:gap-4 lg:columns-3">
           {visible.map((item) => (
             <button
               key={item.src}
@@ -54,11 +54,11 @@ export function WorkGallery({ items }: { items: WorkItem[] }) {
                 <MediaFrame
                   src={item.src}
                   alt="Sonali Events celebration"
-                  className="min-h-[240px] aspect-[3/4] rounded-3xl"
+                  className="min-h-[140px] aspect-[3/4] md:min-h-[240px]"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               ) : (
-                <div className="relative flex min-h-[240px] aspect-[3/4] items-end overflow-hidden rounded-3xl bg-cream p-5">
+                <div className="relative flex min-h-[140px] aspect-[3/4] items-end overflow-hidden bg-cream p-3 md:min-h-[240px] md:p-5">
                   {item.poster ? (
                     <div className="pointer-events-none absolute inset-0">
                       <MediaFrame

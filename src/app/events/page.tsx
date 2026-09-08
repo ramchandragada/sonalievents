@@ -13,32 +13,32 @@ export const metadata: Metadata = pageMeta("/events", {
 
 export default function EventsPage() {
   return (
-    <div className="pt-24">
+    <div className="pt-20 md:pt-24">
       <PageIntro
         kicker="What we hold"
         title="Eight celebrations. One house."
         body="Each category has its own experienced team. The same end-to-end promise: venue, décor, food, invitations, music, dance, games."
       />
-      <div className="mx-auto grid max-w-7xl gap-4 px-5 pb-24 md:grid-cols-2 md:px-8">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-2 px-5 pb-12 md:grid-cols-2 md:gap-4 md:px-8 md:pb-24">
         {events.map((item) => (
           <Link
             key={item.slug}
             href={`/events/${item.slug}`}
-            className="group img-zoom grid overflow-hidden border-t border-ink/10 bg-paper md:grid-cols-2"
+            className="group img-zoom overflow-hidden border-t border-ink/10 bg-paper md:grid md:grid-cols-2"
           >
             <MediaFrame
               src={item.image}
               alt={item.name}
-              className="min-h-[240px]"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              className="min-h-[140px] md:min-h-[240px]"
+              sizes="(max-width: 768px) 50vw, 50vw"
             />
-            <div className="flex flex-col justify-end p-6 md:p-8">
-              <p className="text-[0.65rem] tracking-[0.2em] text-garnet uppercase">
+            <div className="flex flex-col justify-end p-3 md:p-8">
+              <p className="text-[0.58rem] tracking-[0.16em] text-garnet uppercase md:text-[0.65rem] md:tracking-[0.2em]">
                 {item.local}
               </p>
-              <h2 className="display mt-2 text-4xl">{item.name}</h2>
-              <p className="mt-3 text-ink-soft/80">{item.summary}</p>
-              <span className="mt-6 text-[0.7rem] tracking-[0.18em] uppercase">
+              <h2 className="display mt-1 text-xl md:mt-2 md:text-4xl">{item.name}</h2>
+              <p className="mt-2 hidden text-sm text-ink-soft/80 md:mt-3 md:block md:text-base">{item.summary}</p>
+              <span className="mt-2 hidden text-[0.7rem] tracking-[0.18em] uppercase md:mt-6 md:inline">
                 View →
               </span>
             </div>

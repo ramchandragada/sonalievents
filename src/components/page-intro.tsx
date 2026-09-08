@@ -8,12 +8,12 @@ export function PageIntro({
   body: string;
 }) {
   return (
-    <div className="mx-auto max-w-7xl px-5 pb-12 md:px-8">
+    <div className="mx-auto max-w-7xl px-5 pb-6 md:px-8 md:pb-12">
       <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
         {kicker}
       </p>
-      <h1 className="display mt-4 max-w-4xl text-5xl md:text-7xl">{title}</h1>
-      <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft/80">
+      <h1 className="display mt-3 max-w-4xl text-4xl md:mt-4 md:text-7xl">{title}</h1>
+      <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft/80 md:mt-6 md:text-lg">
         {body}
       </p>
     </div>

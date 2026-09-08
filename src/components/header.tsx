@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { nav, site, whatsappHref } from "@/lib/site";
+import { BrandMark } from "./brand-mark";
 import { Magnetic } from "./magnetic";
 
 export function Header() {
@@ -29,14 +30,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:h-[4.5rem] md:px-8">
-        <Link href="/" className="group flex items-baseline gap-2">
-          <span className="font-serif text-2xl tracking-tight text-garnet md:text-[1.7rem]">
-            Sonali
-          </span>
-          <span className="text-[0.65rem] tracking-[0.28em] text-ink-soft uppercase">
-            Events
-          </span>
-        </Link>
+        <BrandMark />
 
         <nav className="hidden items-center gap-8 lg:flex">
           {nav.map((item) => (
@@ -90,14 +84,14 @@ export function Header() {
         aria-hidden={!open}
         inert={open ? undefined : true}
       >
-        <div className="flex min-h-[calc(100dvh-4rem)] flex-col justify-between bg-ivory px-6 pb-10">
-          <nav className="flex flex-col gap-2 pt-6">
+        <div className="flex flex-col justify-between bg-ivory px-6 pb-8">
+          <nav className="flex flex-col gap-1 pt-2">
             {nav.map((item) => (
-              <Link key={item.href} href={item.href} className="display text-5xl text-ink">
+              <Link key={item.href} href={item.href} className="display text-3xl text-ink">
                 {item.label}
               </Link>
             ))}
-            <Link href="/plan" className="display text-5xl text-garnet">
+            <Link href="/plan" className="display text-3xl text-garnet">
               Plan
             </Link>
           </nav>

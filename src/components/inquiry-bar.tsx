@@ -18,7 +18,7 @@ export function InquiryBar() {
 
   return (
     <form
-      className="mx-auto grid max-w-7xl gap-3 bg-paper p-4 sm:grid-cols-[1fr_1fr_auto] sm:items-end md:p-5"
+      className="mx-auto grid max-w-7xl grid-cols-2 gap-3 bg-paper p-3 sm:grid-cols-[1fr_1fr_auto] sm:items-end md:p-5"
       onSubmit={(event) => {
         event.preventDefault();
         openWhatsApp();
@@ -45,7 +45,7 @@ export function InquiryBar() {
       </label>
       <button
         type="submit"
-        className="rounded-full bg-garnet px-6 py-3 text-[0.68rem] tracking-[0.2em] text-paper uppercase"
+        className="col-span-2 rounded-full bg-garnet px-6 py-3 text-[0.68rem] tracking-[0.2em] text-paper uppercase sm:col-span-1"
       >
         WhatsApp us
       </button>

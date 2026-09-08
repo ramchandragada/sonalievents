@@ -1,37 +1,29 @@
 import Link from "next/link";
+import { BrandMark } from "./brand-mark";
 import { events } from "@/lib/events";
 import { nav, site, whatsappHref } from "@/lib/site";
 import { themes } from "@/lib/themes";
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-paper pb-24 text-ink md:pb-28">
+    <footer className="relative overflow-hidden bg-paper pb-8 text-ink md:pb-16">
       <div className="h-px bg-garnet" />
-      <div className="pointer-events-none absolute -right-10 -bottom-16 font-serif text-[28vw] leading-none text-garnet/10">
-        SE
-      </div>
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-12 md:px-8">
+      <div className="mx-auto grid max-w-7xl gap-8 px-5 py-8 md:grid-cols-12 md:gap-12 md:px-8 md:py-16">
         <div className="md:col-span-5">
-          <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
-            Pune · Nanded City
-          </p>
-          <h2 className="display mt-4 text-5xl md:text-6xl">
-            Ready when you are.
-          </h2>
+          <BrandMark compact />
           <p className="mt-5 max-w-sm text-ink-soft">
-            {site.proprietor} and her teams. Venue, décor, food, music, dance,
-            invitations, games.
+            {site.houseLine} Venue, décor, food, music, dance, invitations, games.
           </p>
           <Link
             href={whatsappHref(
               "Hello Sonali Events, I would like to plan a celebration.",
             )}
-            className="mt-8 inline-flex rounded-full bg-garnet px-6 py-3 text-[0.7rem] tracking-[0.2em] text-paper uppercase"
+            className="mt-6 inline-flex rounded-full bg-garnet px-6 py-3 text-[0.7rem] tracking-[0.2em] text-paper uppercase"
           >
             WhatsApp {site.phoneDisplay}
           </Link>
         </div>
-        <div className="grid gap-10 sm:grid-cols-3 md:col-span-7">
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-7">
           <div>
             <p className="text-[0.65rem] tracking-[0.22em] text-garnet uppercase">
               Visit
@@ -51,7 +43,7 @@ export function Footer() {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="hidden sm:block">
             <p className="text-[0.65rem] tracking-[0.22em] text-garnet uppercase">
               Events
             </p>

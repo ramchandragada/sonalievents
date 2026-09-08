@@ -51,7 +51,7 @@ export const events: EventItem[] = [
     local: "Lagna and related functions",
     summary: "Multi-day venue, ritual map, and a dedicated wedding team.",
     story:
-      "Mrs Sonali Rahul Upagnalawar quality-checks every wedding week. Category teams run mehendi, sangeet, ceremony, and reception as one file — venue, décor, food, music, dance, and show-calling — so the family is in the photographs, not on the phone.",
+      "The wedding desk quality-checks every week. Specialist teams run mehendi, sangeet, ceremony, and reception as one file — venue, décor, food, music, dance, and show-calling — so the family is in the photographs, not on the phone.",
     image: work.banquetDoor,
     guests: "150–400",
     includes: [

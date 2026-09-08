@@ -18,7 +18,7 @@ export default function GalleryPage() {
   const films = items.filter((item) => item.kind === "video").length;
 
   return (
-    <div className="pt-24">
+    <div className="pt-20 md:pt-24">
       <PageIntro
         kicker="From the floor"
         title="The work, as it happened."
@@ -28,7 +28,7 @@ export default function GalleryPage() {
             : `${photos} photograph${photos === 1 ? "" : "s"} and ${films} film${films === 1 ? "" : "s"} from Pune celebrations. New files in the photos and videos folder appear here after a refresh.`
         }
       />
-      <div className="mx-auto max-w-7xl px-5 pb-24 md:px-8">
+      <div className="mx-auto max-w-7xl px-5 pb-12 md:px-8 md:pb-24">
         <WorkGallery items={items} />
       </div>
     </div>
