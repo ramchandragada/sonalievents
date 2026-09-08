@@ -16,9 +16,9 @@ export const events: EventItem[] = [
     slug: "birthdays",
     name: "Birthdays",
     local: "Kids, milestones, 50, 60, 75",
-    summary: "Theme, cake stage, games, and a room that feels like a gift.",
+    summary: "Theme, cake stage, games, and a celebration that feels like a gift.",
     story:
-      "From first-year birthdays in Nanded City homes to golden jubilees in Sinhgad Road banquets, the birthday team builds a world around the person being celebrated — décor, food, music, and games that keep every age in the room.",
+      "From first-year birthdays in Nanded City homes to golden jubilees in Sinhgad Road banquet halls, the birthday team builds a world around the person being celebrated — décor, food, music, and games that keep every age on the floor.",
     image: work.birthdayUnicorn,
     guests: "30–120",
     includes: ["Theme décor", "Cake & dessert staging", "Kids games & anchor", "Music", "F&B coordination"],
@@ -51,7 +51,7 @@ export const events: EventItem[] = [
     local: "Lagna and related functions",
     summary: "Multi-day venue, ritual map, and a dedicated wedding team.",
     story:
-      "A wedding desk runs mehendi, sangeet, ceremony, and reception as one file — venue, décor, food, music, dance, and show-calling — so the family greets guests, not vendors.",
+      "A wedding team runs mehendi, sangeet, ceremony, and reception as one file — venue, décor, food, music, dance, and show-calling — so the family greets guests, not vendors.",
     image: work.banquetDoor,
     guests: "150–400",
     includes: [
@@ -102,7 +102,7 @@ export const events: EventItem[] = [
     local: "Anniversary, baby shower, success",
     summary: "A styled party with a reason — and a run-of-show to match.",
     story:
-      "Anniversaries, baby showers, promotions, house-full evenings. Same house desk as a wedding, scaled to the room you actually have.",
+      "Anniversaries, baby showers, promotions, house-full evenings. Same team as a wedding, scaled to the home or hall you actually have.",
     image: work.birthdaySixteen,
     guests: "40–150",
     includes: ["Styled décor", "Host & games", "Music", "Invites", "Food"],

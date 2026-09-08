@@ -15,7 +15,7 @@ export default function PlanPage() {
     <div className="pt-20 md:pt-24">
       <PageIntro
         kicker="Begin"
-        title="A date, a ritual, a room."
+        title="Date, tradition, and where."
         body={`${site.oneWindowLine} The brief lands on WhatsApp — ${site.phoneDisplay}.`}
       />
       <div className="mx-auto grid max-w-7xl gap-6 px-5 pb-12 md:grid-cols-2 md:gap-16 md:px-8 md:pb-24">
@@ -26,7 +26,7 @@ export default function PlanPage() {
             <li>01 · We reply in Marathi, Hindi, or English.</li>
             <li>02 · A short discovery on call or at Nanded City.</li>
             <li>03 · Theme board, venue options, clear estimate.</li>
-            <li>04 · A team for your kind of event on this corridor.</li>
+            <li>04 · A team for your kind of event near Nanded City / Sinhgad Road.</li>
           </ol>
         </div>
       </div>

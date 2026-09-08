@@ -6,14 +6,14 @@ import { whatsappHref } from "@/lib/site";
 export function InquiryBar() {
   const [date, setDate] = useState("");
   const [guests, setGuests] = useState("");
-  const [room, setRoom] = useState("");
+  const [place, setPlace] = useState("");
 
   function openWhatsApp() {
     const lines = [
       "Hello Sonali Events, I would like to plan a celebration near Nanded City / Sinhgad Road.",
       date && `Date: ${date}`,
       guests && `Guests: ${guests}`,
-      room && `Room: ${room}`,
+      place && `Function at: ${place}`,
     ].filter(Boolean);
     window.open(whatsappHref(lines.join("\n")), "_blank", "noopener,noreferrer");
   }
@@ -46,16 +46,16 @@ export function InquiryBar() {
         />
       </label>
       <label className="col-span-2 grid gap-1.5 text-[0.65rem] tracking-[0.18em] uppercase sm:col-span-1">
-        Home or hall
+        Function at
         <select
-          value={room}
-          onChange={(e) => setRoom(e.target.value)}
+          value={place}
+          onChange={(e) => setPlace(e.target.value)}
           className="border-b border-ink/20 bg-transparent py-2 text-base tracking-normal normal-case outline-none"
         >
-          <option value="">Not sure yet</option>
-          <option value="Home / society">Home / society</option>
-          <option value="Sinhgad Road hall">Sinhgad Road hall</option>
-          <option value="Nanded City clubhouse">Nanded City clubhouse</option>
+          <option value="">Not decided yet</option>
+          <option value="At home">At home</option>
+          <option value="Society lawn / clubhouse">Society lawn / clubhouse</option>
+          <option value="Banquet / marriage hall">Banquet / marriage hall</option>
         </select>
       </label>
       <button

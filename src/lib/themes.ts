@@ -40,7 +40,7 @@ export const themes: ThemeItem[] = [
     kicker: "Jasmine, silk, temple rhythm",
     summary: "Banana leaf, gopuram lines, and a ceremony paced for priests and family.",
     story:
-      "Naming, wedding, housewarming, thread ceremony — South Indian families on this corridor get a team that understands jasmine, silk, banana stem, and a satvik meal, without turning the hall into a cliché.",
+      "Naming, wedding, housewarming, thread ceremony — South Indian families near Nanded City and Sinhgad Road get a team that understands jasmine, silk, banana stem, and a satvik meal, without turning the hall into a cliché.",
     cues: ["Jasmine & silk", "Temple motifs", "Banana leaf dining", "Priest-led pacing"],
     image: work.lotusStage,
     accent: "#1e3d32",

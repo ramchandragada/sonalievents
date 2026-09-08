@@ -15,9 +15,9 @@ export default function ThemesPage() {
   return (
     <div className="pt-20 md:pt-24">
       <PageIntro
-        kicker="How a room feels"
+        kicker="How the day feels"
         title="Maharashtrian. North Indian. South Indian."
-        body="Three design languages, one production house on this corridor. Tell us the family, we dress the day."
+        body="Three design languages, one production house near Nanded City and Sinhgad Road. Tell us the family, we dress the day."
       />
       <div className="mx-auto max-w-7xl space-y-2 px-5 pb-12 md:px-8 md:pb-24 md:space-y-3">
         {themes.map((theme, index) => (

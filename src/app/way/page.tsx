@@ -15,7 +15,7 @@ export default function WayPage() {
       <PageIntro
         kicker="Method"
         title="The day has a sequence."
-        body="You decide the date, the ritual, the guest count, and home or hall. The same six-stage file for a birthday and a wedding week. Only the depth changes. Crews for different kinds of day can run on the same Saturday on this corridor without borrowing each other’s people."
+        body="You decide the date, the tradition, the guest count, and where the function is — at home, society lawn, or banquet hall. The same six steps for a birthday and a wedding week. Only the depth changes. Different teams can run on the same Saturday near Nanded City and Sinhgad Road without borrowing each other’s people."
       />
       <div className="mx-auto max-w-7xl px-5 pb-12 md:px-8 md:pb-24">
         <ol className="grid gap-2 md:grid-cols-2 md:gap-4">

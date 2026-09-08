@@ -15,7 +15,7 @@ const slides = [
   },
   {
     src: work.floralMoon,
-    alt: "Floral moon naming ceremony, staged by Sonali Events on this corridor",
+    alt: "Floral moon naming ceremony, staged by Sonali Events near Nanded City",
   },
 ] as const;
 

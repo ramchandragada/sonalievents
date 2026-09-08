@@ -26,7 +26,7 @@ export default function AboutPage() {
         </div>
         <p className="text-base text-ink-soft md:col-span-5 md:text-lg">
           {site.houseLine} Three years of work, more than a thousand events —
-          focused on this corridor before we look farther.
+          focused on Nanded City and Sinhgad Road before we look farther.
         </p>
       </div>
 
@@ -58,8 +58,8 @@ export default function AboutPage() {
             Delivery sits with experienced crews for each kind of day, so a
             munj and an office night can share a Saturday without sharing a crew.
             We do not list staff names, degrees, or awards here that we cannot
-            stand behind. We do not claim photography, purohit booking, or other
-            desks until we can book them from one WhatsApp.
+            stand behind.             We do not claim photography, purohit booking, or other
+            services until we can book them from one WhatsApp.
           </p>
           <p>
             The website is English. On the floor the team speaks Marathi,
@@ -89,7 +89,7 @@ export default function AboutPage() {
 
       <div className="mx-auto max-w-7xl px-5 pb-12 md:px-8 md:pb-24">
         <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
-          Desks
+          What we run
         </p>
         <h2 className="display mt-2 text-3xl md:text-5xl">
           What we actually run.
@@ -117,7 +117,7 @@ export default function AboutPage() {
           </div>
           <div>
             <p className="text-[0.65rem] tracking-[0.2em] text-garnet uppercase">
-              How a room can feel
+              How the day can feel
             </p>
             <ul className="mt-3 space-y-1 text-ink-soft">
               {themes.map((item) => (

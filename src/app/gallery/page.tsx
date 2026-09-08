@@ -24,7 +24,7 @@ export default function GalleryPage() {
         body={
           featured.length === 0
             ? "Photographs from days we hold will appear here."
-            : `A selection of real days from this corridor — not every file on a phone. ${site.honestLine}`
+            : `A selection of real days near Nanded City and Sinhgad Road — not every file on a phone. ${site.honestLine}`
         }
       />
       <div className="mx-auto max-w-7xl px-5 pb-12 md:px-8 md:pb-24">

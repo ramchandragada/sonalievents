@@ -4,11 +4,12 @@ import { useState } from "react";
 import { events } from "@/lib/events";
 import { whatsappHref } from "@/lib/site";
 
-const rooms = [
-  "Home / society in Nanded City",
-  "Sinhgad Road hall",
-  "Other nearby hall",
-  "Not sure yet",
+const places = [
+  "At home — Nanded City",
+  "Society lawn / clubhouse — Nanded City",
+  "Banquet / marriage hall — Sinhgad Road",
+  "Other nearby banquet hall",
+  "Not decided yet",
 ] as const;
 
 const budgets = [
@@ -19,7 +20,7 @@ const budgets = [
   "Prefer to discuss",
 ] as const;
 
-const rituals = [
+const traditions = [
   "Maharashtrian",
   "North Indian",
   "South Indian",
@@ -29,10 +30,10 @@ const rituals = [
 export function PlanForm() {
   const [name, setName] = useState("");
   const [eventType, setEventType] = useState(events[0]?.name ?? "Birthday");
-  const [ritual, setRitual] = useState<(typeof rituals)[number] | "">("");
+  const [tradition, setTradition] = useState<(typeof traditions)[number] | "">("");
   const [date, setDate] = useState("");
   const [guests, setGuests] = useState("");
-  const [room, setRoom] = useState<(typeof rooms)[number] | "">("");
+  const [place, setPlace] = useState<(typeof places)[number] | "">("");
   const [budget, setBudget] = useState<(typeof budgets)[number] | "">("");
   const [phone, setPhone] = useState("");
   const [notes, setNotes] = useState("");
@@ -42,11 +43,11 @@ export function PlanForm() {
       "Hello Sonali Events, I would like to plan a celebration near Nanded City / Sinhgad Road.",
       name && `Name: ${name}`,
       `Event: ${eventType}`,
-      ritual && `Ritual / theme: ${ritual}`,
+      tradition && `Tradition: ${tradition}`,
       date && `Date: ${date}`,
       guests && `Guests: ${guests}`,
-      room && `Room: ${room}`,
-      budget && `Budget band: ${budget}`,
+      place && `Function at: ${place}`,
+      budget && `Budget: ${budget}`,
       phone && `WhatsApp: ${phone}`,
       notes && `Notes: ${notes}`,
     ]
@@ -84,14 +85,16 @@ export function PlanForm() {
         </select>
       </label>
       <label className="grid gap-2 text-[0.7rem] tracking-[0.16em] uppercase">
-        Ritual / theme
+        Tradition
         <select
-          value={ritual}
-          onChange={(e) => setRitual(e.target.value as (typeof rituals)[number] | "")}
+          value={tradition}
+          onChange={(e) =>
+            setTradition(e.target.value as (typeof traditions)[number] | "")
+          }
           className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none"
         >
           <option value="">Select</option>
-          {rituals.map((item) => (
+          {traditions.map((item) => (
             <option key={item}>{item}</option>
           ))}
         </select>
@@ -119,23 +122,25 @@ export function PlanForm() {
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="grid gap-2 text-[0.7rem] tracking-[0.16em] uppercase">
-          Home or hall
+          Function at
           <select
-            value={room}
-            onChange={(e) => setRoom(e.target.value as (typeof rooms)[number] | "")}
+            value={place}
+            onChange={(e) => setPlace(e.target.value as (typeof places)[number] | "")}
             className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none"
           >
             <option value="">Select</option>
-            {rooms.map((item) => (
+            {places.map((item) => (
               <option key={item}>{item}</option>
             ))}
           </select>
         </label>
         <label className="grid gap-2 text-[0.7rem] tracking-[0.16em] uppercase">
-          Budget band
+          Budget
           <select
             value={budget}
-            onChange={(e) => setBudget(e.target.value as (typeof budgets)[number] | "")}
+            onChange={(e) =>
+              setBudget(e.target.value as (typeof budgets)[number] | "")
+            }
             className="border-b border-ink/20 bg-transparent py-3 text-base tracking-normal normal-case outline-none"
           >
             <option value="">Prefer to discuss</option>

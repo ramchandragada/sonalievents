@@ -34,7 +34,8 @@ export default function Home() {
           </h1>
           <p className="hero-copy mt-4 max-w-md text-base leading-relaxed text-paper md:mt-6 md:text-lg">
             {site.houseLine} Venue, décor, food, invitations, music, dance,
-            and games — for the eight kinds of day we hold on this corridor.
+            and games — for the eight kinds of day we hold near Nanded City and
+            Sinhgad Road.
           </p>
           <div className="mt-6 flex items-center gap-2 md:mt-8">
             <Magnetic>
@@ -86,8 +87,8 @@ export default function Home() {
 
       <section className="mx-auto max-w-7xl px-5 pb-4 md:px-8">
         <p className="max-w-2xl text-sm text-ink-soft md:text-base">
-          {site.honestLine} Rooms include Nanded City homes, Sinhgad Road
-          halls, and venues such as Serenova Banquet.
+          {site.honestLine} We work at Nanded City homes, society lawns,
+          Sinhgad Road banquet halls, and halls such as Serenova Banquet.
         </p>
       </section>
 
@@ -221,10 +222,11 @@ export default function Home() {
             {site.domain}
           </p>
           <h2 className="display mt-3 text-4xl md:mt-4 md:text-7xl">
-            Tell us the date, the ritual, and the room.
+            Tell us the date, the tradition, and where it is.
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-sm text-paper/75 md:text-base">
-            We hold the rest from Nanded City and Sinhgad Road.
+            Home, society lawn, or banquet hall near Nanded City and Sinhgad
+            Road — we hold the rest.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-10 md:gap-4">
             <Link

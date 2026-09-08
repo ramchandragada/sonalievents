@@ -20,7 +20,7 @@ export const site = {
   honestLine:
     "Photographs and films on this site are from days we held. We do not publish reviews, awards, or social pages we do not have.",
   oneWindowLine:
-    "Tell us the date, the ritual, the guest count, and home or hall. We hold the rest — venue, décor, food, invitations, music, dance, games, and show-calling.",
+    "Tell us the date, the tradition, the guest count, and where the function is — at home, society lawn, or banquet hall. We hold the rest: venue, décor, food, invitations, music, dance, games, and show-calling.",
 } as const;
 
 export function whatsappHref(message?: string) {
@@ -45,12 +45,12 @@ export const steps = [
   {
     n: "02",
     title: "Discover",
-    body: "Budget, ritual, guest count, and the feeling you want in the room.",
+    body: "Budget, tradition, guest count, and the look and feel you want on the day.",
   },
   {
     n: "03",
     title: "Design",
-    body: "Venue options on this corridor, a theme board, and a clear estimate. Maharashtrian, North Indian, or South Indian.",
+    body: "Venue options near Nanded City and Sinhgad Road, a theme board, and a clear estimate. Maharashtrian, North Indian, or South Indian.",
   },
   {
     n: "04",
@@ -60,7 +60,7 @@ export const steps = [
   {
     n: "05",
     title: "Produce",
-    body: "Décor, food, music, invitations, dance, games — one WhatsApp room, no vendor chase.",
+    body: "Décor, food, music, invitations, dance, games — one WhatsApp group, no vendor chase.",
   },
   {
     n: "06",
