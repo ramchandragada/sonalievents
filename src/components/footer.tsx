@@ -84,11 +84,7 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
-              <li className="pt-4 text-ink-muted">
-                {site.address}
-                <br />
-                Proprietorship
-              </li>
+              <li className="pt-4 text-ink-muted">{site.address}</li>
             </ul>
           </div>
         </div>
