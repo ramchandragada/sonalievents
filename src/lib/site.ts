@@ -16,7 +16,7 @@ export const site = {
   eventsDelivered: "1,000+",
   years: "3",
   houseLine:
-    "An event house based at Nanded City and Sinhgad Road, with experienced teams for the celebrations we actually run.",
+    "An event house based at Nanded City and Sinhgad Road, with experienced teams for the celebrations we hold.",
   honestLine:
     "Photographs and films on this site are from days we held. We do not publish reviews, awards, or social pages we do not have.",
   oneWindowLine:

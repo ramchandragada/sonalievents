@@ -16,31 +16,27 @@ export default function EventsPage() {
     <div className="pt-20 md:pt-24">
       <PageIntro
         kicker="What we hold"
-        title="Eight celebrations. One house."
-        body="Each category has its own experienced team. The same house holds: venue, décor, food, invitations, music, dance, games."
+        title="Celebrations we hold."
+        body="From namkaran to wedding week — each day has its own experienced team. Venue, décor, food, invitations, music, dance, games."
       />
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-2 px-5 pb-12 md:grid-cols-2 md:gap-4 md:px-8 md:pb-24">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-1 px-5 pb-12 md:grid-cols-4 md:gap-1.5 md:px-8 md:pb-20">
         {events.map((item) => (
           <Link
             key={item.slug}
             href={`/events/${item.slug}`}
-            className="group img-zoom overflow-hidden border-t border-ink/10 bg-paper md:grid md:grid-cols-2"
+            className="group img-zoom relative aspect-[3/4] overflow-hidden"
           >
             <MediaFrame
               src={item.image}
               alt={item.name}
-              className="min-h-[140px] md:min-h-[240px]"
-              sizes="(max-width: 768px) 50vw, 50vw"
+              className="absolute inset-0 h-full w-full"
+              sizes="(max-width: 768px) 50vw, 25vw"
             />
-            <div className="flex flex-col justify-end p-3 md:p-8">
-              <p className="text-[0.58rem] tracking-[0.16em] text-garnet uppercase md:text-[0.65rem] md:tracking-[0.2em]">
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/35 to-transparent p-3 pt-14 md:p-4 md:pt-20">
+              <p className="text-[0.55rem] tracking-[0.16em] text-paper/70 uppercase">
                 {item.local}
               </p>
-              <h2 className="display mt-1 text-xl md:mt-2 md:text-4xl">{item.name}</h2>
-              <p className="mt-2 hidden text-sm text-ink-soft/80 md:mt-3 md:block md:text-base">{item.summary}</p>
-              <span className="mt-2 hidden text-[0.7rem] tracking-[0.18em] uppercase md:mt-6 md:inline">
-                View →
-              </span>
+              <h2 className="display mt-1 text-lg text-paper md:text-2xl">{item.name}</h2>
             </div>
           </Link>
         ))}

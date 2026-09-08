@@ -87,68 +87,54 @@ export default function Home() {
         ]}
       />
 
-      <section className="mx-auto grid max-w-7xl grid-cols-2 gap-x-4 px-5 py-8 md:grid-cols-4 md:px-8 md:py-14">
+      <section className="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 px-5 py-8 md:grid-cols-4 md:px-8 md:py-12">
         <CountUp value={1000} suffix="+" label="Events in 3 years" tint="bg-transparent" />
-        <CountUp value={8} label="Event categories" tint="bg-transparent" />
+        <CountUp value={3} label="Years with families" tint="bg-transparent" />
         <CountUp value={3} label="Regional themes" tint="bg-transparent" />
         <CountUp value={3} label="Languages on the floor" tint="bg-transparent" />
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 pb-4 md:px-8">
+      <section className="mx-auto max-w-7xl px-5 pb-2 md:px-8">
         <p className="max-w-2xl text-sm text-ink-soft md:text-base">
           {site.honestLine} We work at Nanded City homes, society lawns,
           Sinhgad Road banquet halls, and halls such as Serenova Banquet.
         </p>
       </section>
 
-      <section className="px-5 py-10 md:px-8 md:py-16">
+      <section className="px-5 py-8 md:px-8 md:py-12">
         <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col justify-between gap-3 md:flex-row md:items-end">
+          <div className="flex items-end justify-between gap-4">
             <div>
               <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
-                Selected days
+                From the floor
               </p>
-              <h2 className="display mt-2 text-4xl md:mt-3 md:text-7xl">
-                Days we have held nearby.
-              </h2>
+              <h2 className="display mt-2 text-4xl md:text-6xl">Real days nearby.</h2>
             </div>
             <Link
               href="/gallery"
-              className="nav-link w-fit text-[0.72rem] tracking-[0.2em] uppercase"
+              className="nav-link shrink-0 text-[0.72rem] tracking-[0.2em] uppercase"
             >
               Gallery
             </Link>
           </div>
-          <div className="mt-6 grid grid-cols-2 gap-2 md:mt-12 md:grid-cols-3 md:gap-4">
-            {caseStudies.slice(0, 4).map((item, index) => (
+          <div className="mt-5 grid grid-cols-2 gap-1 md:mt-8 md:gap-1.5">
+            {caseStudies.slice(0, 4).map((item) => (
               <Link
                 key={item.title}
                 href={item.href}
-                className={`group img-zoom relative overflow-hidden ${
-                  index === 0
-                    ? "col-span-2 min-h-[260px] md:col-span-2 md:min-h-[560px]"
-                    : "min-h-[180px] md:min-h-[360px]"
-                }`}
+                className="group img-zoom relative aspect-[4/5] overflow-hidden md:aspect-[5/4]"
               >
                 <MediaFrame
                   src={item.image}
                   alt={`${item.title} — ${item.place}`}
-                  className={`h-full w-full ${
-                    index === 0
-                      ? "min-h-[260px] md:min-h-[560px]"
-                      : "min-h-[180px] md:min-h-[360px]"
-                  }`}
-                  sizes={
-                    index === 0
-                      ? "(max-width: 768px) 100vw, 66vw"
-                      : "(max-width: 768px) 50vw, 33vw"
-                  }
+                  className="absolute inset-0 h-full w-full"
+                  sizes="(max-width: 768px) 50vw, 50vw"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 via-ink/45 to-transparent p-3 pt-12 md:p-6 md:pt-20">
-                  <p className="text-[0.6rem] tracking-[0.2em] text-paper/70 uppercase">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/35 to-transparent p-3 pt-16 md:p-5 md:pt-24">
+                  <p className="text-[0.58rem] tracking-[0.18em] text-paper/70 uppercase">
                     {item.place}
                   </p>
-                  <h3 className="display mt-1 text-2xl text-paper md:text-4xl">
+                  <h3 className="display mt-1 text-xl text-paper md:text-3xl">
                     {item.title}
                   </h3>
                 </div>
@@ -158,47 +144,42 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 pb-6 md:px-8">
+      <section className="px-5 pb-4 md:px-8 md:pb-8">
         <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col justify-between gap-3 md:flex-row md:items-end">
+          <div className="flex items-end justify-between gap-4">
             <div>
               <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
-                The work
+                Celebrations
               </p>
-              <h2 className="display mt-2 text-4xl md:mt-3 md:text-7xl">Eight kinds of joy.</h2>
+              <h2 className="display mt-2 text-4xl md:text-6xl">
+                From namkaran to wedding week.
+              </h2>
             </div>
             <Link
               href="/events"
-              className="nav-link w-fit text-[0.72rem] tracking-[0.2em] uppercase"
+              className="nav-link shrink-0 text-[0.72rem] tracking-[0.2em] uppercase"
             >
-              All events
+              See all
             </Link>
           </div>
-
-          <div className="mt-6 grid grid-cols-2 gap-2 md:mt-12 md:auto-rows-[280px] md:grid-cols-4 md:gap-4">
-            {events.map((item, index) => (
+          <div className="mt-5 grid grid-cols-2 gap-1 md:mt-8 md:grid-cols-4 md:gap-1.5">
+            {events.map((item) => (
               <Link
                 key={item.slug}
                 href={`/events/${item.slug}`}
-                className={`group img-zoom relative min-h-[160px] overflow-hidden md:min-h-[280px] ${
-                  index === 0 || index === 5 ? "md:row-span-2 md:min-h-[584px]" : ""
-                }`}
+                className="group img-zoom relative aspect-[3/4] overflow-hidden"
               >
                 <MediaFrame
                   src={item.image}
                   alt={item.name}
-                  className={`h-full w-full min-h-[160px] ${
-                    index === 0 || index === 5
-                      ? "md:min-h-[584px]"
-                      : "md:min-h-[280px]"
-                  }`}
+                  className="absolute inset-0 h-full w-full"
                   sizes="(max-width: 768px) 50vw, 25vw"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 via-ink/40 to-transparent p-3 pt-10 text-paper md:p-5 md:pt-16">
-                  <p className="text-[0.6rem] tracking-[0.2em] text-paper/70 uppercase">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/35 to-transparent p-3 pt-14 text-paper md:p-4 md:pt-20">
+                  <p className="text-[0.55rem] tracking-[0.16em] text-paper/70 uppercase">
                     {item.local}
                   </p>
-                  <h3 className="display mt-1 text-xl md:text-4xl">{item.name}</h3>
+                  <h3 className="display mt-1 text-lg md:text-2xl">{item.name}</h3>
                 </div>
               </Link>
             ))}
@@ -206,7 +187,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-10 md:px-8 md:py-16">
+      <section className="mx-auto max-w-7xl px-5 py-10 md:px-8 md:py-14">
         <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
           One window
         </p>
@@ -239,7 +220,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-ink px-5 py-12 text-paper md:px-8 md:py-24">
+      <section className="bg-ink px-5 py-12 text-paper md:px-8 md:py-20">
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-[0.7rem] tracking-[0.28em] text-garnet uppercase">
             {site.domain}
