@@ -1,23 +1,19 @@
 import type { MetadataRoute } from "next";
-import { events } from "@/lib/events";
-import { site } from "@/lib/site";
-import { themes } from "@/lib/themes";
+import { publicPaths, publicUrl } from "@/lib/public-paths";
+
+/**
+ * Build-time static sitemap. `new Date()` used to opt this metadata route
+ * into dynamic/ISR rendering; cache misses then 500'd while robots.txt
+ * still advertised /sitemap.xml. Force-static + no request-time Date keeps
+ * the XML a CDN file generated at build.
+ */
+export const dynamic = "force-static";
+export const revalidate = false;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-  const staticRoutes = ["", "/events", "/themes", "/way", "/gallery", "/about", "/plan"].map(
-    (path) => ({
-      url: `${site.url}${path}`,
-      lastModified: now,
-    }),
-  );
-  const eventRoutes = events.map((item) => ({
-    url: `${site.url}/events/${item.slug}`,
-    lastModified: now,
+  return publicPaths().map((path) => ({
+    url: publicUrl(path),
+    changeFrequency: path === "" ? "weekly" : "monthly",
+    priority: path === "" ? 1 : path.startsWith("/locations") ? 0.8 : 0.6,
   }));
-  const themeRoutes = themes.map((item) => ({
-    url: `${site.url}/themes/${item.slug}`,
-    lastModified: now,
-  }));
-  return [...staticRoutes, ...eventRoutes, ...themeRoutes];
 }

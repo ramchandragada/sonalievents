@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BrandMark } from "./brand-mark";
 import { WhatsAppButton } from "./cta";
 import { events } from "@/lib/events";
+import { locations } from "@/lib/locations";
 import { nav, site } from "@/lib/site";
 import { themes } from "@/lib/themes";
 
@@ -54,6 +55,24 @@ export function Footer() {
                   See the work
                 </Link>
               </li>
+              <li className="pt-3">
+                <Link
+                  href="/locations"
+                  className="inline-flex min-h-11 items-center font-semibold text-ink hover:text-garnet"
+                >
+                  Areas
+                </Link>
+              </li>
+              {locations.map((item) => (
+                <li key={item.slug}>
+                  <Link
+                    href={`/locations/${item.slug}`}
+                    className="inline-flex min-h-11 items-center hover:text-garnet"
+                  >
+                    {item.navLabel}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="hidden sm:block">

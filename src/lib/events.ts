@@ -1,3 +1,4 @@
+import type { FaqItem } from "./seo";
 import { work } from "./work-picks";
 
 export type EventItem = {
@@ -9,6 +10,9 @@ export type EventItem = {
   image: string;
   guests: string;
   includes: string[];
+  metaTitle?: string;
+  detail?: string[];
+  faqs?: FaqItem[];
 };
 
 export const events: EventItem[] = [
@@ -22,6 +26,26 @@ export const events: EventItem[] = [
     image: work.birthdayUnicorn,
     guests: "30–120",
     includes: ["Theme décor", "Cake & dessert staging", "Kids games & anchor", "Music", "F&B coordination"],
+    metaTitle: "Birthday planner in Nanded City & Sinhgad Road",
+    detail: [
+      "In the Nanded City township a birthday usually starts in the flat or on the society lawn: a unicorn first year, a car theme for a five-year-old, a quiet 60th with elders at the table. We measure the room, set the cake stage where photographs will actually happen, and keep games in a pocket that does not block the meal.",
+      "When the list outgrows the society, the same team moves the night to a Sinhgad Road banquet — including halls we already know, such as Serenova — without changing the brief. Theme, cake, music, and an anchor who can hold both children and uncles.",
+      "Tell us the date, the age, and whether it is home, lawn, or hall. We hold décor, food, invitations, music, dance, and games so the family can watch the person being celebrated.",
+    ],
+    faqs: [
+      {
+        q: "Do you plan birthdays inside Nanded City homes?",
+        a: "Yes. Most first-year and kids’ birthdays we hold are in Nanded City flats or society lawns. We scale décor and food to the rooms you actually have, including society curfews.",
+      },
+      {
+        q: "Can a larger birthday move to Sinhgad Road?",
+        a: "Yes. Milestone birthdays — 50, 60, 75 — often sit in a Sinhgad Road banquet when the guest list leaves the society. The same birthday team runs both floors.",
+      },
+      {
+        q: "What does the birthday plan usually include?",
+        a: "Theme décor, cake and dessert staging, kids’ games and an anchor when the room needs one, music, and food coordination. Typical gatherings are 30–120 guests.",
+      },
+    ],
   },
   {
     slug: "naming-ceremony",
@@ -33,6 +57,26 @@ export const events: EventItem[] = [
     image: work.namingPrincess,
     guests: "40–150",
     includes: ["Ritual layout", "Cradle & floral", "Guest flow", "Satvik / family menu", "Invites"],
+    metaTitle: "Namkaran planner in Nanded City, Pune",
+    detail: [
+      "Naming ceremonies in Nanded City are often at home: a palna in the hall, a ritual corner the priest can reach without crossing the cake, seating that puts grandparents first. Barsa and namkaran ask for quiet precision more than a stage.",
+      "South Indian families on this road ask for jasmine, silk, and a satvik meal. Maharashtrian houses ask for a custom the elders already know. We do not overwrite the ritual with a theme. The floral and the cradle sit around it.",
+      "If the guest list needs a clubhouse or a Sinhgad Road hall, we keep the same layout logic — ritual first, meal second, photographs where the light actually is. WhatsApp the date and the custom. We reply in Marathi, Hindi, or English.",
+    ],
+    faqs: [
+      {
+        q: "Do you hold namkaran at home in Nanded City?",
+        a: "Yes. Many naming ceremonies we hold are in Nanded City homes or society halls. We set the cradle, the ritual corner, and elder seating before we talk about décor themes.",
+      },
+      {
+        q: "Can the meal follow Maharashtrian, North Indian, or South Indian custom?",
+        a: "Yes. Satvik and family menus are part of the plan. Tell us the custom on the first WhatsApp — the house works all three on this road.",
+      },
+      {
+        q: "Is a naming ceremony only for small gatherings?",
+        a: "Typical namkaran gatherings are 40–150. When the list is larger we use a society lawn or a Sinhgad Road hall and keep the ritual map the same.",
+      },
+    ],
   },
   {
     slug: "engagements",
@@ -61,6 +105,26 @@ export const events: EventItem[] = [
       "Catering",
       "Music & sangeet",
       "Guest flow",
+    ],
+    metaTitle: "Wedding planner Sinhgad Road & Nanded City Pune",
+    detail: [
+      "Wedding weeks on this corridor usually split across floors: a haldi or mehendi in a Nanded City home or society lawn, ceremony and reception in a Sinhgad Road banquet. We lock the venues as one map so the family does not run two productions.",
+      "The banquet stretch — Sinhgad Road, also written Sinhagad Road — is where larger lists sit. We have already dressed halls such as Serenova Banquet. We do not publish a venue catalogue we have not stood on. If you already have a hall, we still hold décor, food, music, dance, and show-calling.",
+      "Maharashtrian lagna, North Indian pheras, South Indian ceremonies: the wedding team sequences priests, elders, and the dance floor so each function has a start and a close. Tell us the dates and the guest count. We return a clear estimate and a dedicated crew.",
+    ],
+    faqs: [
+      {
+        q: "Do you plan weddings on Sinhgad Road?",
+        a: "Yes. Ceremony and reception days typically sit in a Sinhgad Road banquet. Related functions — mehendi, haldi, a quieter lunch — often stay in Nanded City homes or lawns, under the same wedding file.",
+      },
+      {
+        q: "Have you worked Serenova Banquet?",
+        a: "Yes. Serenova Banquet is a Sinhgad Road hall we have already dressed. If your date is in another hall on the corridor, we still run the production — we only name venues we have stood on.",
+      },
+      {
+        q: "What size of wedding do you hold?",
+        a: "Typical wedding gatherings are 150–400 guests. Final scale follows the rooms you book. A dedicated wedding team holds venue, multi-day décor, ritual map, catering, music, and guest flow.",
+      },
     ],
   },
   {

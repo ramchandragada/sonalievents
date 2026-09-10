@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { LocationPage } from "./locations";
 import { site } from "./site";
 
 const ogImage = {
@@ -58,6 +59,14 @@ export const businessJsonLd = {
   areaServed: [
     {
       "@type": "Place",
+      name: "Nanded City, Pune",
+    },
+    {
+      "@type": "Place",
+      name: "Sinhgad Road, Pune",
+    },
+    {
+      "@type": "Place",
       name: "Nanded City, Sinhgad Road, Pune",
     },
     {
@@ -67,14 +76,66 @@ export const businessJsonLd = {
   ],
 };
 
+export type FaqItem = {
+  q: string;
+  a: string;
+};
+
+export function faqJsonLd(items: FaqItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+}
+
+export function locationJsonLd(item: LocationPage) {
+  const url = `${site.url}/locations/${item.slug}`;
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+        { "@type": "ListItem", position: 2, name: "Locations", item: `${site.url}/locations` },
+        { "@type": "ListItem", position: 3, name: item.name, item: url },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "EventPlanningBusiness",
+      name: site.name,
+      url,
+      image: `${site.url}${item.image}`,
+      telephone: site.phoneTel,
+      address: businessJsonLd.address,
+      geo: businessJsonLd.geo,
+      areaServed: item.areaServed,
+      parentOrganization: {
+        "@type": "EventPlanningBusiness",
+        name: site.name,
+        url: site.url,
+      },
+    },
+  ];
+}
+
 export function eventJsonLd(item: {
   name: string;
   summary: string;
   slug: string;
   image: string;
+  faqs?: FaqItem[];
 }) {
   const url = `${site.url}/events/${item.slug}`;
-  return [
+  const blocks: Record<string, unknown>[] = [
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -95,4 +156,8 @@ export function eventJsonLd(item: {
       url,
     },
   ];
+  if (item.faqs?.length) {
+    blocks.push(faqJsonLd(item.faqs));
+  }
+  return blocks;
 }
