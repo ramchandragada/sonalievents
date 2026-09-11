@@ -127,12 +127,12 @@ export function Header() {
             <p>{site.address}</p>
             <a
               href={`tel:${site.phoneTel}`}
-              className="mt-2 inline-flex min-h-11 items-center underline-offset-4 hover:underline"
+              className="mt-2 flex min-h-11 items-center underline-offset-4 hover:underline"
             >
               {site.phoneDisplay}
             </a>
-            <EmailLink className="mt-1 inline-flex min-h-11 items-center underline-offset-4 hover:underline" />
-            <p className="mt-1 text-sm text-ink-muted">{site.hoursDisplay}</p>
+            <EmailLink className="flex min-h-11 items-center underline-offset-4 hover:underline" />
+            <p className="text-sm text-ink-muted">{site.hoursDisplay}</p>
           </div>
         </div>
       </div>

@@ -90,7 +90,11 @@ export default function AboutPage() {
             ].map(([k, v]) => (
               <div key={k} className="border-t border-ink/10 pt-3">
                 <dt className="eyebrow">{k}</dt>
-                <dd className="mt-1.5 font-serif text-xl text-ink md:text-2xl">
+                <dd
+                  className={`mt-1.5 font-serif text-ink ${
+                    k === "Hours" ? "text-lg md:text-xl" : "text-xl md:text-2xl"
+                  }`}
+                >
                   {k === "Contact" ? (
                     <a
                       href={`tel:${site.phoneTel}`}
