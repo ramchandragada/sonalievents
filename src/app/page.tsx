@@ -42,14 +42,8 @@ export default function Home() {
             minHeight: "min(92svh, 52rem)",
           }}
         >
-          <p
-            className="hero-copy text-[0.7rem] tracking-[0.28em] text-paper uppercase"
-            style={{ animation: "rise 0.8s 0.12s cubic-bezier(0.16,1,0.3,1) both" }}
-          >
-            {site.baseLine}
-          </p>
           <h1
-            className="hero-copy mt-4 max-w-2xl font-serif text-[1.65rem] leading-[1.15] text-paper sm:text-3xl md:text-4xl"
+            className="hero-copy max-w-2xl font-serif text-[1.65rem] leading-[1.15] text-paper sm:text-3xl md:text-4xl"
             style={{ animation: "rise 0.9s 0.22s cubic-bezier(0.16,1,0.3,1) both" }}
           >
             Event management for Nanded City &amp; Sinhgad Road
