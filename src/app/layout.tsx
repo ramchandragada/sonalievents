@@ -51,6 +51,9 @@ export const metadata: Metadata = {
   },
   twitter: shareImages.twitter,
   robots: { index: true, follow: true },
+  verification: {
+    google: "2l7q61AQH6iUq_D0-McGPI754pL1d-4SPhRMzGId4a0",
+  },
 };
 
 export const viewport: Viewport = {
