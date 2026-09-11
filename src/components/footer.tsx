@@ -60,7 +60,7 @@ export function Footer() {
                   href="/locations"
                   className="inline-flex min-h-11 items-center font-semibold text-ink hover:text-garnet"
                 >
-                  Areas
+                  Locations
                 </Link>
               </li>
               {locations.map((item) => (
