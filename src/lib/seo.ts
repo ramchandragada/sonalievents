@@ -56,6 +56,7 @@ export const businessJsonLd = {
     "@type": "Person",
     name: site.proprietor,
   },
+  sameAs: [site.googleMaps],
   areaServed: [
     {
       "@type": "Place",

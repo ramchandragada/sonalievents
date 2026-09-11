@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { whatsappHref } from "@/lib/site";
+import { site, whatsappHref } from "@/lib/site";
 
 const DEFAULT_WA =
   "Hello Sonali Events, I would like to plan a celebration near Nanded City / Sinhgad Road.";
@@ -38,6 +38,27 @@ export function WhatsAppButton({
     >
       {children}
     </Link>
+  );
+}
+
+type ReviewLinkProps = {
+  className?: string;
+  children?: ReactNode;
+};
+
+export function GoogleReviewLink({
+  className = "",
+  children = "Share your day on Google",
+}: ReviewLinkProps) {
+  return (
+    <a
+      href={site.googleReview}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+    >
+      {children}
+    </a>
   );
 }
 
