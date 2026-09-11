@@ -8,6 +8,7 @@ import { events, getEvent } from "@/lib/events";
 import { locations } from "@/lib/locations";
 import { eventJsonLd, pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
+import { themes } from "@/lib/themes";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -68,19 +69,42 @@ export default async function EventDetailPage({ params }: Props) {
           </p>
           <p className="mt-4 text-sm text-ink-muted">
             Areas we hold this:{" "}
-            {locations.map((place, index) => (
-              <span key={place.slug}>
-                {index > 0 ? " · " : null}
-                <Link
-                  href={`/locations/${place.slug}`}
-                  className="text-garnet-deep underline-offset-4 hover:underline"
-                >
-                  {place.navLabel}
-                </Link>
-              </span>
-            ))}
+            <InlineLinks
+              items={locations.map((place) => ({
+                href: `/locations/${place.slug}`,
+                label: place.navLabel,
+              }))}
+            />
             .
           </p>
+          {item.relatedThemes?.length ? (
+            <p className="mt-2 text-sm text-ink-muted">
+              Themes that sit under this day:{" "}
+              <InlineLinks
+                items={item.relatedThemes.flatMap((slug) => {
+                  const theme = themes.find((entry) => entry.slug === slug);
+                  return theme
+                    ? [{ href: `/themes/${theme.slug}`, label: theme.name }]
+                    : [];
+                })}
+              />
+              .
+            </p>
+          ) : null}
+          {item.relatedEvents?.length ? (
+            <p className="mt-2 text-sm text-ink-muted">
+              Related celebrations:{" "}
+              <InlineLinks
+                items={item.relatedEvents.flatMap((slug) => {
+                  const related = events.find((entry) => entry.slug === slug);
+                  return related
+                    ? [{ href: `/events/${related.slug}`, label: related.name }]
+                    : [];
+                })}
+              />
+              .
+            </p>
+          ) : null}
           {item.faqs ? <FaqList items={item.faqs} /> : null}
         </div>
         <aside className="md:col-span-5">
@@ -109,4 +133,18 @@ export default async function EventDetailPage({ params }: Props) {
       </div>
     </article>
   );
+}
+
+function InlineLinks({ items }: { items: { href: string; label: string }[] }) {
+  return items.map((item, index) => (
+    <span key={item.href}>
+      {index > 0 ? " · " : null}
+      <Link
+        href={item.href}
+        className="text-garnet-deep underline-offset-4 hover:underline"
+      >
+        {item.label}
+      </Link>
+    </span>
+  ));
 }

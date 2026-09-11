@@ -13,6 +13,8 @@ export type EventItem = {
   metaTitle?: string;
   detail?: string[];
   faqs?: FaqItem[];
+  relatedThemes?: string[];
+  relatedEvents?: string[];
 };
 
 export const events: EventItem[] = [
@@ -46,6 +48,7 @@ export const events: EventItem[] = [
         a: "Theme décor, cake and dessert staging, kids’ games and an anchor when the room needs one, music, and food coordination. Typical gatherings are 30–120 guests.",
       },
     ],
+    relatedEvents: ["celebration-parties", "naming-ceremony"],
   },
   {
     slug: "naming-ceremony",
@@ -77,6 +80,8 @@ export const events: EventItem[] = [
         a: "Typical namkaran gatherings are 40–150. When the list is larger we use a society lawn or a Sinhgad Road hall and keep the ritual map the same.",
       },
     ],
+    relatedThemes: ["maharashtrian", "south-indian"],
+    relatedEvents: ["housewarming", "thread-ceremony"],
   },
   {
     slug: "engagements",
@@ -88,6 +93,28 @@ export const events: EventItem[] = [
     image: work.roka,
     guests: "80–250",
     includes: ["Stage & floral", "Entry & host", "DJ / live music", "Invitations", "F&B"],
+    metaTitle: "Engagement planner in Nanded City & Sinhgad Road",
+    detail: [
+      "A sakhar pud in Nanded City often stays in the flat or on the society lawn: a floral pocket for the exchange, seating that puts both families in the photograph, and a meal the passage can actually hold. We measure the room before we promise a stage.",
+      "When the list leaves the society, the same team moves the night to a Sinhgad Road banquet. Ring ceremonies on this corridor now ask for wedding-level staging — walk-in, ring moment, host, and a dance floor with a clear peak — without a new set of vendors.",
+      "Maharashtrian sakhar pud and North Indian ring or roka evenings use the same file. Tell us the date, the guest count, and whether it is home, lawn, or hall. We hold décor, food, invitations, music, and the host.",
+    ],
+    faqs: [
+      {
+        q: "Do you hold sakhar pud in Nanded City homes?",
+        a: "Yes. Smaller engagements and sakhar pud evenings often stay in a Nanded City flat or society lawn. We scale the floral, the seating, and the meal to the rooms you actually have.",
+      },
+      {
+        q: "Can a ring ceremony sit in a Sinhgad Road banquet?",
+        a: "Yes. Larger ring ceremonies typically move to a Sinhgad Road hall when the guest list outgrows the society. If you already have a hall, we still hold the stage, host, music, and food.",
+      },
+      {
+        q: "What does the engagement plan usually include?",
+        a: "Stage and floral, entry and host, DJ or live music, invitations, and food. Typical gatherings are 80–250 guests. Final scale follows the home, lawn, or hall you book.",
+      },
+    ],
+    relatedThemes: ["maharashtrian", "north-indian"],
+    relatedEvents: ["marriages", "celebration-parties"],
   },
   {
     slug: "marriages",
@@ -126,6 +153,8 @@ export const events: EventItem[] = [
         a: "Typical wedding gatherings are 150–400 guests. Final scale follows the rooms you book. A dedicated wedding team holds venue, multi-day décor, ritual map, catering, music, and guest flow.",
       },
     ],
+    relatedThemes: ["maharashtrian", "north-indian", "south-indian"],
+    relatedEvents: ["engagements", "thread-ceremony"],
   },
   {
     slug: "housewarming",
@@ -137,6 +166,28 @@ export const events: EventItem[] = [
     image: work.houseGarlands,
     guests: "40–120",
     includes: ["Threshold décor", "Puja staging", "Home or hall setup", "Catering", "Music"],
+    metaTitle: "Housewarming planner in Nanded City, Pune",
+    detail: [
+      "Most gruha pravesh days we hold are in new Nanded City flats: a dressed threshold, a puja corner the priest can reach without crossing the meal, and seating that puts elders first. This is a home taking a first breath — not a banquet dropped into a living room.",
+      "When the guest list will not fit the passage, we use the society lawn or move the meal to a Sinhgad Road hall and keep the same ritual map. You do not start again with a new decorator because cousins confirmed late.",
+      "Maharashtrian and South Indian houses ask for different objects and a different meal. We do not overwrite the puja with a theme. Tell us the date, the custom, and the rooms you have. We hold décor, food, and the sequence.",
+    ],
+    faqs: [
+      {
+        q: "Do you plan gruha pravesh inside Nanded City homes?",
+        a: "Yes. Housewarming days we hold are usually in new Nanded City flats. We dress the threshold, set the puja, and scale the meal to the kitchen and passage you actually have.",
+      },
+      {
+        q: "Can a housewarming use a Sinhgad Road hall?",
+        a: "Yes, when the list leaves the flat. Some families keep the puja at home and the meal in a society lawn or a Sinhgad Road banquet. The same team runs both floors.",
+      },
+      {
+        q: "What does the housewarming plan usually include?",
+        a: "Threshold décor, puja staging, home or hall setup, catering, and music. Typical gatherings are 40–120 guests. Satvik and family menus follow the custom you name on the first WhatsApp.",
+      },
+    ],
+    relatedThemes: ["maharashtrian", "south-indian"],
+    relatedEvents: ["naming-ceremony", "thread-ceremony"],
   },
   {
     slug: "thread-ceremony",
@@ -148,6 +199,28 @@ export const events: EventItem[] = [
     image: work.namingPalna,
     guests: "80–200",
     includes: ["Mandap", "Ritual map", "Elder seating", "Traditional meal", "Invites"],
+    metaTitle: "Thread ceremony planner in Nanded City & Sinhgad Road",
+    detail: [
+      "Munj in the Nanded City township usually sits on a society lawn: a mandap, fire the priest can hold, chairs for grandparents, and a morning that does not rush the boy. We ask the society’s curfew and power point before we promise a dhol.",
+      "When the list needs a larger floor, the same ritual map moves to a Sinhgad Road banquet. The wedding-week crew is not borrowed for this day. Thread ceremony has its own team — mandap, meal, invites, and elder seating as one file.",
+      "Maharashtrian munj and South Indian upanayana ask for different objects and a different pace. We do not dress a temple cliché over the priest’s work. WhatsApp the date and the custom. We reply in Marathi, Hindi, or English.",
+    ],
+    faqs: [
+      {
+        q: "Can munj be held on a Nanded City society lawn?",
+        a: "Yes. Many thread ceremonies we hold are on Nanded City society lawns or in a clubhouse. We set the mandap, the fire, and seating for priests and grandparents around the rules of that society.",
+      },
+      {
+        q: "Do you hold thread ceremonies in Sinhgad Road halls?",
+        a: "Yes, when the guest list leaves the lawn. A Sinhgad Road banquet keeps the same ritual map — we do not rebuild the day because the floor changed.",
+      },
+      {
+        q: "What size of thread ceremony do you hold?",
+        a: "Typical gatherings are 80–200 guests. The plan includes mandap, ritual map, elder seating, a traditional meal, and invites. Final scale follows the lawn or hall you book.",
+      },
+    ],
+    relatedThemes: ["maharashtrian", "south-indian"],
+    relatedEvents: ["naming-ceremony", "marriages"],
   },
   {
     slug: "office-parties",
@@ -159,6 +232,27 @@ export const events: EventItem[] = [
     image: work.birthdayAyaan,
     guests: "40–200",
     includes: ["Venue", "Stage & lights", "Entertainment", "Games", "F&B"],
+    metaTitle: "Office party planner Sinhgad Road, Pune",
+    detail: [
+      "Office annual days and offsite nights on this corridor usually sit in a Sinhgad Road banquet: a stage the speeches can use, lights the camera phones can live with, food that lands between awards, and an anchor who can hold a room of colleagues.",
+      "Smaller team nights can stay in a Nanded City clubhouse or society hall when the headcount does not need a banquet. We still give the hall manager one name, a load-in time, and a load-out time — the HR group chat should watch the night, not run it.",
+      "Tell us the date, the headcount, the branding you must show, and the hour the room must be empty. We hold venue, stage, entertainment, games, and food so the office is not collecting vendors from four chats.",
+    ],
+    faqs: [
+      {
+        q: "Do you plan office annual days on Sinhgad Road?",
+        a: "Yes. Most office nights we hold are in a Sinhgad Road banquet or a nearby hall. Stage, lights, food, games, and an anchor sit in one file.",
+      },
+      {
+        q: "Can a smaller team night stay in Nanded City?",
+        a: "Yes. A clubhouse or society hall in the Nanded City township works when the list is closer to 40 than 200. We still run the floor so one person answers the manager.",
+      },
+      {
+        q: "What does the office party plan usually include?",
+        a: "Venue, stage and lights, entertainment, games, and food. Typical gatherings are 40–200. Send the date, headcount, and any branding that must appear on the night.",
+      },
+    ],
+    relatedEvents: ["celebration-parties", "marriages"],
   },
   {
     slug: "celebration-parties",
@@ -170,6 +264,28 @@ export const events: EventItem[] = [
     image: work.birthdaySixteen,
     guests: "40–150",
     includes: ["Styled décor", "Host & games", "Music", "Invites", "Food"],
+    metaTitle: "Celebration party planner in Nanded City & Sinhgad Road",
+    detail: [
+      "Anniversaries, baby showers, and quieter success evenings often stay in a Nanded City home or society lawn: styled décor the photographs can use, a host when games need one, and a meal that fits the rooms you have.",
+      "House-full nights and larger promotions move to a Sinhgad Road banquet. The crew is the same one that runs a wedding week, scaled to the hall you actually booked — not a catalogue evening dropped onto the floor.",
+      "Maharashtrian and North Indian houses ask for different colours and a different meal. Tell us the reason, the date, and whether it is home, lawn, or hall. We hold décor, music, invites, and food.",
+    ],
+    faqs: [
+      {
+        q: "Do you hold baby showers and anniversaries at home in Nanded City?",
+        a: "Yes. Many celebration parties we hold are in Nanded City flats or society lawns — baby showers, anniversaries, and smaller success evenings. Décor and food follow the rooms you have.",
+      },
+      {
+        q: "Can a celebration party use a Sinhgad Road banquet?",
+        a: "Yes. Larger house-full nights and promotions typically sit in a Sinhgad Road hall. The same team runs both floors so you do not collect a new set of vendors.",
+      },
+      {
+        q: "What kinds of celebration parties do you plan?",
+        a: "Anniversaries, baby showers, promotions, and other evenings with a clear reason. Typical gatherings are 40–150 guests. The plan includes styled décor, host and games, music, invites, and food.",
+      },
+    ],
+    relatedThemes: ["maharashtrian", "north-indian"],
+    relatedEvents: ["birthdays", "engagements", "housewarming"],
   },
 ];
 
