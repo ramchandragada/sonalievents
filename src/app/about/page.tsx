@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { WhatsAppButton } from "@/components/cta";
+import { GoogleReviewLink, WhatsAppButton } from "@/components/cta";
 import { MediaFrame } from "@/components/media-frame";
 import { events } from "@/lib/events";
 import { pageMeta } from "@/lib/seo";
@@ -99,7 +99,12 @@ export default function AboutPage() {
           </dl>
         </div>
         <p className="mt-10 max-w-2xl text-sm leading-relaxed text-ink-muted md:text-base">
-          {site.honestLine}
+          {site.honestLine} If we held your day near Nanded City or Sinhgad
+          Road, you can{" "}
+          <GoogleReviewLink className="underline underline-offset-4 hover:text-garnet">
+            share it on Google
+          </GoogleReviewLink>
+          .
         </p>
       </section>
 

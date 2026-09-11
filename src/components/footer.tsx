@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BrandMark } from "./brand-mark";
-import { WhatsAppButton } from "./cta";
+import { GoogleReviewLink, WhatsAppButton } from "./cta";
 import { events } from "@/lib/events";
 import { locations } from "@/lib/locations";
 import { nav, site } from "@/lib/site";
@@ -24,6 +24,7 @@ export function Footer() {
           >
             Call {site.phoneDisplay}
           </a>
+          <GoogleReviewLink className="mt-3 flex min-h-11 items-center text-sm text-ink-soft underline-offset-4 hover:text-garnet hover:underline" />
         </div>
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-7">
           <div>

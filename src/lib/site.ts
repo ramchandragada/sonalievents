@@ -12,6 +12,11 @@ export const site = {
   phoneDisplay: "+91 89757 60707",
   phoneTel: "+918975760707",
   whatsapp: "https://wa.me/918975760707",
+  googlePlaceId: "ChIJ20JKVwCVwjsRRvZm-_QAntE",
+  googleReview:
+    "https://search.google.com/local/writereview?placeid=ChIJ20JKVwCVwjsRRvZm-_QAntE",
+  googleMaps:
+    "https://www.google.com/maps/place/?q=place_id:ChIJ20JKVwCVwjsRRvZm-_QAntE",
   languagesSpoken: ["Marathi", "Hindi", "English"] as const,
   siteLanguage: "English",
   eventsDelivered: "1,000+",
