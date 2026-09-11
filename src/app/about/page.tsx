@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { GoogleReviewLink, WhatsAppButton } from "@/components/cta";
+import {
+  EmailLink,
+  GoogleMapsLink,
+  GoogleReviewLink,
+  JustdialLink,
+  WhatsAppButton,
+} from "@/components/cta";
 import { MediaFrame } from "@/components/media-frame";
 import { events } from "@/lib/events";
 import { pageMeta } from "@/lib/seo";
@@ -78,11 +84,17 @@ export default function AboutPage() {
               ["Record", `${site.eventsDelivered} events in ${site.years} years`],
               ["Spoken", site.languagesSpoken.join(" · ")],
               ["Contact", site.phoneDisplay],
+              ["Email", site.email],
+              ["Hours", site.hoursDisplay],
               ["Founded", "2023"],
             ].map(([k, v]) => (
               <div key={k} className="border-t border-ink/10 pt-3">
                 <dt className="eyebrow">{k}</dt>
-                <dd className="mt-1.5 font-serif text-xl text-ink md:text-2xl">
+                <dd
+                  className={`mt-1.5 font-serif text-ink ${
+                    k === "Hours" ? "text-lg md:text-xl" : "text-xl md:text-2xl"
+                  }`}
+                >
                   {k === "Contact" ? (
                     <a
                       href={`tel:${site.phoneTel}`}
@@ -90,6 +102,8 @@ export default function AboutPage() {
                     >
                       {v}
                     </a>
+                  ) : k === "Email" ? (
+                    <EmailLink className="inline-flex min-h-11 items-center underline-offset-4 hover:underline" />
                   ) : (
                     v
                   )}
@@ -104,6 +118,12 @@ export default function AboutPage() {
           <GoogleReviewLink className="underline underline-offset-4 hover:text-garnet">
             share it on Google
           </GoogleReviewLink>
+          . Find us on{" "}
+          <GoogleMapsLink className="underline underline-offset-4 hover:text-garnet">
+            Google Maps
+          </GoogleMapsLink>
+          . Also listed on{" "}
+          <JustdialLink className="underline underline-offset-4 hover:text-garnet" />
           .
         </p>
       </section>
