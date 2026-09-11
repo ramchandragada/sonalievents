@@ -1,4 +1,5 @@
 import { events } from "./events";
+import { guides } from "./guides";
 import { locations } from "./locations";
 import { site } from "./site";
 import { themes } from "./themes";
@@ -13,6 +14,7 @@ export const staticPaths = [
   "/about",
   "/plan",
   "/locations",
+  "/guides",
 ] as const;
 
 export function publicPaths(): string[] {
@@ -21,6 +23,7 @@ export function publicPaths(): string[] {
     ...locations.map((item) => `/locations/${item.slug}`),
     ...events.map((item) => `/events/${item.slug}`),
     ...themes.map((item) => `/themes/${item.slug}`),
+    ...guides.map((item) => `/guides/${item.slug}`),
   ];
 }
 

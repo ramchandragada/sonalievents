@@ -162,3 +162,48 @@ export function eventJsonLd(item: {
   }
   return blocks;
 }
+
+export function guideJsonLd(item: {
+  slug: string;
+  title: string;
+  description: string;
+  h1: string;
+  image: string;
+  published: string;
+  faqs?: FaqItem[];
+}) {
+  const url = `${site.url}/guides/${item.slug}`;
+  const blocks: Record<string, unknown>[] = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+        { "@type": "ListItem", position: 2, name: "Guides", item: `${site.url}/guides` },
+        { "@type": "ListItem", position: 3, name: item.h1, item: url },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: item.h1,
+      name: item.title,
+      description: item.description,
+      image: `${site.url}${item.image}`,
+      datePublished: item.published,
+      dateModified: item.published,
+      author: { "@type": "Organization", name: site.name, url: site.url },
+      publisher: { "@type": "Organization", name: site.name, url: site.url },
+      mainEntityOfPage: url,
+      about: {
+        "@type": "EventPlanningBusiness",
+        name: site.name,
+        url: site.url,
+      },
+    },
+  ];
+  if (item.faqs?.length) {
+    blocks.push(faqJsonLd(item.faqs));
+  }
+  return blocks;
+}
