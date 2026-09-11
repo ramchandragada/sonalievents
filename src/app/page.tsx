@@ -9,10 +9,22 @@ import { MediaFrame } from "@/components/media-frame";
 import { Stat } from "@/components/stat";
 import { caseStudies } from "@/lib/case-studies";
 import { events } from "@/lib/events";
+import { locations } from "@/lib/locations";
 import { scope, site } from "@/lib/site";
 import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = pageMeta("/", {});
+const homeTitle = "Event Planner Nanded City & Sinhgad Road Pune | Sonali Events";
+const homeDescription =
+  "End-to-end event management in Nanded City and on Sinhgad Road, Pune — birthdays, namkaran, engagements, weddings, housewarming, munj, office parties. Venue, décor, food, music. WhatsApp +91 89757 60707.";
+
+export const metadata: Metadata = pageMeta("/", {
+  title: { absolute: homeTitle },
+  description: homeDescription,
+  openGraph: {
+    title: homeTitle,
+    description: homeDescription,
+  },
+});
 
 export default function Home() {
   return (
@@ -36,13 +48,19 @@ export default function Home() {
             {site.baseLine}
           </p>
           <h1
+            className="hero-copy mt-4 max-w-2xl font-serif text-[1.65rem] leading-[1.15] text-paper sm:text-3xl md:text-4xl"
+            style={{ animation: "rise 0.9s 0.22s cubic-bezier(0.16,1,0.3,1) both" }}
+          >
+            Event management for Nanded City &amp; Sinhgad Road
+          </h1>
+          <h2
             className="hero-copy display mt-3 max-w-3xl text-[13vw] leading-[0.9] text-paper sm:text-[11vw] lg:text-[8.5vw] xl:text-[7.5rem]"
             style={{ animation: "rise 1s 0.28s cubic-bezier(0.16,1,0.3,1) both" }}
           >
             You live
             <br />
             the day.
-          </h1>
+          </h2>
           <p
             className="hero-copy mt-4 max-w-md text-base leading-relaxed text-paper/95 md:mt-5 md:text-lg"
             style={{ animation: "rise 0.85s 0.48s cubic-bezier(0.16,1,0.3,1) both" }}
@@ -82,6 +100,46 @@ export default function Home() {
           {site.honestLine} We work at Nanded City homes, society lawns,
           Sinhgad Road banquet halls, and halls such as Serenova Banquet.
         </p>
+      </section>
+
+      <section className="section-pad px-5 md:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="reveal">
+            <p className="eyebrow">Where we work</p>
+            <h2 className="display mt-2 text-4xl md:text-6xl">
+              Nanded City and Sinhgad Road.
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft md:text-lg">
+              The Pune township of homes and lawns, and the banquet corridor on
+              the same road — not Nanded district in Marathwada.
+            </p>
+          </div>
+          <div className="mt-6 grid gap-2 md:mt-8 md:grid-cols-2 md:gap-3">
+            {locations.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/locations/${item.slug}`}
+                className="group img-zoom relative min-h-[240px] overflow-hidden md:min-h-[320px]"
+              >
+                <MediaFrame
+                  src={item.image}
+                  alt={item.imageAlt}
+                  className="absolute inset-0 h-full w-full"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/40 to-transparent p-5 pt-20">
+                  <p className="text-[0.55rem] tracking-[0.16em] text-paper/75 uppercase">
+                    {item.kicker}
+                  </p>
+                  <h3 className="display mt-1 text-2xl text-paper md:text-4xl">
+                    {item.navLabel}
+                  </h3>
+                  <p className="mt-2 max-w-sm text-sm text-paper/85">{item.lede}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="section-pad px-5 md:px-8">

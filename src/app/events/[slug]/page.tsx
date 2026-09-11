@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { WhatsAppButton } from "@/components/cta";
+import { FaqList } from "@/components/faq-list";
 import { MediaFrame } from "@/components/media-frame";
 import { events, getEvent } from "@/lib/events";
+import { locations } from "@/lib/locations";
 import { eventJsonLd, pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -17,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const item = getEvent(slug);
   if (!item) return { title: "Event" };
   return pageMeta(`/events/${slug}`, {
-    title: item.name,
+    title: item.metaTitle ?? item.name,
     description: item.summary,
     openGraph: { images: [{ url: item.image }] },
   });
@@ -54,10 +57,31 @@ export default async function EventDetailPage({ params }: Props) {
       <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 md:grid-cols-12 md:gap-12 md:px-8 md:py-20">
         <div className="md:col-span-7">
           <p className="text-xl leading-relaxed text-ink-soft">{item.story}</p>
+          {item.detail?.map((paragraph) => (
+            <p key={paragraph.slice(0, 40)} className="mt-5 text-base leading-relaxed text-ink-soft md:text-lg">
+              {paragraph}
+            </p>
+          ))}
           <p className="mt-6 text-ink-soft/80">
             Typical gathering: {item.guests} guests. Final scale follows your
             home, society lawn, or Sinhgad Road hall.
           </p>
+          <p className="mt-4 text-sm text-ink-muted">
+            Areas we hold this:{" "}
+            {locations.map((place, index) => (
+              <span key={place.slug}>
+                {index > 0 ? " · " : null}
+                <Link
+                  href={`/locations/${place.slug}`}
+                  className="text-garnet-deep underline-offset-4 hover:underline"
+                >
+                  {place.navLabel}
+                </Link>
+              </span>
+            ))}
+            .
+          </p>
+          {item.faqs ? <FaqList items={item.faqs} /> : null}
         </div>
         <aside className="md:col-span-5">
           <div className="border-t border-ink/10 bg-paper p-6">
