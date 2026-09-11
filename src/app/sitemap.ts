@@ -14,6 +14,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return publicPaths().map((path) => ({
     url: publicUrl(path),
     changeFrequency: path === "" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : path.startsWith("/locations") ? 0.8 : 0.6,
+    priority:
+      path === ""
+        ? 1
+        : path.startsWith("/locations") || path.startsWith("/guides")
+          ? 0.8
+          : 0.6,
   }));
 }

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BrandMark } from "./brand-mark";
 import { GoogleReviewLink, WhatsAppButton } from "./cta";
 import { events } from "@/lib/events";
+import { guides } from "@/lib/guides";
 import { locations } from "@/lib/locations";
 import { nav, site } from "@/lib/site";
 import { themes } from "@/lib/themes";
@@ -68,6 +69,24 @@ export function Footer() {
                 <li key={item.slug}>
                   <Link
                     href={`/locations/${item.slug}`}
+                    className="inline-flex min-h-11 items-center hover:text-garnet"
+                  >
+                    {item.navLabel}
+                  </Link>
+                </li>
+              ))}
+              <li className="pt-3">
+                <Link
+                  href="/guides"
+                  className="inline-flex min-h-11 items-center font-semibold text-ink hover:text-garnet"
+                >
+                  Guides
+                </Link>
+              </li>
+              {guides.map((item) => (
+                <li key={item.slug}>
+                  <Link
+                    href={`/guides/${item.slug}`}
                     className="inline-flex min-h-11 items-center hover:text-garnet"
                   >
                     {item.navLabel}

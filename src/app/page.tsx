@@ -9,6 +9,7 @@ import { MediaFrame } from "@/components/media-frame";
 import { Stat } from "@/components/stat";
 import { caseStudies } from "@/lib/case-studies";
 import { events } from "@/lib/events";
+import { guides } from "@/lib/guides";
 import { locations } from "@/lib/locations";
 import { scope, site } from "@/lib/site";
 import { pageMeta } from "@/lib/seo";
@@ -246,12 +247,51 @@ export default function Home() {
           <Link href="/themes" className="nav-link text-garnet-deep">
             Themes →
           </Link>
+          <Link href="/guides" className="nav-link text-garnet-deep">
+            Guides →
+          </Link>
           <Link href="/way" className="nav-link text-garnet-deep">
             How we work →
           </Link>
           <Link href="/about" className="nav-link text-garnet-deep">
             About →
           </Link>
+        </div>
+      </section>
+
+      <section className="px-5 pb-12 md:px-8 md:pb-16">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex items-end justify-between gap-4">
+            <div className="reveal">
+              <p className="eyebrow">Guides</p>
+              <h2 className="display mt-2 text-4xl md:text-6xl">
+                Planning notes for this road.
+              </h2>
+            </div>
+            <Link
+              href="/guides"
+              className="nav-link shrink-0 text-xs font-semibold tracking-[0.16em] text-garnet-deep uppercase"
+            >
+              All guides
+            </Link>
+          </div>
+          <div className="mt-6 grid gap-2 md:mt-8 md:grid-cols-2 md:gap-4">
+            {guides.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/guides/${item.slug}`}
+                className="group border-t border-ink/10 bg-paper p-5 transition hover:border-garnet/40 md:p-8"
+              >
+                <p className="eyebrow">{item.kicker}</p>
+                <h3 className="display mt-2 text-2xl group-hover:text-garnet-deep md:text-4xl">
+                  {item.navLabel}
+                </h3>
+                <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-soft md:text-base">
+                  {item.lede}
+                </p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

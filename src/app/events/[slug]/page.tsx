@@ -5,6 +5,7 @@ import { WhatsAppButton } from "@/components/cta";
 import { FaqList } from "@/components/faq-list";
 import { MediaFrame } from "@/components/media-frame";
 import { events, getEvent } from "@/lib/events";
+import { guidesLinkingTo } from "@/lib/guides";
 import { locations } from "@/lib/locations";
 import { eventJsonLd, pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -31,6 +32,7 @@ export default async function EventDetailPage({ params }: Props) {
   const { slug } = await params;
   const item = getEvent(slug);
   if (!item) notFound();
+  const relatedGuides = guidesLinkingTo(`/events/${item.slug}`);
 
   return (
     <article className="pt-20 md:pt-28">
@@ -101,6 +103,18 @@ export default async function EventDetailPage({ params }: Props) {
                     ? [{ href: `/events/${related.slug}`, label: related.name }]
                     : [];
                 })}
+              />
+              .
+            </p>
+          ) : null}
+          {relatedGuides.length ? (
+            <p className="mt-2 text-sm text-ink-muted">
+              Planning notes:{" "}
+              <InlineLinks
+                items={relatedGuides.map((guide) => ({
+                  href: `/guides/${guide.slug}`,
+                  label: guide.navLabel,
+                }))}
               />
               .
             </p>
