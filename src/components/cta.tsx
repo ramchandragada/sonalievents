@@ -46,6 +46,17 @@ type ReviewLinkProps = {
   children?: ReactNode;
 };
 
+export function EmailLink({
+  className = "",
+  children = site.email,
+}: ReviewLinkProps) {
+  return (
+    <a href={`mailto:${site.email}`} className={className}>
+      {children}
+    </a>
+  );
+}
+
 export function GoogleReviewLink({
   className = "",
   children = "Share your day on Google",
@@ -53,6 +64,38 @@ export function GoogleReviewLink({
   return (
     <a
       href={site.googleReview}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+    >
+      {children}
+    </a>
+  );
+}
+
+export function GoogleMapsLink({
+  className = "",
+  children = "Open in Google Maps",
+}: ReviewLinkProps) {
+  return (
+    <a
+      href={site.googleMaps}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+    >
+      {children}
+    </a>
+  );
+}
+
+export function JustdialLink({
+  className = "",
+  children = "Justdial",
+}: ReviewLinkProps) {
+  return (
+    <a
+      href={site.justdial}
       target="_blank"
       rel="noopener noreferrer"
       className={className}

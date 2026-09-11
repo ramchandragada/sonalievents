@@ -21,4 +21,6 @@ Next.js (App Router) · TypeScript · Tailwind CSS · Lenis
 
 ## Contact
 
-WhatsApp / call: +91 89757 60707
+WhatsApp / call: +91 89757 60707  
+Email: hello@sonali.events  
+Hours: Monday–Sunday, 10:00 AM – 8:00 PM

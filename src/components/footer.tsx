@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { BrandMark } from "./brand-mark";
-import { GoogleReviewLink, WhatsAppButton } from "./cta";
+import {
+  EmailLink,
+  GoogleMapsLink,
+  GoogleReviewLink,
+  JustdialLink,
+  WhatsAppButton,
+} from "./cta";
 import { events } from "@/lib/events";
 import { guides } from "@/lib/guides";
 import { locations } from "@/lib/locations";
@@ -25,7 +31,15 @@ export function Footer() {
           >
             Call {site.phoneDisplay}
           </a>
+          <EmailLink className="mt-3 flex min-h-11 items-center text-sm text-ink-soft underline-offset-4 hover:text-garnet hover:underline" />
+          <p className="mt-3 text-sm text-ink-soft">{site.hoursDisplay}</p>
           <GoogleReviewLink className="mt-3 flex min-h-11 items-center text-sm text-ink-soft underline-offset-4 hover:text-garnet hover:underline" />
+          <GoogleMapsLink className="mt-1 flex min-h-11 items-center text-sm text-ink-soft underline-offset-4 hover:text-garnet hover:underline" />
+          <p className="mt-5 text-sm text-ink-muted">
+            Also listed on{" "}
+            <JustdialLink className="underline-offset-4 hover:text-garnet hover:underline" />
+            .
+          </p>
         </div>
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-7">
           <div>

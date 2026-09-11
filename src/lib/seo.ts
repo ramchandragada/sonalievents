@@ -32,6 +32,21 @@ export const shareImages = {
   },
 };
 
+const openingHoursSpecification = {
+  "@type": "OpeningHoursSpecification",
+  dayOfWeek: [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ],
+  opens: site.hoursOpens,
+  closes: site.hoursCloses,
+} as const;
+
 export const businessJsonLd = {
   "@context": "https://schema.org",
   "@type": "EventPlanningBusiness",
@@ -39,6 +54,7 @@ export const businessJsonLd = {
   url: site.url,
   image: `${site.url}${ogImage.url}`,
   telephone: site.phoneTel,
+  email: site.email,
   address: {
     "@type": "PostalAddress",
     streetAddress: "Nanded City, Sinhgad Road",
@@ -56,7 +72,8 @@ export const businessJsonLd = {
     "@type": "Person",
     name: site.proprietor,
   },
-  sameAs: [site.googleMaps],
+  openingHoursSpecification,
+  sameAs: [site.googleMaps, site.justdial],
   areaServed: [
     {
       "@type": "Place",
@@ -116,8 +133,11 @@ export function locationJsonLd(item: LocationPage) {
       url,
       image: `${site.url}${item.image}`,
       telephone: site.phoneTel,
+      email: site.email,
       address: businessJsonLd.address,
       geo: businessJsonLd.geo,
+      openingHoursSpecification: businessJsonLd.openingHoursSpecification,
+      sameAs: businessJsonLd.sameAs,
       areaServed: item.areaServed,
       parentOrganization: {
         "@type": "EventPlanningBusiness",

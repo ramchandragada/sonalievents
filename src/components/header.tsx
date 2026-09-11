@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { nav, site } from "@/lib/site";
 import { BrandMark } from "./brand-mark";
 import { Magnetic } from "./magnetic";
-import { WhatsAppButton } from "./cta";
+import { EmailLink, WhatsAppButton } from "./cta";
 
 export function Header() {
   const pathname = usePathname();
@@ -131,6 +131,8 @@ export function Header() {
             >
               {site.phoneDisplay}
             </a>
+            <EmailLink className="mt-1 inline-flex min-h-11 items-center underline-offset-4 hover:underline" />
+            <p className="mt-1 text-sm text-ink-muted">{site.hoursDisplay}</p>
           </div>
         </div>
       </div>
