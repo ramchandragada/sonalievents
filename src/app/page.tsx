@@ -14,9 +14,10 @@ import { locations } from "@/lib/locations";
 import { scope, site } from "@/lib/site";
 import { pageMeta } from "@/lib/seo";
 
-const homeTitle = "Event Planner Nanded City & Sinhgad Road Pune | Sonali Events";
+const homeTitle =
+  "Event Management Company in Nanded City & Sinhgad Road, Pune | Sonali Events";
 const homeDescription =
-  "End-to-end event management in Nanded City and on Sinhgad Road, Pune — birthdays, namkaran, engagements, weddings, housewarming, munj, office parties. Venue, décor, food, music. WhatsApp +91 89757 60707.";
+  "Event management company and event planner in Nanded City, Pune — the Sinhgad Road township, also spelled Sinhagad Road, not Nanded district. Birthdays, weddings, parties. WhatsApp +91 89757 60707.";
 
 export const metadata: Metadata = pageMeta("/", {
   title: { absolute: homeTitle },
@@ -46,7 +47,7 @@ export default function Home() {
             className="hero-copy max-w-2xl font-serif text-[1.65rem] leading-[1.15] text-paper sm:text-3xl md:text-4xl"
             style={{ animation: "rise 0.9s 0.22s cubic-bezier(0.16,1,0.3,1) both" }}
           >
-            Event management for Nanded City &amp; Sinhgad Road
+            Event management company in Nanded City, Pune
           </h1>
           <h2
             className="hero-copy display mt-3 max-w-3xl text-[13vw] leading-[0.9] text-paper sm:text-[11vw] lg:text-[8.5vw] xl:text-[7.5rem]"
@@ -60,8 +61,8 @@ export default function Home() {
             className="hero-copy mt-4 max-w-md text-base leading-relaxed text-paper/95 md:mt-5 md:text-lg"
             style={{ animation: "rise 0.85s 0.48s cubic-bezier(0.16,1,0.3,1) both" }}
           >
-            Venue, décor, food, music, dance, and games — at home, society lawn,
-            or banquet hall near Nanded City and Sinhgad Road.
+            Event planner for homes, society lawns, and banquet halls in the
+            Nanded City township — Sinhgad Road, also spelled Sinhagad Road.
           </p>
           <div
             className="mt-6 flex flex-wrap items-center gap-2 md:mt-8"
@@ -92,8 +93,9 @@ export default function Home() {
 
       <section className="mx-auto max-w-7xl px-5 pb-2 md:px-8">
         <p className="max-w-2xl text-base leading-relaxed text-ink-soft">
-          {site.honestLine} We work at Nanded City homes, society lawns,
-          Sinhgad Road banquet halls, and halls such as Serenova Banquet.
+          {site.honestLine} We are an event management company for Nanded City
+          homes, society lawns, and Sinhgad Road banquet halls — Sinhagad Road
+          on many maps — including halls such as Serenova Banquet.
         </p>
       </section>
 
@@ -102,11 +104,12 @@ export default function Home() {
           <div className="reveal">
             <p className="eyebrow">Where we work</p>
             <h2 className="display mt-2 text-4xl md:text-6xl">
-              Nanded City and Sinhgad Road.
+              Event planner for Nanded City and Sinhgad Road.
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft md:text-lg">
               The Pune township of homes and lawns, and the banquet corridor on
-              the same road — not Nanded district in Marathwada.
+              the same road — Sinhgad Road, also written Sinhagad Road. Not
+              Nanded district in Marathwada.
             </p>
           </div>
           <div className="mt-6 grid gap-2 md:mt-8 md:grid-cols-2 md:gap-3">

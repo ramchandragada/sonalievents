@@ -25,25 +25,26 @@ export const locations: LocationPage[] = [
     slug: "nanded-city-pune",
     name: "Nanded City, Pune",
     navLabel: "Nanded City",
-    title: "Event Planner in Nanded City, Pune | Birthdays, Weddings & More | Sonali Events",
+    title: "Event Management Company in Nanded City, Pune | Sonali Events",
     description:
-      "Event planner in Nanded City, Pune — the Sinhgad Road township, not Nanded district. Birthdays, namkaran, engagements, weddings, housewarming, and munj at home or on a society lawn. WhatsApp +91 89757 60707.",
-    h1: "Event planner in Nanded City, Pune",
+      "Event management company and event planner in Nanded City, Pune — the Sinhgad Road township, also spelled Sinhagad Road, not Nanded district. Birthdays, weddings, and parties at home or on a society lawn. WhatsApp +91 89757 60707.",
+    h1: "Event management company in Nanded City, Pune",
     kicker: "Pune township · 411068",
     lede:
-      "Homes, society lawns, and clubhouses in the Nanded City township on Sinhgad Road. We hold the day so the family greets guests — not vendors.",
+      "Event planner in Nanded City, Pune — homes, society lawns, and clubhouses in the township on Sinhgad Road, also spelled Sinhagad Road. We hold the day so the family greets guests — not vendors.",
     image: work.birthdayUnicorn,
     imageAlt: "Birthday décor held at a Nanded City home",
     areaServed: [
       { "@type": "Place", name: "Nanded City, Pune" },
       { "@type": "Place", name: "Nanded City township, Sinhgad Road, Pune" },
+      { "@type": "Place", name: "Nanded City township, Sinhagad Road, Pune" },
       { "@type": "City", name: "Pune" },
     ],
     sections: [
       {
         heading: "This Nanded — the Pune township",
         paragraphs: [
-          "Nanded City is a township on Sinhgad Road in Pune: gated homes, society lawns, and clubhouses in postal code 411068. It is not Nanded district in Marathwada. Families who type “event planner Nanded” often land on the wrong city. Sonali Events works here — the Pune township, the societies along this stretch, and the banquet halls a short drive toward Sinhgad Road.",
+          "Nanded City is a township on Sinhgad Road in Pune — Sinhagad Road on many maps. Gated homes, society lawns, and clubhouses in postal code 411068. It is not Nanded district in Marathwada. Families who type “event planner Nanded” often land on the wrong city. Sonali Events is an event management company for this township, the societies along this stretch, and the banquet halls a short drive toward Sinhgad Road.",
           "When a brief says “Nanded City home,” the house already knows the shape of the day. Lifts and visitor parking. A lawn that must be clear by a society curfew. Elders who want the ritual in the living room and the meal outside. Children who will find the cake before the host does. We hold those constraints so they become the gift, not the argument.",
           "The website is English. On the floor the team speaks Marathi, Hindi, and English — the three languages this township actually uses when a neighbour, a priest, and a cousin from another city are in the same room.",
         ],
@@ -93,13 +94,13 @@ export const locations: LocationPage[] = [
     slug: "sinhgad-road-pune",
     name: "Sinhgad Road, Pune",
     navLabel: "Sinhgad Road",
-    title: "Event Planner Sinhgad Road, Pune | Weddings, Office Parties & Banquets | Sonali Events",
+    title: "Event Management Company on Sinhgad Road, Pune | Sonali Events",
     description:
-      "Event planner on Sinhgad Road, Pune — weddings, office parties, engagements, and banquet days, including halls such as Serenova. Also Nanded City homes and lawns. WhatsApp +91 89757 60707.",
-    h1: "Event planner on Sinhgad Road, Pune",
+      "Event management company on Sinhgad Road, Pune — also spelled Sinhagad Road. Wedding planner for banquet weeks, office parties, and Nanded City homes. WhatsApp +91 89757 60707.",
+    h1: "Event management company on Sinhgad Road, Pune",
     kicker: "Banquet corridor · Pune",
     lede:
-      "Wedding weeks, office nights, and banquet days along Sinhgad Road — also spelled Sinhagad Road — with the same team that holds Nanded City homes.",
+      "Wedding planner for weeks, office nights, and banquet days along Sinhgad Road — also spelled Sinhagad Road — with the same team that holds Nanded City homes.",
     image: work.banquetDoor,
     imageAlt: "Banquet entrance on Sinhgad Road dressed by Sonali Events",
     areaServed: [
@@ -113,12 +114,12 @@ export const locations: LocationPage[] = [
         heading: "The banquet corridor",
         paragraphs: [
           "Sinhgad Road — Sinhagad Road on many maps and invites — is the stretch where Nanded City families go when the guest list leaves the society. Banquet halls, marriage halls, and hotel floors sit along this corridor. Office annual days book the same rooms on a Friday that a reception will take on Sunday.",
-          "Sonali Events is based at Nanded City, Sinhgad Road, Pune. We hold days on this road so the family does not have to collect a decorator, a caterer, a DJ, and a host from four group chats. Venue, décor, food, invitations, music, dance, games, and show-calling stay in one window.",
+          "Sonali Events is an event management company based at Nanded City, Sinhgad Road, Pune. We hold days on this road so the family does not have to collect a decorator, a caterer, a DJ, and a host from four group chats. Venue, décor, food, invitations, music, dance, games, and show-calling stay in one window.",
           "We mention halls only when we have already worked them. Serenova Banquet is one such floor on this corridor. If your date needs a different hall, we still run the production: the brief, the estimate, the team, and the day. We do not invent a venue list we have not stood on.",
         ],
       },
       {
-        heading: "Weddings and the week around them",
+        heading: "Wedding planner on Sinhgad Road, Pune",
         paragraphs: [
           "A wedding on Sinhgad Road is rarely one evening. Mehendi, sangeet, ceremony, and reception travel across a home, a lawn, and a hall. The wedding team runs those functions as one file — venue lock, multi-day décor, a ritual map, catering, music, and guest flow — so the family greets people, not vendors.",
           "Engagements and sakhar pud on this road now carry wedding-level staging: a walk-in, a ring moment, a dance floor with a clear peak. We design the stage and the host so the night has a shape, not a blur of lights.",

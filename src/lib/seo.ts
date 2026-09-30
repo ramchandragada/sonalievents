@@ -85,6 +85,10 @@ export const businessJsonLd = {
     },
     {
       "@type": "Place",
+      name: "Sinhagad Road, Pune",
+    },
+    {
+      "@type": "Place",
       name: "Nanded City, Sinhgad Road, Pune",
     },
     {
@@ -150,6 +154,7 @@ export function locationJsonLd(item: LocationPage) {
 
 export function eventJsonLd(item: {
   name: string;
+  h1?: string;
   summary: string;
   slug: string;
   image: string;
@@ -169,7 +174,7 @@ export function eventJsonLd(item: {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: `${item.name} — ${site.name}`,
+      name: `${item.h1 ?? item.name} — ${site.name}`,
       description: item.summary,
       image: `${site.url}${item.image}`,
       provider: { "@type": "EventPlanningBusiness", name: site.name, url: site.url },

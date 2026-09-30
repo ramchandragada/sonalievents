@@ -19,6 +19,7 @@ export type EventItem = {
   guests: string;
   includes: string[];
   metaTitle?: string;
+  h1?: string;
   detail?: string[];
   faqs?: FaqItem[];
   relatedThemes?: string[];
@@ -31,22 +32,28 @@ export const events: EventItem[] = [
     slug: "birthdays",
     name: "Birthdays",
     local: "Kids, milestones, 50, 60, 75",
-    summary: "Theme, cake stage, games, and a celebration that feels like a gift.",
+    summary:
+      "Birthday planner in Nanded City, Pune — the township on Sinhgad Road (Sinhagad Road), not Nanded district. Theme, cake, games. WhatsApp +91 89757 60707.",
     story:
-      "From first-year birthdays in Nanded City homes to golden jubilees in Sinhgad Road banquet halls, the birthday team builds a world around the person being celebrated — décor, food, music, and games that keep every age on the floor.",
+      "A birthday planner in Nanded City, Pune, for the township — not Nanded district in Marathwada. From first-year birthdays in township homes to golden jubilees in Sinhgad Road banquet halls, the birthday team builds a world around the person being celebrated — décor, food, music, and games that keep every age on the floor.",
     image: work.birthdayUnicorn,
     guests: "30–120",
     includes: ["Theme décor", "Cake & dessert staging", "Kids games & anchor", "Music", "F&B coordination"],
-    metaTitle: "Birthday planner in Nanded City & Sinhgad Road",
+    metaTitle: "Birthday planner in Nanded City, Pune",
+    h1: "Birthday planner in Nanded City, Pune",
     detail: [
-      "In the Nanded City township a birthday usually starts in the flat or on the society lawn: a unicorn first year, a car theme for a five-year-old, a quiet 60th with elders at the table. We measure the room, set the cake stage where photographs will actually happen, and keep games in a pocket that does not block the meal.",
+      "Nanded City on this page is the Pune township on Sinhgad Road — Sinhagad Road on many maps — postal code 411068. It is not Nanded district, Nanded Town, or PIN 431601 in Marathwada. A birthday here usually starts in the flat or on the society lawn: a unicorn first year, a car theme for a five-year-old, a quiet 60th with elders at the table. We measure the room, set the cake stage where photographs will actually happen, and keep games in a pocket that does not block the meal.",
       "When the list outgrows the society, the same team moves the night to a Sinhgad Road banquet — including halls we already know, such as Serenova — without changing the brief. Theme, cake, music, and an anchor who can hold both children and uncles.",
       "Tell us the date, the age, and whether it is home, lawn, or hall. We hold décor, food, invitations, music, dance, and games so the family can watch the person being celebrated.",
     ],
     faqs: [
       {
+        q: "Is this Nanded City in Pune, or Nanded district?",
+        a: "Pune. Nanded City is the township on Sinhgad Road — also spelled Sinhagad Road — postal code 411068. It is not Nanded district, Nanded Town, or PIN 431601 in Marathwada. Sonali Events plans birthdays in the township.",
+      },
+      {
         q: "Do you plan birthdays inside Nanded City homes?",
-        a: "Yes. Most first-year and kids’ birthdays we hold are in Nanded City flats or society lawns. We scale décor and food to the rooms you actually have, including society curfews.",
+        a: "Yes. Most first-year and kids’ birthdays we hold are in Nanded City flats or society lawns in the Pune township. We scale décor and food to the rooms you actually have, including society curfews.",
       },
       {
         q: "Can a larger birthday move to Sinhgad Road?",
@@ -156,9 +163,10 @@ export const events: EventItem[] = [
     slug: "marriages",
     name: "Marriages",
     local: "Lagna and related functions",
-    summary: "Multi-day venue, ritual map, and a dedicated wedding team.",
+    summary:
+      "Wedding planner on Sinhgad Road, Pune — also spelled Sinhagad Road. Ceremony, reception, and the functions that stay in Nanded City. WhatsApp +91 89757 60707.",
     story:
-      "A wedding team runs mehendi, sangeet, ceremony, and reception as one file — venue, décor, food, music, dance, and show-calling — so the family greets guests, not vendors.",
+      "A wedding planner on Sinhgad Road, Pune — also spelled Sinhagad Road — runs mehendi, sangeet, ceremony, and reception as one file, so the family greets guests, not vendors.",
     image: work.banquetDoor,
     guests: "150–400",
     includes: [
@@ -169,10 +177,11 @@ export const events: EventItem[] = [
       "Music & sangeet",
       "Guest flow",
     ],
-    metaTitle: "Wedding planner Sinhgad Road & Nanded City Pune",
+    metaTitle: "Wedding planner on Sinhgad Road, Pune",
+    h1: "Wedding planner on Sinhgad Road, Pune",
     detail: [
       "Wedding weeks on this corridor usually split across floors: a haldi or mehendi in a Nanded City home or society lawn, ceremony and reception in a Sinhgad Road banquet. We lock the venues as one map so the family does not run two productions.",
-      "The banquet stretch — Sinhgad Road, also written Sinhagad Road — is where larger lists sit. We have already dressed halls such as Serenova Banquet. We do not publish a venue catalogue we have not stood on. If you already have a hall, we still hold décor, food, music, dance, and show-calling.",
+      "The banquet stretch — Sinhgad Road, also written Sinhagad Road — is where larger lists sit. Sonali Events is an event management company for that week: we have already dressed halls such as Serenova Banquet. We do not publish a venue catalogue we have not stood on. If you already have a hall, we still hold décor, food, music, dance, and show-calling.",
       "Maharashtrian lagna, North Indian pheras, South Indian ceremonies: the wedding team sequences priests, elders, and the dance floor so each function has a start and a close. Tell us the dates and the guest count. We return a clear estimate and a dedicated crew.",
     ],
     faqs: [
@@ -294,16 +303,18 @@ export const events: EventItem[] = [
     slug: "celebration-parties",
     name: "Celebration parties",
     local: "Anniversary, baby shower, success",
-    summary: "A styled party with a reason — and a run-of-show to match.",
+    summary:
+      "Party planner in Nanded City, Pune — the township on Sinhgad Road, also spelled Sinhagad Road, not Nanded district. WhatsApp +91 89757 60707.",
     story:
-      "Anniversaries, baby showers, promotions, house-full evenings. Same team as a wedding, scaled to the home or hall you actually have.",
+      "A party planner in Nanded City, Pune — the township on Sinhgad Road, also spelled Sinhagad Road, not Nanded district. Anniversaries, baby showers, promotions, house-full evenings. Same team as a wedding, scaled to the home or hall you actually have.",
     image: work.birthdaySixteen,
     guests: "40–150",
     includes: ["Styled décor", "Host & games", "Music", "Invites", "Food"],
-    metaTitle: "Celebration party planner in Nanded City & Sinhgad Road",
+    metaTitle: "Party planner in Nanded City, Pune",
+    h1: "Party planner in Nanded City, Pune",
     detail: [
-      "Anniversaries, baby showers, and quieter success evenings often stay in a Nanded City home or society lawn: styled décor the photographs can use, a host when games need one, and a meal that fits the rooms you have.",
-      "House-full nights and larger promotions move to a Sinhgad Road banquet. The crew is the same one that runs a wedding week, scaled to the hall you actually booked — not a catalogue evening dropped onto the floor.",
+      "Nanded City here is the Pune township, not Nanded district. Anniversaries, baby showers, and quieter success evenings often stay in a home or on a society lawn: styled décor the photographs can use, a host when games need one, and a meal that fits the rooms you have.",
+      "House-full nights and larger promotions move to a Sinhgad Road banquet — Sinhagad Road on many maps. The crew is the same one that runs a wedding week, scaled to the hall you actually booked — not a catalogue evening dropped onto the floor.",
       "Maharashtrian and North Indian houses ask for different colours and a different meal. Tell us the reason, the date, and whether it is home, lawn, or hall. We hold décor, music, invites, and food.",
     ],
     faqs: [
