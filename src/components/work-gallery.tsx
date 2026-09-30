@@ -6,6 +6,16 @@ import type { WorkItem } from "@/lib/work-media";
 
 const filters = ["All", "Photos", "Films"] as const;
 
+function photoAlt(label: string) {
+  return label === "Photograph" ? "Sonali Events celebration" : label;
+}
+
+function filmStillAlt(label: string) {
+  return label === "Film"
+    ? "Film still from a Sonali Events celebration"
+    : label;
+}
+
 export function WorkGallery({
   featured,
   rest,
@@ -60,7 +70,7 @@ export function WorkGallery({
               {item.kind === "photo" ? (
                 <MediaFrame
                   src={item.src}
-                  alt="Sonali Events celebration"
+                  alt={photoAlt(item.label)}
                   className="min-h-[140px] aspect-[3/4] md:min-h-[240px]"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
@@ -70,7 +80,7 @@ export function WorkGallery({
                     <div className="pointer-events-none absolute inset-0">
                       <MediaFrame
                         src={item.poster}
-                        alt="Film still from a Sonali Events celebration"
+                        alt={filmStillAlt(item.label)}
                         className="h-full w-full"
                         sizes="(max-width: 640px) 100vw, 33vw"
                       />
@@ -123,7 +133,7 @@ export function WorkGallery({
               <div className="relative h-[80dvh]">
                 <MediaFrame
                   src={active.src}
-                  alt="Sonali Events celebration"
+                  alt={photoAlt(active.label)}
                   className="h-full w-full"
                   sizes="100vw"
                 />
@@ -135,6 +145,7 @@ export function WorkGallery({
                 controls
                 autoPlay
                 playsInline
+                aria-label={filmStillAlt(active.label)}
                 className="max-h-[80dvh] w-full bg-ink object-contain"
               />
             )}

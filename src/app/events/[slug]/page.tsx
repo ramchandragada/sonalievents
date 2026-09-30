@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { WhatsAppButton } from "@/components/cta";
 import { FaqList } from "@/components/faq-list";
+import { FloorMedia } from "@/components/floor-media";
 import { MediaFrame } from "@/components/media-frame";
 import { events, getEvent } from "@/lib/events";
 import { guidesLinkingTo } from "@/lib/guides";
@@ -57,6 +58,7 @@ export default async function EventDetailPage({ params }: Props) {
           <h1 className="display mt-3 text-5xl md:mt-5 md:text-8xl">{item.name}</h1>
         </div>
       </div>
+      {item.floor ? <FloorMedia shots={item.floor} /> : null}
       <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 md:grid-cols-12 md:gap-12 md:px-8 md:py-20">
         <div className="md:col-span-7">
           <p className="text-xl leading-relaxed text-ink-soft">{item.story}</p>
