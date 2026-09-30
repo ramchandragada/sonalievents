@@ -55,7 +55,15 @@ export default async function EventDetailPage({ params }: Props) {
           <p className="eyebrow">
             {item.local}
           </p>
-          <h1 className="display mt-3 text-5xl md:mt-5 md:text-8xl">{item.name}</h1>
+          <h1
+            className={
+              item.h1
+                ? "display mt-3 max-w-xl text-4xl leading-[1.05] md:mt-4 md:text-5xl lg:text-6xl"
+                : "display mt-3 text-5xl md:mt-5 md:text-8xl"
+            }
+          >
+            {item.h1 ?? item.name}
+          </h1>
         </div>
       </div>
       {item.floor ? <FloorMedia shots={item.floor} /> : null}
@@ -69,7 +77,7 @@ export default async function EventDetailPage({ params }: Props) {
           ))}
           <p className="mt-6 text-ink-soft/80">
             Typical gathering: {item.guests} guests. Final scale follows your
-            home, society lawn, or Sinhgad Road hall.
+            home, society lawn, or Sinhgad Road hall — also spelled Sinhagad Road.
           </p>
           <p className="mt-4 text-sm text-ink-muted">
             Areas we hold this:{" "}

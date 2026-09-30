@@ -25,24 +25,28 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Event Planner Nanded City & Sinhgad Road Pune | Sonali Events",
+    default:
+      "Event Management Company in Nanded City & Sinhgad Road, Pune | Sonali Events",
     template: "%s · Sonali Events",
   },
   description:
-    "End-to-end event management in Nanded City and on Sinhgad Road, Pune — birthdays, namkaran, engagements, weddings, housewarming, munj, office parties. Venue, décor, food, music. WhatsApp +91 89757 60707.",
+    "Event management company and event planner in Nanded City, Pune — the Sinhgad Road township, also spelled Sinhagad Road, not Nanded district. Birthdays, weddings, parties. WhatsApp +91 89757 60707.",
   keywords: [
-    "event planner Nanded City",
-    "event planner Sinhgad Road",
-    "wedding planner Pune",
+    "event management company Nanded City Pune",
+    "event planner Nanded City Pune",
+    "birthday planner Nanded City",
+    "wedding planner Sinhgad Road Pune",
+    "wedding planner Sinhagad Road Pune",
+    "event management Sinhgad Road Pune",
+    "event management Sinhagad Road",
+    "party planner Nanded City Pune",
     "Sonali Events",
-    "naming ceremony Pune",
-    "Nanded City events",
-    "Sinhgad Road event management",
   ],
   openGraph: {
-    title: "Event Planner Nanded City & Sinhgad Road Pune | Sonali Events",
+    title:
+      "Event Management Company in Nanded City & Sinhgad Road, Pune | Sonali Events",
     description:
-      "End-to-end event management in Nanded City and on Sinhgad Road, Pune — birthdays, namkaran, engagements, weddings, housewarming, munj, office parties. Venue, décor, food, music.",
+      "Event management company and event planner in Nanded City, Pune — the Sinhgad Road township, also spelled Sinhagad Road, not Nanded district. Birthdays, weddings, parties.",
     url: site.url,
     siteName: site.name,
     locale: "en_IN",

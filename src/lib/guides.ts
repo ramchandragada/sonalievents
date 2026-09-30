@@ -27,10 +27,10 @@ export const guides: GuidePage[] = [
   {
     slug: "birthday-nanded-city-society-lawn",
     title:
-      "Birthday at a Nanded City Home or Society Lawn, Pune | Sonali Events",
+      "Birthday Planner in Nanded City, Pune | Home or Society Lawn | Sonali Events",
     description:
-      "How to plan a birthday in a Nanded City (Pune township) home or society lawn — guest ranges, décor, food, music, and what Sonali Events holds. WhatsApp +91 89757 60707.",
-    h1: "Planning a birthday at a Nanded City home or society lawn",
+      "Birthday planner in Nanded City, Pune — the township on Sinhgad Road, also spelled Sinhagad Road, not Nanded district. How an event management company holds a home or society-lawn birthday. WhatsApp +91 89757 60707.",
+    h1: "Birthday planner in Nanded City, Pune",
     kicker: "Guide · Nanded City, Pune",
     navLabel: "Birthday, Nanded City",
     lede:
@@ -59,16 +59,16 @@ export const guides: GuidePage[] = [
       },
       {
         q: "Is this Nanded City in Pune, or Nanded district?",
-        a: "Pune. Nanded City is the township on Sinhgad Road, postal code 411068 — not Nanded district in Marathwada. Sonali Events is based in the township.",
+        a: "Pune. Nanded City is the township on Sinhgad Road — also spelled Sinhagad Road — postal code 411068. It is not Nanded district in Marathwada. Sonali Events is an event management company based in the township.",
       },
     ],
     sections: [
       {
         heading: "This Nanded City — the Pune township",
         paragraphs: [
-          "Nanded City is a gated township on Sinhgad Road in Pune: flats, bungalows, society lawns, and clubhouses in postal code 411068. It is not Nanded district in Marathwada. Families who search “birthday planner Nanded” often land on the wrong city. This guide is for the Pune township — visitor parking, the lift that will carry the cake, and the lawn that must be clear by a published hour.",
+          "Nanded City is a gated township on Sinhgad Road in Pune — Sinhagad Road on many maps. Flats, bungalows, society lawns, and clubhouses sit in postal code 411068. It is not Nanded district in Marathwada. Families who search “birthday planner Nanded” often land on the wrong city. This guide is for the Pune township — visitor parking, the lift that will carry the cake, and the lawn that must be clear by a published hour.",
           "A birthday here rarely begins as a banquet brief. It begins as a living room, a passage, cousins in cars that need a slot, and a neighbour who will hear the music whether the society permits a dhol or not. That is a different floor from a hall on Sinhgad Road. It needs a different plan.",
-          "Sonali Events is based at Nanded City, Sinhgad Road, Pune. The website is English. On the floor the team speaks Marathi, Hindi, and English. Read the [[/locations/nanded-city-pune|Nanded City location page]] for the wider map of days we hold here. This note is only about the birthday.",
+          "Sonali Events is an event management company based at Nanded City, Sinhgad Road, Pune. The website is English. On the floor the team speaks Marathi, Hindi, and English. Read the [[/locations/nanded-city-pune|Nanded City location page]] for the wider map of days we hold here. This note is only about the birthday.",
         ],
       },
       {
@@ -116,14 +116,14 @@ export const guides: GuidePage[] = [
   {
     slug: "office-party-sinhgad-road",
     title:
-      "Office Party & Annual Day on Sinhgad Road, Pune | Sonali Events",
+      "Event Management Company on Sinhagad Road, Pune | Office Party | Sonali Events",
     description:
-      "How to plan an office party or annual day on Sinhgad Road, Pune — banquet versus clubhouse, stage, food, load-out, and what Sonali Events holds. WhatsApp +91 89757 60707.",
-    h1: "Planning an office or annual-day party on Sinhgad Road",
+      "Event management company on Sinhgad Road, Pune — also spelled Sinhagad Road. How to plan an office party or annual day: banquet versus a Nanded City clubhouse, stage, food, and load-out. WhatsApp +91 89757 60707.",
+    h1: "Event management company on Sinhagad Road, Pune",
     kicker: "Guide · Sinhgad Road, Pune",
     navLabel: "Office party, Sinhgad Road",
     lede:
-      "Banquet hall or Nanded City clubhouse, stage or no stage, the hour the room must be empty. What to decide before the HR group chat starts collecting vendors.",
+      "Sinhgad Road and Sinhagad Road are the same Pune stretch. Banquet hall or Nanded City clubhouse, stage or no stage, the hour the room must be empty — what to decide before the HR group chat starts collecting vendors.",
     image: work.banquetDoor,
     imageAlt: "Banquet entrance on Sinhgad Road dressed by Sonali Events",
     published: "2026-09-11",
@@ -156,7 +156,7 @@ export const guides: GuidePage[] = [
         heading: "Sinhgad Road, also written Sinhagad Road",
         paragraphs: [
           "Sinhgad Road — Sinhagad Road on many maps, invites, and hall listings — is the Pune corridor where Nanded City families and nearby offices go when a guest list leaves a society. Banquet halls, marriage halls, and hotel floors sit along this stretch. An office annual day books the same kind of room on a Friday that a reception will take on Sunday. The production problem is the same: one name for the manager, a load-in time, a load-out time, and a night that has a shape.",
-          "Sonali Events is based at Nanded City, Sinhgad Road, Pune. We hold office nights on this road so the company does not collect a decorator, a caterer, a DJ, and an anchor from four chats. The service page is [[/events/office-parties|office parties]] — annual day and offsite night, typical gatherings 40–200. The geography page is [[/locations/sinhgad-road-pune|event planner on Sinhgad Road]]. This guide is the planning note in between: banquet versus clubhouse, and what to lock before you pay a hall deposit.",
+          "Sonali Events is an event management company based at Nanded City, Sinhgad Road, Pune. We hold office nights on this road so the company does not collect a decorator, a caterer, a DJ, and an anchor from four chats. The service page is [[/events/office-parties|office parties]] — annual day and offsite night, typical gatherings 40–200. The geography page is [[/locations/sinhgad-road-pune|event management company on Sinhgad Road]]. This guide is the planning note in between: banquet versus clubhouse, and what to lock before you pay a hall deposit.",
           "We mention halls only when we have already worked them. Serenova Banquet is one such floor on this corridor. If your date needs a different hall, we still run the production. We do not publish a venue catalogue we have not stood on.",
         ],
       },
