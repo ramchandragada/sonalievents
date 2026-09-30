@@ -1,6 +1,14 @@
 import type { FaqItem } from "./seo";
 import { work } from "./work-picks";
 
+export type FloorShot = {
+  src: string;
+  alt: string;
+  caption: string;
+  kind?: "photo" | "video";
+  poster?: string;
+};
+
 export type EventItem = {
   slug: string;
   name: string;
@@ -15,6 +23,7 @@ export type EventItem = {
   faqs?: FaqItem[];
   relatedThemes?: string[];
   relatedEvents?: string[];
+  floor?: FloorShot[];
 };
 
 export const events: EventItem[] = [
@@ -49,6 +58,33 @@ export const events: EventItem[] = [
       },
     ],
     relatedEvents: ["celebration-parties", "naming-ceremony"],
+    floor: [
+      {
+        src: work.birthdayXtoColumns,
+        alt: "Blue and white balloon columns and a neon Happy Birthday sign at XTO Pizza",
+        caption: "Birthday at XTO Pizza",
+      },
+      {
+        src: work.birthdayAgesFiveAndTen,
+        alt: "Blue and pink balloon arch with marquee numbers 5 and 10 and a Happy Birthday sign",
+        caption: "Birthday, ages 5 and 10",
+      },
+      {
+        src: work.birthdayReyaans,
+        alt: "Cars-theme home birthday with a gold number 4 and the name REYAANS",
+        caption: "REYAANS, age 4",
+      },
+      {
+        src: work.birthdayShlok,
+        alt: "Gold foil letters spelling SHLOK with blue and white balloons at XTO Pizza",
+        caption: "SHLOK at XTO Pizza",
+      },
+      {
+        src: work.purpleFloralBackdrop,
+        alt: "Purple floral curtain backdrop with hanging flowers and fairy lights",
+        caption: "Purple floral backdrop",
+      },
+    ],
   },
   {
     slug: "naming-ceremony",
@@ -286,6 +322,15 @@ export const events: EventItem[] = [
     ],
     relatedThemes: ["maharashtrian", "north-indian"],
     relatedEvents: ["birthdays", "engagements", "housewarming"],
+    floor: [
+      {
+        src: work.babyShowerFilm,
+        alt: "Baby shower decoration: balloon walkway, floral arches, and a wooden swing in a hall",
+        caption: "Baby shower decoration",
+        kind: "video",
+        poster: "/posters/baby-shower-decoration.jpg",
+      },
+    ],
   },
 ];
 

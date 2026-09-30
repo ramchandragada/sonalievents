@@ -29,7 +29,24 @@ export const work = {
     "/photos-and-videos/whatsapp-image-2026-09-07-at-10-56-12-pm.jpeg",
   houseGarlands:
     "/photos-and-videos/whatsapp-image-2026-09-07-at-10-51-42-pm.jpeg",
+  birthdayXtoColumns:
+    "/photos-and-videos/birthday-xto-pizza-blue-white-balloons.jpeg",
+  birthdayAgesFiveAndTen:
+    "/photos-and-videos/birthday-balloon-arch-ages-5-and-10.jpeg",
+  birthdayReyaans: "/photos-and-videos/birthday-reyaans-age-4.jpeg",
+  birthdayShlok: "/photos-and-videos/birthday-shlok-xto-pizza.jpeg",
+  purpleFloralBackdrop:
+    "/photos-and-videos/purple-floral-curtain-backdrop.jpeg",
+  babyShowerFilm: "/photos-and-videos/baby-shower-decoration.mp4",
 } as const;
+
+/** Film captions taken from what is on screen. */
+export const mediaCaptions: Record<string, string> = {
+  [work.babyShowerFilm]: "Baby shower decoration",
+};
+
+/** Films kept in the gallery lead, ahead of other films. */
+export const pinnedFilms = [work.babyShowerFilm] as const;
 
 /** Real stills chosen for the public gallery — labels describe the photograph, not a review. */
 export const featuredStills = [
@@ -40,6 +57,11 @@ export const featuredStills = [
   { src: work.birthdaySixteen, label: "Birthday" },
   { src: work.birthdayAyaan, label: "Birthday" },
   { src: work.birthdayCar, label: "Birthday" },
+  { src: work.birthdayXtoColumns, label: "Birthday at XTO Pizza" },
+  { src: work.birthdayAgesFiveAndTen, label: "Birthday, ages 5 and 10" },
+  { src: work.birthdayReyaans, label: "REYAANS, age 4" },
+  { src: work.birthdayShlok, label: "SHLOK at XTO Pizza" },
+  { src: work.purpleFloralBackdrop, label: "Purple floral backdrop" },
   { src: work.namingPrincess, label: "Naming ceremony" },
   { src: work.namingGirl, label: "Naming ceremony" },
   { src: work.namingKrishna, label: "Naming ceremony" },
