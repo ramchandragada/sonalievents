@@ -82,6 +82,18 @@ export const events: EventItem[] = [
     footerAnchor: "Birthday planner in Nanded City",
     floor: [
       {
+        src: work.birthdayAnika,
+        alt: "Fairy theme pastel balloon ring for Anika's birthday",
+        caption: "Fairy theme pastel balloon ring for Anika's birthday",
+      },
+      {
+        src: work.birthdayAnikaFilm,
+        alt: "Fairy theme pastel balloon ring for Anika's birthday",
+        caption: "Fairy theme pastel balloon ring for Anika's birthday",
+        kind: "video",
+        poster: "/posters/birthday-anika-fairy-balloon-ring.jpg",
+      },
+      {
         src: work.birthdayXtoColumns,
         alt: "Blue and white balloon columns and a neon Happy Birthday sign at XTO Pizza",
         caption: "Birthday at XTO Pizza",
@@ -183,6 +195,36 @@ export const events: EventItem[] = [
     footerAnchor: "Birthday decoration in Nanded City",
     floor: [
       {
+        src: work.birthdayShourya,
+        alt: "Gold and white balloon birthday setup with SHOURYA letters at XTO Pizza",
+        caption:
+          "Gold and white balloon birthday setup with SHOURYA letters at XTO Pizza",
+      },
+      {
+        src: work.birthdayAnika,
+        alt: "Fairy theme pastel balloon ring for Anika's birthday",
+        caption: "Fairy theme pastel balloon ring for Anika's birthday",
+      },
+      {
+        src: work.birthdayAnikaFilm,
+        alt: "Fairy theme pastel balloon ring for Anika's birthday",
+        caption: "Fairy theme pastel balloon ring for Anika's birthday",
+        kind: "video",
+        poster: "/posters/birthday-anika-fairy-balloon-ring.jpg",
+      },
+      {
+        src: work.birthdayCeilingBalloons,
+        alt: "Blue and white helium ceiling balloons for a birthday at home",
+        caption: "Blue and white helium ceiling balloons for a birthday at home",
+      },
+      {
+        src: work.birthdayHomeBalloonsFilm,
+        alt: "Blue and white helium ceiling balloons for a birthday at home",
+        caption: "Blue and white helium ceiling balloons for a birthday at home",
+        kind: "video",
+        poster: "/posters/birthday-blue-white-balloons-home.jpg",
+      },
+      {
         src: work.birthdayAgesFiveAndTen,
         alt: "Blue and pink balloon arch with marquee numbers 5 and 10 and a Happy Birthday sign",
         caption: "Birthday, ages 5 and 10",
@@ -261,6 +303,13 @@ export const events: EventItem[] = [
     footerAnchor: "Baby shower decoration on Sinhgad Road",
     floor: [
       {
+        src: work.dohaleJevanFilm,
+        alt: "Dohale jevan decoration with peacock stage and floral swing",
+        caption: "Dohale jevan decoration with peacock stage and floral swing",
+        kind: "video",
+        poster: "/posters/baby-shower-dohale-jevan-peacock-stage.jpg",
+      },
+      {
         src: work.babyShowerFilm,
         alt: "Baby shower decoration: balloon walkway, floral arches, and a wooden swing in a hall",
         caption: "Baby shower decoration",
@@ -286,6 +335,7 @@ export const events: EventItem[] = [
     detail: [
       "Naming ceremonies in Nanded City are often at home: a palna in the hall, a ritual corner the priest can reach without crossing the cake, seating that puts grandparents first. Barsa and namkaran ask for quiet precision more than a stage.",
       "South Indian families on this road ask for jasmine, silk, and a satvik meal. Maharashtrian houses ask for a custom the elders already know. We do not overwrite the ritual with a theme. The floral and the cradle sit around it.",
+      "We also decorate annaprashan, the first rice-feeding ceremony.",
       "If the guest list needs a clubhouse or a Sinhgad Road hall, we keep the same layout logic — ritual first, meal second, photographs where the light actually is. WhatsApp the date and the custom. We reply in Marathi, Hindi, or English.",
     ],
     faqs: [
@@ -307,6 +357,20 @@ export const events: EventItem[] = [
     nandedAnchor: "naming ceremony in Nanded City",
     sinhgadAnchor: "namkaran planner on Sinhgad Road",
     footerAnchor: "Naming ceremony in Nanded City",
+    floor: [
+      {
+        src: work.annaprashan,
+        alt: "Annaprashan (first meal) floral setup with Krishna backdrop",
+        caption: "Annaprashan (first meal) floral setup with Krishna backdrop",
+      },
+      {
+        src: work.annaprashanFilm,
+        alt: "Annaprashan (first meal) floral setup with Krishna backdrop",
+        caption: "Annaprashan (first meal) floral setup with Krishna backdrop",
+        kind: "video",
+        poster: "/posters/annaprashan-first-meal-floral-setup.jpg",
+      },
+    ],
   },
   {
     slug: "engagements",
@@ -430,6 +494,15 @@ export const events: EventItem[] = [
     nandedAnchor: "housewarming in Nanded City",
     sinhgadAnchor: "gruha pravesh on Sinhgad Road",
     footerAnchor: "Housewarming in Nanded City",
+    floor: [
+      {
+        src: work.gruhaPraveshFilm,
+        alt: "Gruha pravesh flower rangoli welcome path",
+        caption: "Gruha pravesh flower rangoli welcome path",
+        kind: "video",
+        poster: "/posters/housewarming-gruha-pravesh-flower-rangoli.jpg",
+      },
+    ],
   },
   {
     slug: "thread-ceremony",
