@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import { events } from "./events";
 import type { LocationPage } from "./locations";
 import { site } from "./site";
+
+export const businessId = `${site.url}/#business`;
 
 const ogImage = {
   url: "/og/sonali-events-cover.jpg",
@@ -50,6 +53,7 @@ const openingHoursSpecification = {
 export const businessJsonLd = {
   "@context": "https://schema.org",
   "@type": "EventPlanningBusiness",
+  "@id": businessId,
   name: site.name,
   url: site.url,
   image: `${site.url}${ogImage.url}`,
@@ -74,6 +78,19 @@ export const businessJsonLd = {
   },
   openingHoursSpecification,
   sameAs: [site.googleMaps, site.justdial],
+  knowsLanguage: ["mr", "hi", "en"],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Celebrations in Nanded City and Sinhgad Road",
+    itemListElement: events.map((item) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: item.h1 ?? item.name,
+        url: `${site.url}/events/${item.slug}`,
+      },
+    })),
+  },
   areaServed: [
     {
       "@type": "Place",
@@ -133,21 +150,8 @@ export function locationJsonLd(item: LocationPage) {
     {
       "@context": "https://schema.org",
       "@type": "EventPlanningBusiness",
-      name: site.name,
-      url,
-      image: `${site.url}${item.image}`,
-      telephone: site.phoneTel,
-      email: site.email,
-      address: businessJsonLd.address,
-      geo: businessJsonLd.geo,
-      openingHoursSpecification: businessJsonLd.openingHoursSpecification,
-      sameAs: businessJsonLd.sameAs,
+      "@id": businessId,
       areaServed: item.areaServed,
-      parentOrganization: {
-        "@type": "EventPlanningBusiness",
-        name: site.name,
-        url: site.url,
-      },
     },
   ];
 }
@@ -177,7 +181,7 @@ export function eventJsonLd(item: {
       name: `${item.h1 ?? item.name} — ${site.name}`,
       description: item.summary,
       image: `${site.url}${item.image}`,
-      provider: { "@type": "EventPlanningBusiness", name: site.name, url: site.url },
+      provider: { "@id": businessId },
       areaServed: "Nanded City, Sinhgad Road, and nearby Pune",
       url,
     },
@@ -220,11 +224,7 @@ export function guideJsonLd(item: {
       author: { "@type": "Organization", name: site.name, url: site.url },
       publisher: { "@type": "Organization", name: site.name, url: site.url },
       mainEntityOfPage: url,
-      about: {
-        "@type": "EventPlanningBusiness",
-        name: site.name,
-        url: site.url,
-      },
+      about: { "@id": businessId },
     },
   ];
   if (item.faqs?.length) {

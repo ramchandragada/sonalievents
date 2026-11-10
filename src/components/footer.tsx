@@ -41,7 +41,8 @@ export function Footer() {
             .
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-7">
+        <div className="md:col-span-7">
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
           <div>
             <p className="eyebrow">Visit</p>
             <ul className="mt-4 space-y-1 text-sm text-ink-soft">
@@ -140,6 +141,22 @@ export function Footer() {
               <li className="pt-4 text-ink-muted">{site.address}</li>
             </ul>
           </div>
+        </div>
+        <div className="mt-10 border-t border-ink/10 pt-8">
+          <p className="eyebrow">Services</p>
+          <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-sm text-ink-soft">
+            {events.map((item) => (
+              <li key={item.slug}>
+                <Link
+                  href={`/events/${item.slug}`}
+                  className="inline-flex min-h-11 items-center hover:text-garnet"
+                >
+                  {item.footerAnchor}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
         </div>
       </div>
       <div className="border-t border-garnet/15 bg-ivory px-5 py-5 text-[0.7rem] tracking-[0.16em] text-ink-muted uppercase md:px-8">

@@ -6,10 +6,14 @@ import { events } from "@/lib/events";
 import { locations } from "@/lib/locations";
 import { pageMeta } from "@/lib/seo";
 
+const eventsTitle =
+  "Events We Plan in Nanded City & Sinhgad Road, Pune | Sonali Events";
+
 export const metadata: Metadata = pageMeta("/events", {
-  title: "Events",
+  title: { absolute: eventsTitle },
   description:
     "Birthdays, naming ceremonies, engagements, marriages, housewarming, thread ceremonies, office parties, and celebration nights from Nanded City and Sinhgad Road.",
+  openGraph: { title: eventsTitle },
 });
 
 export default function EventsPage() {

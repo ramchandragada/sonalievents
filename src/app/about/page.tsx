@@ -13,10 +13,14 @@ import { scope, site } from "@/lib/site";
 import { themes } from "@/lib/themes";
 import { work } from "@/lib/work-picks";
 
+const aboutTitle =
+  "About Sonali Events - Event Management Company, Nanded City, Pune";
+
 export const metadata: Metadata = pageMeta("/about", {
-  title: "About",
+  title: { absolute: aboutTitle },
   description:
     "Sonali Events — the event house at Nanded City and Sinhgad Road. Founded in 2023 by Sonali Upagnalawar. 1,000+ celebrations held with clear communication and on-time delivery.",
+  openGraph: { title: aboutTitle },
 });
 
 export default function AboutPage() {

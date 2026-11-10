@@ -16,9 +16,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const item = getTheme(slug);
   if (!item) return { title: "Theme" };
   return pageMeta(`/themes/${slug}`, {
-    title: `${item.name} theme`,
+    title: { absolute: item.metaTitle },
     description: item.summary,
-    openGraph: { images: [{ url: item.image }] },
+    openGraph: {
+      title: item.metaTitle,
+      description: item.summary,
+      images: [{ url: item.image }],
+    },
   });
 }
 
@@ -44,6 +48,9 @@ export default async function ThemeDetailPage({ params }: Props) {
             {item.kicker}
           </p>
           <h1 className="display mt-3 text-5xl md:mt-5 md:text-8xl">{item.name}</h1>
+          <p className="mt-4 text-sm font-semibold tracking-[0.14em] text-garnet-deep uppercase">
+            {item.placeLine}
+          </p>
         </div>
       </div>
       <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 md:grid-cols-12 md:gap-12 md:px-8 md:py-20">
@@ -66,6 +73,11 @@ export default async function ThemeDetailPage({ params }: Props) {
             />
           </li>
         </ul>
+      </div>
+      <div className="mx-auto max-w-3xl space-y-4 px-5 pb-16 text-base leading-relaxed text-ink-soft md:px-8 md:pb-24 md:text-lg">
+        {item.essay.map((paragraph) => (
+          <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+        ))}
       </div>
     </article>
   );
