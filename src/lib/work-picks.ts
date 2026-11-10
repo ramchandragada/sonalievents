@@ -37,12 +37,40 @@ export const work = {
   birthdayShlok: "/photos-and-videos/birthday-shlok-xto-pizza.jpeg",
   purpleFloralBackdrop:
     "/photos-and-videos/purple-floral-curtain-backdrop.jpeg",
+  birthdayShourya: "/photos-and-videos/birthday-shourya-xto-pizza.jpg",
+  birthdayAnika: "/photos-and-videos/birthday-anika-fairy-balloon-ring.jpg",
+  birthdayAnikaFilm: "/photos-and-videos/birthday-anika-fairy-balloon-ring.mp4",
+  birthdayCeilingBalloons:
+    "/photos-and-videos/birthday-blue-white-ceiling-balloons.jpg",
+  birthdayHomeBalloonsFilm:
+    "/photos-and-videos/birthday-blue-white-balloons-home.mp4",
   babyShowerFilm: "/photos-and-videos/baby-shower-decoration.mp4",
+  dohaleJevanFilm:
+    "/photos-and-videos/baby-shower-dohale-jevan-peacock-stage.mp4",
+  gruhaPraveshFilm:
+    "/photos-and-videos/housewarming-gruha-pravesh-flower-rangoli.mp4",
+  annaprashan: "/photos-and-videos/annaprashan-first-meal-floral-setup.jpg",
+  annaprashanFilm: "/photos-and-videos/annaprashan-first-meal-floral-setup.mp4",
 } as const;
 
 /** Captions taken from what is on screen. Gallery alts use these when a still has no featured label. */
 export const mediaCaptions: Record<string, string> = {
   [work.babyShowerFilm]: "Baby shower decoration",
+  [work.birthdayShourya]:
+    "Gold and white balloon birthday setup with SHOURYA letters at XTO Pizza",
+  [work.birthdayAnika]: "Fairy theme pastel balloon ring for Anika's birthday",
+  [work.birthdayAnikaFilm]: "Fairy theme pastel balloon ring for Anika's birthday",
+  [work.birthdayCeilingBalloons]:
+    "Blue and white helium ceiling balloons for a birthday at home",
+  [work.birthdayHomeBalloonsFilm]:
+    "Blue and white helium ceiling balloons for a birthday at home",
+  [work.dohaleJevanFilm]:
+    "Dohale jevan decoration with peacock stage and floral swing",
+  [work.gruhaPraveshFilm]: "Gruha pravesh flower rangoli welcome path",
+  [work.annaprashan]:
+    "Annaprashan (first meal) floral setup with Krishna backdrop",
+  [work.annaprashanFilm]:
+    "Annaprashan (first meal) floral setup with Krishna backdrop",
   "/photos-and-videos/new-whatsapp-image-2026-09-07-at-11-04-22-pm.jpeg":
     "Blue and pink hot-air-balloon birthday backdrop with cloud balloons, teddy bears, and a marquee number 5",
   "/photos-and-videos/whatsapp-image-2026-09-07-at-11-04-22-pm.jpeg":
@@ -116,7 +144,14 @@ export const mediaCaptions: Record<string, string> = {
 };
 
 /** Films kept in the gallery lead, ahead of other films. */
-export const pinnedFilms = [work.babyShowerFilm] as const;
+export const pinnedFilms = [
+  work.babyShowerFilm,
+  work.birthdayAnikaFilm,
+  work.birthdayHomeBalloonsFilm,
+  work.dohaleJevanFilm,
+  work.gruhaPraveshFilm,
+  work.annaprashanFilm,
+] as const;
 
 /** Real stills chosen for the public gallery — labels describe the photograph, not a review. */
 export const featuredStills = [
@@ -132,11 +167,27 @@ export const featuredStills = [
   { src: work.birthdayReyaans, label: "REYAANS, age 4" },
   { src: work.birthdayShlok, label: "SHLOK at XTO Pizza" },
   { src: work.purpleFloralBackdrop, label: "Purple floral backdrop" },
+  {
+    src: work.birthdayShourya,
+    label: "Gold and white balloon birthday setup with SHOURYA letters at XTO Pizza",
+  },
+  {
+    src: work.birthdayAnika,
+    label: "Fairy theme pastel balloon ring for Anika's birthday",
+  },
+  {
+    src: work.birthdayCeilingBalloons,
+    label: "Blue and white helium ceiling balloons for a birthday at home",
+  },
   { src: work.namingPrincess, label: "Naming ceremony" },
   { src: work.namingGirl, label: "Naming ceremony" },
   { src: work.namingKrishna, label: "Naming ceremony" },
   { src: work.namingPalna, label: "Naming ceremony" },
   { src: work.namingMoon, label: "Naming ceremony" },
+  {
+    src: work.annaprashan,
+    label: "Annaprashan (first meal) floral setup with Krishna backdrop",
+  },
   { src: work.peacockSofa, label: "Celebration" },
   { src: work.banquetDoor, label: "Banquet" },
   { src: work.houseGarlands, label: "Housewarming" },
