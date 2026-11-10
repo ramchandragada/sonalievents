@@ -17,7 +17,7 @@ export default function GuidesPage() {
       <PageIntro
         kicker="Guides"
         title="How a day sits on this road."
-        body="Practical notes for the Pune township and the banquet corridor — not Nanded district. A birthday in a Nanded City home or society lawn. An office night on Sinhgad Road. A wedding week from sakhar pud to reception."
+        body="Practical notes for the Pune township and the banquet corridor — not Nanded district. A birthday in a Nanded City home or society lawn. An office night on Sinhgad Road. A wedding week from sakhar puda to reception."
       />
       <div className="mx-auto grid max-w-7xl gap-2 px-5 pb-12 md:grid-cols-2 md:gap-3 md:px-8 md:pb-24">
         {guides.map((item) => (

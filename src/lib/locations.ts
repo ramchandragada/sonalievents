@@ -61,7 +61,7 @@ export const locations: LocationPage[] = [
       {
         heading: "Celebrations we already hold",
         paragraphs: [
-          "The house runs the days already listed on this site: birthdays, naming ceremonies, engagements, marriages and the related functions, housewarming, thread ceremony, office parties, and celebration nights. In Nanded City the mix leans home and lawn — first-year and milestone birthdays, namkaran and barsa, gruha pravesh, munj, and smaller sakhar pud evenings.",
+          "The house runs the days already listed on this site: birthdays, naming ceremonies, engagements, marriages and the related functions, housewarming, thread ceremony, office parties, and celebration nights. In Nanded City the mix leans home and lawn — first-year and milestone birthdays, namkaran and barsa, gruha pravesh, munj, and smaller sakhar puda evenings.",
           "Wedding weeks and large office nights usually move to a Sinhgad Road banquet, then come back to the society for a quieter function: a haldi in the clubhouse, a reception lunch at home, a naming the week after the wedding. One file. One WhatsApp group.",
           "Each kind of day has its own experienced team. A Saturday in the township can hold a birthday in one society and a namkaran in another without borrowing people. You lock the date and the brief. We produce the rest.",
         ],
@@ -122,7 +122,7 @@ export const locations: LocationPage[] = [
         heading: "Wedding planner on Sinhgad Road, Pune",
         paragraphs: [
           "A wedding on Sinhgad Road is rarely one evening. Mehendi, sangeet, ceremony, and reception travel across a home, a lawn, and a hall. The wedding team runs those functions as one file — venue lock, multi-day décor, a ritual map, catering, music, and guest flow — so the family greets people, not vendors.",
-          "Engagements and sakhar pud on this road now carry wedding-level staging: a walk-in, a ring moment, a dance floor with a clear peak. We design the stage and the host so the night has a shape, not a blur of lights.",
+          "Engagements and sakhar puda on this road now carry wedding-level staging: a walk-in, a ring moment, a dance floor with a clear peak. We design the stage and the host so the night has a shape, not a blur of lights.",
           "North Indian wedding weeks ask for a dense floral mandap, a mehendi floor, and a sangeet that actually dances. Maharashtrian lagna asks for mundavalya, brass, and a meal elders trust. South Indian ceremonies ask for jasmine, silk, and a pace the priest can hold. The corridor sees all three. The house was built for that mix.",
         ],
       },

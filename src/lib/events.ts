@@ -311,26 +311,26 @@ export const events: EventItem[] = [
   {
     slug: "engagements",
     name: "Engagements",
-    local: "Sakhar pud · Ring ceremony",
+    local: "Sakhar puda · Ring ceremony",
     summary:
-      "Engagement and sakhar pud planner on Sinhgad Road, Pune — stage, floral, host, ring moment, and a clear evening peak. WhatsApp +91 89757 60707.",
+      "Engagement and sakhar puda planner on Sinhgad Road, Pune — stage, floral, host, ring moment, and a clear evening peak. WhatsApp +91 89757 60707.",
     story:
       "Engagements near Sinhgad Road now carry wedding-level production. The team designs the stage, the walk-in, the ring moment, and the dance floor so the evening has a clear peak — not a blur of vendors.",
     image: work.roka,
     guests: "80–250",
     includes: ["Stage & floral", "Entry & host", "DJ / live music", "Invitations", "F&B"],
     metaTitle:
-      "Engagement (Sakhar Pud) Planner on Sinhgad Road, Pune | Sonali Events",
-    h1: "Engagement (sakhar pud) planner on Sinhgad Road, Pune",
+      "Engagement (Sakhar Puda) Planner on Sinhgad Road, Pune | Sonali Events",
+    h1: "Engagement (sakhar puda) planner on Sinhgad Road, Pune",
     detail: [
-      "A sakhar pud in Nanded City often stays in the flat or on the society lawn: a floral pocket for the exchange, seating that puts both families in the photograph, and a meal the passage can actually hold. We measure the room before we promise a stage.",
+      "A sakhar puda in Nanded City often stays in the flat or on the society lawn: a floral pocket for the exchange, seating that puts both families in the photograph, and a meal the passage can actually hold. We measure the room before we promise a stage.",
       "When the list leaves the society, the same team moves the night to a Sinhgad Road banquet. Ring ceremonies on this corridor now ask for wedding-level staging — walk-in, ring moment, host, and a dance floor with a clear peak — without a new set of vendors.",
-      "Maharashtrian sakhar pud and North Indian ring or roka evenings use the same file. Tell us the date, the guest count, and whether it is home, lawn, or hall. We hold décor, food, invitations, music, and the host.",
+      "Maharashtrian sakhar puda and North Indian ring or roka evenings use the same file. Tell us the date, the guest count, and whether it is home, lawn, or hall. We hold décor, food, invitations, music, and the host.",
     ],
     faqs: [
       {
-        q: "Do you hold sakhar pud in Nanded City homes?",
-        a: "Yes. Smaller engagements and sakhar pud evenings often stay in a Nanded City flat or society lawn. We scale the floral, the seating, and the meal to the rooms you actually have.",
+        q: "Do you hold sakhar puda in Nanded City homes?",
+        a: "Yes. Smaller engagements and sakhar puda evenings often stay in a Nanded City flat or society lawn. We scale the floral, the seating, and the meal to the rooms you actually have.",
       },
       {
         q: "Can a ring ceremony sit in a Sinhgad Road banquet?",
@@ -343,7 +343,7 @@ export const events: EventItem[] = [
     ],
     relatedThemes: ["maharashtrian", "north-indian"],
     relatedEvents: ["marriages", "celebration-parties"],
-    nandedAnchor: "sakhar pud in Nanded City",
+    nandedAnchor: "sakhar puda in Nanded City",
     sinhgadAnchor: "engagement planner on Sinhgad Road",
     footerAnchor: "Engagement planner on Sinhgad Road",
   },
