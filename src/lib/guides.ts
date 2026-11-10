@@ -204,7 +204,7 @@ export const guides: GuidePage[] = [
     kicker: "Guide · Sinhgad Road, Pune",
     navLabel: "Wedding planner, Sinhgad Road",
     lede:
-      "A wedding on Sinhgad Road is rarely one evening. This note is how Sonali Events chooses a hall slot, runs the week from sakhar pud to reception, and writes an itemised estimate with no rate printed here.",
+      "A wedding on Sinhgad Road is rarely one evening. This note is how Sonali Events chooses a hall slot, runs the week from sakhar puda to reception, and writes an itemised estimate with no rate printed here.",
     image: work.banquetDoor,
     imageAlt: "Banquet entrance on Sinhgad Road dressed by Sonali Events",
     published: "2026-11-10",
@@ -212,7 +212,7 @@ export const guides: GuidePage[] = [
       "Hello Sonali Events, I would like to plan a wedding on Sinhgad Road — banquet, mehendi, and reception.",
     related: [
       { href: "/events/marriages", label: "Wedding planner" },
-      { href: "/events/engagements", label: "Engagement (sakhar pud)" },
+      { href: "/events/engagements", label: "Engagement (sakhar puda)" },
       { href: "/locations/sinhgad-road-pune", label: "Sinhgad Road, Pune" },
       { href: "/themes/maharashtrian", label: "Maharashtrian theme" },
       { href: "/themes/north-indian", label: "North Indian theme" },
@@ -224,8 +224,8 @@ export const guides: GuidePage[] = [
         a: "Match the slot to the functions, not the other way around. A date, a backup date, a start, and a hard end that includes load-in and load-out. Tell us which functions stay in Nanded City and which need the banquet. We will say if the hours overlap.",
       },
       {
-        q: "Do you hold the week from sakhar pud through reception?",
-        a: "Yes. Sakhar pud or a ring ceremony, then haldi, mehendi, sangeet if you want it, ceremony, and reception can sit in one file. Not every house needs every function. We sequence the ones you name.",
+        q: "Do you hold the week from sakhar puda through reception?",
+        a: "Yes. Sakhar puda or a ring ceremony, then haldi, mehendi, sangeet if you want it, ceremony, and reception can sit in one file. Not every house needs every function. We sequence the ones you name.",
       },
       {
         q: "Can one wedding use Maharashtrian, North Indian, and South Indian themes?",
@@ -253,11 +253,11 @@ export const guides: GuidePage[] = [
         ],
       },
       {
-        heading: "From sakhar pud to reception",
+        heading: "From sakhar puda to reception",
         paragraphs: [
-          "The week has a spine. Sakhar pud or a ring ceremony often comes first — sometimes months earlier, sometimes the week of the wedding. It may sit in a Nanded City flat or on a lawn when the list is the two families, or in a Sinhgad Road banquet when it has already become a wedding-scale night. The [[/events/engagements|engagement and sakhar pud planner]] is that evening. Stage, floral, the ring moment, a host, and a peak, so the night is not a blur of vendors.",
+          "The week has a spine. Sakhar puda or a ring ceremony often comes first — sometimes months earlier, sometimes the week of the wedding. It may sit in a Nanded City flat or on a lawn when the list is the two families, or in a Sinhgad Road banquet when it has already become a wedding-scale night. The [[/events/engagements|engagement and sakhar puda planner]] is that evening. Stage, floral, the ring moment, a host, and a peak, so the night is not a blur of vendors.",
           "Then the wedding week itself. A haldi or a puja close to the family. Mehendi, with a floor people can sit on for hours. Sangeet, if the families want a dance night with a start and a close. Ceremony, paced for the priest and the elders. Reception, which is the hall most guests will remember. Not every house holds every function. A Maharashtrian lagna may not want a sangeet. A North Indian week often does. We sequence what you named, and we do not add a function to fill a brochure.",
-          "The point of one file from sakhar pud to reception is that décor, food, music, and the host do not reset every morning. Colours can change. The crew does not. The family greets people. We hold the run of show: who enters, when the meal opens, when the mic is allowed, when the hall must be clear.",
+          "The point of one file from sakhar puda to reception is that décor, food, music, and the host do not reset every morning. Colours can change. The crew does not. The family greets people. We hold the run of show: who enters, when the meal opens, when the mic is allowed, when the hall must be clear.",
         ],
       },
       {
@@ -273,7 +273,7 @@ export const guides: GuidePage[] = [
         heading: "Maharashtrian, North Indian, and South Indian themes",
         paragraphs: [
           "This corridor sees all three, often in one week when the two families do not share a custom. We do not invent a fusion look. We dress each function in the language that family already speaks, and we link the theme to the ritual instead of laying it on top.",
-          "A [[/themes/maharashtrian|Maharashtrian wedding and event theme]] asks for mundavalya, paithani colour, marigold, brass, and a meal elders trust. Lagna, a sakhar pud, a munj the same season — the objects change, the discipline does not. Haldi stays close to the family. Dhol-tasha is optional, and only when the society or the hall allows it.",
+          "A [[/themes/maharashtrian|Maharashtrian wedding and event theme]] asks for mundavalya, paithani colour, marigold, brass, and a meal elders trust. Lagna, a sakhar puda, a munj the same season — the objects change, the discipline does not. Haldi stays close to the family. Dhol-tasha is optional, and only when the society or the hall allows it.",
           "A [[/themes/north-indian|North Indian wedding and event theme]] asks for a dense floral mandap, a mehendi floor, a sangeet that actually dances, and pheras with a path the priest can use. Families near Sinhgad Road host many of these weeks. The mandap in a banquet is not the same build as a ring ceremony in a Nanded City flat, and it is the same design file.",
           "A [[/themes/south-indian|South Indian wedding and event theme]] asks for jasmine, silk, banana leaf, temple lines, and a pace the priest can hold. Ceremony time is not a gap before the DJ. We leave it. A satvik meal is a satvik meal when that is the ask.",
           "Tell us the families, not a board of six cities. If one function is Maharashtrian and the reception is North Indian, say so on the first call. The theme pages are the look. This guide is the week those looks have to survive.",
@@ -290,9 +290,9 @@ export const guides: GuidePage[] = [
       {
         heading: "What to send first",
         paragraphs: [
-          "WhatsApp +91 89757 60707, or the plan form. Someone from the house replies in Marathi, Hindi, or English. Send the dates, including sakhar pud if it is still ahead, the functions you want, roughly who is invited, and whether you already have a hall on Sinhgad Road or a home in Nanded City. If a custom is Maharashtrian, North Indian, South Indian, or a mix, say that in the same message.",
+          "WhatsApp +91 89757 60707, or the plan form. Someone from the house replies in Marathi, Hindi, or English. Send the dates, including sakhar puda if it is still ahead, the functions you want, roughly who is invited, and whether you already have a hall on Sinhgad Road or a home in Nanded City. If a custom is Maharashtrian, North Indian, South Indian, or a mix, say that in the same message.",
           "We come back with slot questions, a theme direction, and an itemised estimate once the rooms are clear. You lock the brief. A wedding team takes the file. You greet guests. We run the floor.",
-          "The [[/events/marriages|wedding page]] is the short list of what sits in the plan. The [[/events/engagements|engagement page]] is the sakhar pud or ring ceremony when that evening stands alone. The [[/locations/nanded-city-pune|Nanded City page]] is the township end of the same road. If you only know the month and the two families, that is enough to begin.",
+          "The [[/events/marriages|wedding page]] is the short list of what sits in the plan. The [[/events/engagements|engagement page]] is the sakhar puda or ring ceremony when that evening stands alone. The [[/locations/nanded-city-pune|Nanded City page]] is the township end of the same road. If you only know the month and the two families, that is enough to begin.",
         ],
       },
     ],

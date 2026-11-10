@@ -21,11 +21,11 @@ export const themes: ThemeItem[] = [
     kicker: "Paithani, brass, marigold",
     summary: "Mundavalya, naivedya, and the warmth of a Pune wada — made for a modern hall.",
     story:
-      "Haldi that smells like home, a mundavalya that sits right, brass that catches the lights, and a meal elders trust. This is the language Sonali Events was built in — munj, namkaran, sakhar pud, lagna, gruha pravesh.",
+      "Haldi that smells like home, a mundavalya that sits right, brass that catches the lights, and a meal elders trust. This is the language Sonali Events was built in — munj, namkaran, sakhar puda, lagna, gruha pravesh.",
     placeLine: "Nanded City, Sinhgad Road, Pune",
     metaTitle: "Maharashtrian Wedding & Event Theme in Pune | Sonali Events",
     essay: [
-      "Nanded City and Sinhgad Road — Sinhagad Road on many maps — ask for this look on munj mornings, namkaran afternoons, sakhar pud evenings, lagna, and gruha pravesh. The township is mixed, and a Maharashtrian house here still wants mundavalya that sit right, paithani colour, marigold, brass, and a meal elders trust. We scale that to a flat, a society lawn, or a banquet on the same road, without turning the day into a stage set that ignores the priest.",
+      "Nanded City and Sinhgad Road — Sinhagad Road on many maps — ask for this look on munj mornings, namkaran afternoons, sakhar puda evenings, lagna, and gruha pravesh. The township is mixed, and a Maharashtrian house here still wants mundavalya that sit right, paithani colour, marigold, brass, and a meal elders trust. We scale that to a flat, a society lawn, or a banquet on the same road, without turning the day into a stage set that ignores the priest.",
       "Haldi stays close to the family. A ritual corner is drawn around the people who must sit, not around a photograph from somewhere else. Dhol-tasha is optional, and only when the society or the hall allows it. Tell us the function and the rooms. The theme sits under the ritual. The same house holds naming ceremonies, thread ceremonies, engagements, weddings, and housewarmings along this corridor, in Marathi, Hindi, or English.",
     ],
     cues: ["Mundavalya & haldi", "Paithani & marigold", "Brass & naivedya", "Dhol-tasha optional"],
