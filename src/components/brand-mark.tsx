@@ -19,7 +19,7 @@ export function BrandMark({
       >
         <Image
           src="/brand/mark-192.png"
-          alt=""
+          alt="Sonali Events"
           width={size}
           height={size}
           className="h-full w-full object-cover"

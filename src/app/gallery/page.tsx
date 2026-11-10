@@ -5,10 +5,14 @@ import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 import { getGallerySets } from "@/lib/work-media";
 
+const galleryTitle =
+  "Event Decoration Photos - Nanded City & Sinhgad Road, Pune | Sonali Events";
+
 export const metadata: Metadata = pageMeta("/gallery", {
-  title: "Gallery",
+  title: { absolute: galleryTitle },
   description:
     "Photographs and films from Sonali Events celebrations near Nanded City and Sinhgad Road.",
+  openGraph: { title: galleryTitle },
 });
 
 export default function GalleryPage() {

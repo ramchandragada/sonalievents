@@ -10,9 +10,13 @@ import { publicPaths, publicUrl } from "@/lib/public-paths";
 export const dynamic = "force-static";
 export const revalidate = false;
 
+/** Fixed at build time so the sitemap stays a static file. */
+const lastModified = "2026-11-10";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return publicPaths().map((path) => ({
     url: publicUrl(path),
+    lastModified,
     changeFrequency: path === "" ? "weekly" : "monthly",
     priority:
       path === ""

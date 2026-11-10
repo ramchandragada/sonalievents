@@ -40,9 +40,79 @@ export const work = {
   babyShowerFilm: "/photos-and-videos/baby-shower-decoration.mp4",
 } as const;
 
-/** Film captions taken from what is on screen. */
+/** Captions taken from what is on screen. Gallery alts use these when a still has no featured label. */
 export const mediaCaptions: Record<string, string> = {
   [work.babyShowerFilm]: "Baby shower decoration",
+  "/photos-and-videos/new-whatsapp-image-2026-09-07-at-11-04-22-pm.jpeg":
+    "Blue and pink hot-air-balloon birthday backdrop with cloud balloons, teddy bears, and a marquee number 5",
+  "/photos-and-videos/whatsapp-image-2026-09-07-at-11-04-22-pm.jpeg":
+    "Blue and pink hot-air-balloon birthday backdrop with cloud balloons, teddy bears, and a marquee number 5",
+  "/photos-and-videos/new-whatsapp-image-2026-09-07-at-11-02-05-pm.jpeg":
+    "Floral hoop, white chair with a red ribbon, and a Marathi 65th-birthday sign",
+  "/photos-and-videos/whatsapp-image-2026-09-07-at-11-02-05-pm.jpeg":
+    "Floral hoop, white chair with a red ribbon, and a Marathi 65th-birthday sign",
+  "/photos-and-videos/whatsapp-image-2026-09-07-at-11-01-24-pm.jpeg":
+    "Blue and white balloon columns, gold foil letters spelling AAVYA, and a neon Happy Birthday sign",
+  "/photos-and-videos/whatsapp-image-2026-09-07-at-11-01-01-pm.jpeg":
+    "White and gold balloon ring with a neon Happy Birthday sign and a marquee number 75",
+  "/photos-and-videos/whatsapp-image-2026-09-07-at-11-00-42-pm.jpeg":
+    "Pastel balloon arch, marquee number 6, name letters spelling VIHAN, and a cartoon character cutout",
+  "/photos-and-videos/whatsapp-image-2026-09-07-at-10-58-33-pm.jpeg":
+    "Blue and silver balloon arch around a white curtain with a neon Happy Birthday sign",
+  "/photos-and-videos/whatsapp-image-2026-09-07-at-10-56-43-pm.jpeg":
+    "Pastel balloon arch with princess cutouts, name letters, and the numbers 2 and 7",
+  "/photos-and-videos/whatsapp-image-2026-09-07-at-10-56-18-pm.jpeg":
+    "First-birthday setup with a green and gold balloon arch, animal cutouts, and the name HRIDA",
+  "/photos-and-videos/whatsapp-image-2026-09-07-at-10-56-04-pm.jpeg":
+    "White ring backdrop with a floral arch, a cream sofa, and a gold monogram",
+  "/photos-and-videos/whatsapp-image-2026-09-07-at-10-54-27-pm.jpeg":
+    "Blue and purple balloon arch, a snow-castle backdrop, a snowman cutout, and a marquee number 6",
+  "/photos-and-videos/whatsapp-image-2026-09-07-at-10-52-52-pm.jpeg":
+    "Yellow flower arch, a cream sofa, and a baby-footprint neon sign",
+  "/photos-and-videos/whatsapp-image-2026-09-07-at-10-52-39-pm.jpeg":
+    "Mehendi seating with colourful umbrellas, kite hangings, and a yellow daybed",
+  "/photos-and-videos/whatsapp-image-2026-09-07-at-10-52-01-pm.jpeg":
+    "Terrace shrine dressed with marigold garlands and rangoli",
+  "/photos-and-videos/whatsapp-image-2026-09-07-at-10-51-26-pm.jpeg":
+    "Colourful arch backdrop, white lattice pillars, and a pale yellow sofa",
+  "/photos-and-videos/photo-whatsapp-image-2026-09-07-at-10-50-29-pm.jpeg":
+    "Mehendi backdrop of pink, yellow, and white drapes with fairy lights and a rose border",
+  "/photos-and-videos/whatsapp-image-2026-09-07-at-10-43-43-pm.jpeg":
+    "Floral swing stage with peacock feathers and Krishna cutouts",
+  "/photos-and-videos/whatsapp-video-2026-09-07-at-11-01-56-pm.mp4":
+    "Pink and white balloons lining a corridor with a flower-petal walkway",
+  "/photos-and-videos/whatsapp-video-2026-09-07-at-10-59-19-pm.mp4":
+    "Krishna cutout on balloons beside a decorated swing and brass lamps",
+  "/photos-and-videos/whatsapp-video-2026-09-07-at-10-57-57-pm.mp4":
+    "Krishna cutout on blue and white balloons beside a tall flower stand",
+  "/photos-and-videos/whatsapp-video-2026-09-07-at-10-55-53-pm.mp4":
+    "Floral ring framing a mother-and-child portrait",
+  "/photos-and-videos/whatsapp-video-2026-09-07-at-10-53-34-pm.mp4":
+    "Brass bowl of rose petals on a marigold rangoli",
+  "/photos-and-videos/whatsapp-video-2026-09-07-at-10-53-02-pm.mp4":
+    "Marigold welcome rangoli with round floral motifs",
+  "/photos-and-videos/whatsapp-video-2026-09-07-at-10-52-20-pm.mp4":
+    "Yellow, white, and maroon flower garlands hanging on a door",
+  "/photos-and-videos/whatsapp-video-2026-09-07-at-10-51-28-pm.mp4":
+    "Orange and yellow floral rangoli running along a tiled floor",
+  "/photos-and-videos/whatsapp-video-2026-09-07-at-10-50-29-pm.mp4":
+    "Blurred close view of red and yellow ceremonial fabric and garlands",
+  "/photos-and-videos/whatsapp-video-2026-09-07-at-10-49-26-pm.mp4":
+    "Brass lamp wrapped in magenta flowers on a round rangoli",
+  "/photos-and-videos/whatsapp-video-2026-09-07-at-10-47-26-pm.mp4":
+    "Flower rangoli in yellow, purple, and magenta on a tiled floor",
+  "/photos-and-videos/whatsapp-video-2026-09-07-at-10-47-04-pm.mp4":
+    "Framed photograph set on a yellow and white floral rangoli",
+  "/photos-and-videos/whatsapp-video-2026-09-07-at-10-46-34-pm.mp4":
+    "Marigold footprints and a welcome rangoli on a grey marble floor",
+  "/photos-and-videos/video-whatsapp-video-2026-09-07-at-10-46-34-pm.mp4":
+    "Three round marigold and rose rangoli on a marble floor",
+  "/photos-and-videos/whatsapp-video-2026-09-07-at-10-44-25-pm.mp4":
+    "Yellow, orange, white, and magenta floral rangoli on a tile floor",
+  "/photos-and-videos/new-whatsapp-video-2026-09-07-at-10-44-25-pm.mp4":
+    "Overexposed film still from an event decoration",
+  "/photos-and-videos/whatsapp-video-2026-09-07-at-10-43-43-pm.mp4":
+    "Krishna cutout standing on red balloons beside a brass vase of flowers",
 };
 
 /** Films kept in the gallery lead, ahead of other films. */

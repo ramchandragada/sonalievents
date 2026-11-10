@@ -10,10 +10,13 @@ import { PageIntro } from "@/components/page-intro";
 import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
+const planTitle = "Plan Your Event - WhatsApp Sonali Events, Nanded City";
+
 export const metadata: Metadata = pageMeta("/plan", {
-  title: "Plan",
+  title: { absolute: planTitle },
   description:
     "Start a celebration near Nanded City or Sinhgad Road with Sonali Events. The form opens WhatsApp with your brief.",
+  openGraph: { title: planTitle },
 });
 
 export default function PlanPage() {

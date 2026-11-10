@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { WhatsAppButton } from "@/components/cta";
 import { MediaFrame } from "@/components/media-frame";
-import { events } from "@/lib/events";
+import { eventPlaceAnchor, events } from "@/lib/events";
 import { guidesLinkingTo } from "@/lib/guides";
 import { getLocation, locations } from "@/lib/locations";
 import { locationJsonLd, pageMeta } from "@/lib/seo";
@@ -88,7 +88,7 @@ export default async function LocationPage({ params }: Props) {
                   href={`/events/${event.slug}`}
                   className="pressable inline-flex min-h-11 items-center rounded-full border border-ink/15 bg-paper px-4 text-xs font-semibold tracking-[0.14em] uppercase hover:border-garnet/40 hover:text-garnet-deep"
                 >
-                  {event.name}
+                  {eventPlaceAnchor(event, item.slug)}
                 </Link>
               </li>
             ))}

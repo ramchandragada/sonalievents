@@ -22,10 +22,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const item = getEvent(slug);
   if (!item) return { title: "Event" };
+  const documentTitle = item.metaTitle ?? item.name;
+  const branded = documentTitle.includes("Sonali Events");
   return pageMeta(`/events/${slug}`, {
-    title: item.metaTitle ?? item.name,
+    title: branded ? { absolute: documentTitle } : documentTitle,
     description: item.summary,
-    openGraph: { images: [{ url: item.image }] },
+    openGraph: {
+      ...(branded ? { title: documentTitle } : {}),
+      description: item.summary,
+      images: [{ url: item.image }],
+    },
   });
 }
 
@@ -74,6 +80,19 @@ export default async function EventDetailPage({ params }: Props) {
             <p key={paragraph.slice(0, 40)} className="mt-5 text-base leading-relaxed text-ink-soft md:text-lg">
               {paragraph}
             </p>
+          ))}
+          {item.sections?.map((section) => (
+            <section key={section.heading} className="mt-8">
+              <h2 className="display text-3xl md:text-4xl">{section.heading}</h2>
+              {section.paragraphs.map((paragraph) => (
+                <p
+                  key={paragraph.slice(0, 40)}
+                  className="mt-4 text-base leading-relaxed text-ink-soft md:text-lg"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </section>
           ))}
           <p className="mt-6 text-ink-soft/80">
             Typical gathering: {item.guests} guests. Final scale follows your
